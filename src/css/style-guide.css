@@ -1,0 +1,2059 @@
+/*------------------------------------*\
+   #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+* ABSTRACTS..............................Declarations of Sass variables & mixins
+* BASE...................................Default element styles
+* .....Body
+* .....Links
+* .....Headings
+* .....Forms
+* .....Defaults
+* LAYOUT.................................Layout-specific styles
+* COMPONENTS.............................Component styles
+* UTILITIES..............................Utility classes
+*/
+/*------------------------------------*\
+   #ABSTRACTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+/**
+ * CONTENTS
+ *
+ * COLORS
+ * Brand Colors...............Globally-available variables and config
+ * Neutral Colors.............Grayscale colors, including white and black
+ *
+ * TYPOGRAPHY
+ * Font Families..............The fonts used in the design system
+ * Sizing.....................Font sizing
+ *
+ * LAYOUT
+ * Max-widths.................Maximum layout container width
+ *
+
+ * SPACING
+ * Spacing defaults...........Spacing between elements
+ *
+ * BORDERS
+ * Border Width...............Border thicknesses
+ * Border Radius..............Border radius definitions
+ *
+ * ANIMATION
+ * Animation Speed............Transition/animation speed variables
+ * Animation easing...........Easing variables
+ *
+ * BREAKPOINTS
+ * Breakpoints................Global breakpoint definitions
+ */
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/**
+ * Brand Colors
+ * 1) Main identifiable colors involved in creating the UI
+ *    Feel free to add your brand's color palette here.
+ */
+/**
+ * Neutral Colors
+ * 1) Neutral colors are grayscale values used throughout the application
+ */
+/**
+ * Utility Colors
+ * 1) Utility colors are colors used to provide feedback, such as alert messages,
+ * form validation, etc.
+ */
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font Family
+ */
+/**
+ * Font Sizing
+ */
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * Max Width
+ */
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Spacing and offsets
+ * 1) Used to space grids and body padding
+ * 2) The width of the bullets, used to align list content.
+ */
+/* 1 */
+/* 2 */
+/*------------------------------------*\
+    #BORDERS
+\*------------------------------------*/
+/**
+ * Border variables
+ */
+/*------------------------------------*\
+    #ANIMATION
+\*------------------------------------*/
+/**
+ * Transition Speed
+ */
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints used in media queries
+ */
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+   #BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    #BODY
+\*------------------------------------*/
+/**
+ * HTML base styles
+ */
+ html {
+    height: 100%; }
+  
+/**
+* Body base styles
+*/
+body {
+background: #fff;
+font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+-webkit-text-size-adjust: 100%;
+color: #444;
+display: flex;
+flex-direction: column;
+height: 100%; }
+
+.visuallyhidden {
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+white-space: nowrap;
+width: 1px; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+* Button and submit inputs reset
+* 1) These should be styled using c-btn
+*/
+button, input[type=submit] {
+cursor: pointer; }
+button:focus, input[type=submit]:focus {
+    outline: 1px solid #bbb; }
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/**
+* 1) Form element base styles
+*/
+/**
+* Input placeholder text base styles
+*/
+::-webkit-input-placeholder {
+color: #bbb; }
+
+::-moz-placeholder {
+/* Firefox 19+ */
+color: #bbb; }
+
+:-ms-input-placeholder {
+color: #bbb; }
+
+/**
+* Fieldset base styles
+*/
+fieldset {
+border: 0;
+padding: 0;
+margin: 0; }
+
+/**
+* Legend base styles
+*/
+legend {
+text-transform: lowercase;
+margin-bottom: 0.25em; }
+
+/**
+* Label base styles
+*/
+label {
+display: block;
+padding-bottom: 0.25rem; }
+
+/**
+* Add font size 100% of form element and margin 0 to these elements
+*/
+button, input, select, textarea {
+font-family: inherit;
+font-size: 100%;
+margin: 0; }
+
+/**
+* Text area base styles
+*/
+textarea {
+resize: none; }
+
+/**
+* Input  and text area base styles
+*/
+input, textarea {
+width: 100%;
+border: 1px solid #808080;
+padding: 0.5rem 0.65rem; }
+
+/**
+* Remove webkit appearance styles from these elements
+*/
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+-webkit-appearance: none; }
+
+/**
+* Checkbox and radio button base styles
+*/
+input[type="checkbox"],
+input[type="radio"] {
+width: auto;
+margin-right: 0.3em; }
+
+/**
+* Search input base styles
+*/
+input[type="search"] {
+-webkit-appearance: none;
+border-radius: 0; }
+
+/**
+* Remove webkit appearance styles from search input cancel and decoration
+*/
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none; }
+
+/**
+* Select
+* 1) Remove default styling
+*/
+select {
+display: block;
+font-size: 0.85rem;
+height: 2rem;
+width: 100%;
+border: 1px solid #ddd;
+padding: 0.3rem;
+border-radius: 4px;
+background: #fff;
+color: #444;
+-moz-appearance: none;
+-webkit-appearance: none;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyIDExOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZmlsbD0iIzgwODA4MCI+PHBhdGggZD0iTTIsNGw0LDRsNC00SDJ6Ii8+PC9zdmc+);
+background-position: calc(100% - 0.3rem) 50%;
+background-size: 16px 16px;
+background-repeat: no-repeat;
+/**
+    * 1) Remove IE select arrow
+    */
+/**
+    * 1) Style IE value selector
+    */ }
+select:focus {
+    outline: 0;
+    border-color: #808080; }
+select::-ms-expand {
+    /* 1 */
+    display: none; }
+select::-ms-value {
+    /* 1 */
+    background: transparent;
+    color: #808080; }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+* Heading 1 base styles
+*/
+h1 {
+font-size: 2.25rem;
+line-height: 1;
+word-wrap: break-word; }
+@media all and (min-width: 46.8em) {
+    h1 {
+    font-size: 2.75rem; } }
+
+/**
+* Heading 2 base styles
+*/
+h2 {
+font-size: 1.6em;
+line-height: 1.2;
+letter-spacing: -0.02rem;
+margin-bottom: 0.5rem;
+word-wrap: break-word; }
+
+/**
+* Heading 3 base styles
+*/
+h3 {
+font-size: 1.2em;
+line-height: 1.2;
+margin-bottom: 0.3rem;
+word-wrap: break-word; }
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/**
+* Link base styles
+*/
+a {
+color: #444;
+text-decoration: none;
+outline: 0;
+transition: color 0.15s ease-out, box-shadow 0.15s ease-out; }
+a:hover, a:focus {
+    color: #808080; }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+* 1) List base styles
+*/
+/**
+* Remove list styles from unordered and ordered lists
+*/
+ol, ul {
+list-style: none; }
+
+/*------------------------------------*\
+    #MAIN ELEMENT
+\*------------------------------------*/
+/**
+* Main element
+*/
+[role=main] {
+display: block;
+flex: 1 0 auto;
+padding: 1rem; }
+@media all and (min-width: 62em) {
+    [role=main] {
+    padding-top: 1.5rem; } }
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+/**
+* Responsive image styling
+* 1) Allows for images to flex with varying screen size
+*/
+img {
+max-width: 100%;
+height: auto; }
+
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+* {
+box-sizing: border-box; }
+
+/**
+* 1) Zero out margins and padding for elements
+*/
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+margin: 0;
+padding: 0; }
+
+/**
+* 1) Set HTML5 elements to display: block
+*/
+header, footer, nav, section, article, hgroup, figure {
+display: block; }
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+/**
+* Table
+*/
+table {
+border-collapse: collapse;
+border-spacing: 0;
+width: 100%; }
+
+/**
+* Table header cell
+*/
+th {
+text-align: left; }
+
+/**
+* Table row
+*/
+tr {
+vertical-align: top; }
+
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+/**
+* Paragraph base styles
+*/
+p {
+margin-bottom: 1rem; }
+
+/**
+* Blockquote base styles
+*/
+blockquote {
+font-style: italic;
+border-left: 1px solid #808080;
+color: #808080;
+padding-left: 1rem;
+margin-bottom: 1rem; }
+
+/**
+* Horizontal rule base styles
+*/
+hr {
+border: 0;
+height: 1px;
+background: #ddd;
+margin: 1rem 0; }
+
+/**
+* Selection styles
+*/
+::-moz-selection {
+background: #ddd;
+/* Gecko Browsers */ }
+
+::selection {
+background: #ddd;
+/* WebKit/Blink Browsers */ }
+
+/**
+* Code base styles
+*/
+code {
+display: inline-block;
+background: #f9f9f9;
+border: 1px solid #ddd;
+padding: .2rem .5rem;
+line-height: 1.2;
+font-size: .85rem; }
+
+/**
+* Preformatted text base styles
+*/
+pre {
+background: #f9f9f9;
+border: 1px solid #ddd;
+font-size: 1rem;
+padding: 1rem;
+overflow-x: auto;
+/**
+    * Remove border from code within preformatted text block
+    */ }
+pre code {
+    border: 0; }
+
+/**
+* Code with languages associated with them
+* 1) Override Prism sysles for code blocks with language
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+font-family: monospace !important; }
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+* Layout Container
+* 1) Caps the width of the content to the maximum width
+*    and centers the container
+*/
+.l-container {
+max-width: 60rem;
+margin: 0 auto; }
+
+/**
+* Narrow Layout Container
+* 1) This narrow layout container is for lists, forms,
+*    and other singular objects that aren't dashboard-y
+*    kinds of displays
+*/
+.l-container--narrow {
+max-width: 36rem; }
+
+/**
+*
+* 1) This narrow layout container is for lists, forms,
+*    and other singular objects that aren't dashboard-y
+*    kinds of displays
+*/
+.l-linelength-container {
+max-width: 35rem; }
+
+/*------------------------------------*\
+    #LAYOUT SECTIONS
+\*------------------------------------*/
+/**
+* Main section
+* 1) The main section is the primary content container
+*/
+.l-page-layout__main {
+display: flex;
+height: 100vh;
+-ms-flex-direction: column;
+flex-direction: column;
+    /**
+    * Main section of 2 column fixed layout
+    * 1) Margin left equals width of the fixed positioned sidebar
+    */ }
+.l-page-layout--two-column-fixed > .l-page-layout__main {
+    height: 100vh; }
+    @media all and (min-width: 62em) {
+    .l-page-layout--two-column-fixed > .l-page-layout__main {
+        margin-left: 18rem;
+        /* 1 */
+        transition: all 0.4s ease-out; } }
+
+/**
+* Secondary section
+* 1) The secondary section is an auxiliary container
+*    Otherwise known as "sidebar", but we try to
+*    avoid that term to be mindful of the fact in
+*    responsive environments "sidebar"
+*/
+.l-page-layout__secondary {
+/**
+    * Secondary section in a two-column fixed layout
+    * 1) This is a fixed element
+    */ }
+@media all and (min-width: 62em) {
+    .l-page-layout--two-column-fixed > .l-page-layout__secondary {
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+    width: 18rem;
+    height: 100vh; } }
+
+@media all and (min-width: 62em) {
+.c-header__inner-collapsed {
+    overflow: hidden; } }
+
+@media all and (min-width: 62em) {
+.c-header__inner-collapsed + .l-page-layout__main {
+    margin-left: 0; }
+    .c-header__inner-collapsed + .l-page-layout__main main {
+    padding-left: 4rem; }
+    .c-header__inner-collapsed + .l-page-layout__main .c-footer {
+    margin-left: 3rem; } }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+* Grid Container
+*/
+.l-grid {
+margin: 0 -0.5rem;
+display: flex;
+flex-wrap: wrap; }
+@supports (display: grid) {
+    .l-grid {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    margin: 0; } }
+
+/**
+* Abstract grid
+* 1) If display: grid is not supported, create evenly distributed grid using display flex
+* 2) Otherwise, display abstract grid
+*/
+.l-abstract-grid {
+display: flex;
+/* 1 */
+flex-wrap: wrap;
+margin: 0 -0.5rem; }
+@supports (display: grid) {
+    .l-abstract-grid {
+    /* 2 */
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 0; } }
+
+/**
+* Grid Item
+*/
+.l-grid__item {
+padding: 0.5rem;
+display: flex;
+flex-direction: column;
+/**
+    * Grid item within 3-up grid
+    */
+/**
+    * Grid item within 3-up grid
+    */
+/**
+    * Grid item within an abstract grid
+    * 1) If grid is not supported, create 3-up grid using display flex
+    * 2) If grid is supported, create abstract grid
+    * 3) On xl screens, first item spans 2 columns
+    * 4) Even items span only 3rd column
+    * 5) Multiples of 3 items (3, 6, etc.), span only column 1
+    * 6) Multiples of 4 span columns 2 and 3
+    */ }
+.l-grid--3up .l-grid__item {
+    /**
+    * 1) If CSS Grid is supported, set the width
+    *    of grid__items to 100% to fill space
+    *    automatically
+    */ }
+    @media all and (min-width: 35em) {
+    .l-grid--3up .l-grid__item {
+        width: 50%; } }
+    @media all and (min-width: 45em) {
+    .l-grid--3up .l-grid__item {
+        width: 33.33333%; } }
+    @supports (display: grid) {
+    .l-grid--3up .l-grid__item {
+        width: 100%;
+        /* 1 */
+        padding: 0; } }
+.l-grid--4up .l-grid__item {
+    /**
+    * 1) If CSS Grid is supported, set the width
+    *    of grid__items to 100% to fill space
+    *    automatically
+    */ }
+    @media all and (min-width: 35em) {
+    .l-grid--4up .l-grid__item {
+        width: 50%; } }
+    @media all and (min-width: 55em) {
+    .l-grid--4up .l-grid__item {
+        width: 33.33333%; } }
+    @media all and (min-width: 74em) {
+    .l-grid--4up .l-grid__item {
+        width: 25%; } }
+    @supports (display: grid) {
+    .l-grid--4up .l-grid__item {
+        width: 100%;
+        /* 1 */
+        padding: 0; } }
+.l-abstract-grid .l-grid__item {
+    /* 1 */
+    width: 100%;
+    /**
+    * 1) If CSS Grid is supported, set the width
+    *    of grid__items to 100% to fill space
+    *    automatically
+    */ }
+    @media all and (min-width: 35em) {
+    .l-abstract-grid .l-grid__item {
+        width: 50%; } }
+    @media all and (min-width: 45em) {
+    .l-abstract-grid .l-grid__item {
+        width: 33.33333%; } }
+    @supports (display: grid) {
+    .l-abstract-grid .l-grid__item {
+        padding: 0;
+        width: 100%; }
+        @media all and (min-width: 62em) {
+        .l-abstract-grid .l-grid__item {
+            grid-column: 1 / 3;
+            /* 3 */ }
+            .l-abstract-grid .l-grid__item:nth-child(even) {
+            grid-column: 3;
+            /* 4 */ }
+            .l-abstract-grid .l-grid__item:nth-child(3n) {
+            grid-column: 1;
+            /* 5 */ }
+            .l-abstract-grid .l-grid__item:nth-child(4n) {
+            grid-column: 2/4;
+            /* 6 */ }
+            .l-abstract-grid .l-grid__item:last-child {
+            margin-bottom: 0; } } }
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+/**
+* 1) This is an ordered list showing what level you are on in the site
+*/
+.c-breadcrumbs {
+display: flex;
+/* 2 */
+flex-wrap: wrap;
+/* 3 */
+margin: 0 0 1rem 0;
+/* 4 */ }
+
+/**
+* Breadcrumbs list item
+* 1) Set to position relative so :after is positioned relative to the breadcrumbs item
+*/
+.c-breadcrumbs__item {
+position: relative;
+/* 1 */
+margin-right: 1rem;
+/**
+    * Icon in between list item
+    * 1) Set to position absolute so it is positioned relative to its parent container
+    */
+/**
+    * Last breadcrumbs list item
+    */ }
+.c-breadcrumbs__item:after {
+    content: "\203A";
+    position: absolute;
+    /* 1 */
+    top: 0;
+    right: -10px; }
+.c-breadcrumbs__item:last-child {
+    margin-right: 0;
+    /**
+    * Remove last breadcrumb item icon after
+    */ }
+    .c-breadcrumbs__item:last-child:after {
+    display: none; }
+
+/**
+* Breadcrumbs link
+*/
+.c-breadcrumbs__link {
+margin: 0 0.5rem;
+/**
+    * Breadcrumbs link within first breadcrumb item
+    */ }
+.c-breadcrumbs__item:first-child .c-breadcrumbs__link {
+    margin-left: 0; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+* 1) Button or link that has functionality to it
+* 2) Remove box-shadow that's globally applied to links
+*/
+.c-btn {
+display: inline-block;
+background: #444;
+border-radius: 4px;
+cursor: pointer;
+color: #fff;
+line-height: 1;
+font-weight: bold;
+padding: 1rem 2rem;
+border: 0;
+box-shadow: none;
+/* 2 */
+text-align: center;
+transition: all 0.15s ease-out;
+/**
+    * Button within button group
+    */
+/**
+    * Button within button group
+    */
+/**
+    * Button within button group
+    */ }
+.c-btn:hover, .c-btn:focus {
+    background: #000;
+    color: #fff; }
+.c-btn-group .c-btn {
+    margin-right: 0.5rem; }
+    .c-btn-group .c-btn:last-child {
+    margin-right: 0; }
+.c-btn-group .c-btn {
+    margin-right: 0.5rem;
+    /**
+    * Remove right margin on last button group button
+    */ }
+    .c-btn-group .c-btn:last-child {
+    margin-right: 0; }
+.c-btn-group--responsive .c-btn {
+    margin-right: 0;
+    margin-bottom: 0.5rem; }
+    @media all and (min-width: 24em) {
+    .c-btn-group--responsive .c-btn {
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+        /**
+        * Remove right margin on last responsive button group button
+        */ }
+        .c-btn-group--responsive .c-btn:last-child {
+        margin-right: 0; } }
+
+/**
+* Small button
+*/
+.c-btn--small {
+padding: .375rem .75rem; }
+
+/*
+* Inner container of the buton
+* Allows for display flex on a button
+*/
+.c-btn__inner {
+display: flex;
+align-items: center;
+justify-content: center; }
+
+/*
+* Button icon
+*/
+.c-btn__icon {
+width: 16px;
+height: 16px;
+fill: #808080;
+position: relative;
+transition: fill 0.15s ease-in-out;
+/*
+    * Button icon within button hover
+    */
+/*
+    * Button icon within active button
+    */ }
+.c-btn:hover .c-btn__icon, .c-btn:focus .c-btn__icon {
+    fill: #444; }
+.c-btn.is-active .c-btn__icon {
+    fill: #000; }
+
+/*------------------------------------*\
+    #TEXT BUTTON
+\*------------------------------------*/
+/**
+* 1) Button that is text only and doesn't contain a border or fill.
+*/
+.c-text-btn {
+background: none;
+border: 0;
+padding: 0;
+cursor: pointer;
+border-radius: 4px;
+transition: background 0.15s ease-in-out; }
+.c-text-btn:hover, .c-text-btn:focus {
+    color: #808080; }
+
+/*------------------------------------*\
+    #BUTTON GROUP
+\*------------------------------------*/
+/**
+* 1) A button group displays buttons side-by-side.
+*/
+.c-btn-group {
+display: flex; }
+
+/**
+* 1) A button group displays buttons side-by-side.
+*/
+.c-btn-group--responsive {
+flex-direction: column; }
+@media all and (min-width: 24em) {
+    .c-btn-group--responsive {
+    flex-direction: row; } }
+
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+/**
+* 1) A card is a block of media followed by a body of text in a vertical format
+*/
+.c-card {
+display: flex;
+flex-direction: column;
+flex: 1 0 auto;
+position: relative;
+display: flex;
+padding: 1.5rem 1rem 1rem 1rem;
+border: 1px solid #bbb; }
+
+/**
+* Card Footer
+*/
+.c-card__header {
+background: #f9f9f9;
+margin: -1.5rem -1rem 1rem -1rem;
+padding: 1rem 1.5rem 1rem 1.5rem;
+border-bottom: 1px solid #ddd; }
+
+/**
+* Card Body
+*/
+.c-card__body {
+flex: 1 0 auto; }
+
+/**
+* Card Title
+*/
+.c-card__title {
+display: flex;
+align-items: center;
+font-size: 1.4375rem;
+color: #444;
+margin: 0; }
+
+/**
+* Card Footer
+*/
+.c-card__footer {
+background: #f9f9f9;
+margin: 1rem -1rem -1rem -1rem;
+padding: 1rem 1.5rem 1rem 1.5rem;
+border-top: 1px solid #ddd; }
+
+/**
+* Card Actions
+* 1) Card actions is a container for links and buttons within a card.
+*/
+.c-card__actions {
+margin-top: 1rem; }
+
+/**
+* Card icon
+*/
+.c-card__icon {
+margin-left: auto;
+transition: transform 0.15s ease-in-out;
+/**
+    * Card icon on card hover
+    */ }
+.c-card:hover .c-card__icon, .c-card:focus .c-card__icon {
+    transform: translate(3px); }
+
+/*------------------------------------*\
+    #FOOTER NAVIGATION
+\*------------------------------------*/
+/**
+* 1) Navigation within the footer
+*/
+.c-footer-nav {
+display: flex;
+font-size: 0.75rem; }
+
+/**
+* Footer navigation link
+*/
+.c-footer-nav__link {
+display: block;
+padding: 1rem 1rem 0.5rem;
+line-height: 1;
+color: #666; }
+.c-footer-nav__link:hover, .c-footer-nav__link:focus {
+    color: #444; }
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/**
+* 1) Global block at the bottom of each page that contains a navigation and other information
+*/
+.c-footer {
+text-align: center;
+display: flex;
+flex-shrink: 0;
+border-top: 1px solid #eee;
+padding: 1rem 0;
+margin-top: 1rem; }
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+/**
+* Global block at the top of each page containing the navigation, logo, and other potential contents
+*/
+.c-header {
+position: relative;
+background: #eee; }
+
+/**
+* Header inner
+*/
+.c-header__inner {
+display: flex;
+align-items: center;
+padding: 1rem;
+/**
+    * Header inner within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: auto; } }
+
+/**
+* Header navigation button
+* 1) Button used to toggle the navigation on/off on small screens
+*/
+.c-header__nav-btn {
+margin-left: auto; }
+@media all and (min-width: 62em) {
+    .c-header__nav-btn {
+    display: none; } }
+
+/**
+* Header navigation conntainer
+* 1) Contains the primary navigation and other possible patterns
+*/
+.c-header__nav-container {
+display: none;
+width: 100%;
+/**
+    * Header navigation conntainer within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-header__nav-container {
+    display: block;
+    margin-left: auto; } }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-header__nav-container {
+    margin-left: 0; } }
+
+/**
+* Active header nav container
+*/
+.c-header__nav-container.is-active {
+display: block;
+position: absolute;
+background: #eee;
+top: 100%;
+left: 0;
+padding: 0 1rem;
+width: 100%;
+z-index: 5;
+/**
+    * Active header nav container within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-header__nav-container.is-active {
+    display: block;
+    position: static;
+    padding: 0;
+    margin-left: auto;
+    width: inherit; } }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-header__nav-container.is-active {
+    margin-left: 0;
+    width: 100%; } }
+
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+/**
+* 1) Block containing headline, description text, that serves as a primary content area
+*/
+.c-hero {
+display: block;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 100% 100%;
+position: relative;
+margin-bottom: 1rem; }
+
+/**
+* Hero Image
+*/
+.c-hero__img {
+display: block;
+width: 100%;
+margin-bottom: 1rem; }
+@media all and (min-width: 29.75em) {
+    .c-hero__img {
+    margin: 0; } }
+
+/**
+* Hero Body
+*/
+.c-hero__body {
+padding: 2rem 1rem;
+/**
+    * Blue tinted hero
+    */
+/**
+    * Red tinted hero
+    */ }
+.c-hero--blue-tint .c-hero__body {
+    background: rgba(0, 0, 100, 0.4); }
+.c-hero--red-tint .c-hero__body {
+    background: rgba(100, 0, 0, 0.4); }
+@media all and (min-width: 46.8em) {
+    .c-hero__body {
+    padding: 4rem 2rem; } }
+@media all and (min-width: 62em) {
+    .c-hero__body {
+    padding: 5rem; } }
+
+/**
+* Hero Title
+*/
+.c-hero__title {
+max-width: 48rem;
+margin: 0 0 1rem auto;
+font-size: 2rem;
+text-align: right; }
+@media all and (min-width: 46.8em) {
+    .c-hero__title {
+    margin: 0 0 2rem auto;
+    font-size: 3rem; } }
+
+/**
+* Hero Description
+*/
+.c-hero__desc {
+margin-bottom: 2rem;
+margin-left: auto;
+max-width: 34rem;
+text-align: right; }
+@media all and (min-width: 46.8em) {
+    .c-hero__desc {
+    font-size: 1.25rem; } }
+
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+/**
+* Branding image or text of the site
+*/
+.c-logo {
+/**
+    * Logo within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-logo {
+    margin: 0; } }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-logo {
+    margin: 1rem 0; } }
+
+/**
+* Logo link
+*/
+.c-logo__link {
+display: block; }
+
+/**
+* Logo img
+*/
+.c-logo__img {
+display: block;
+max-width: 13rem;
+height: auto;
+/**
+    * Logo within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-logo__img {
+    max-width: 15.75rem; } }
+
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+/**
+* 1) Small image that represents functionality
+*/
+.c-icon {
+height: 16px;
+width: 16px; }
+
+/*------------------------------------*\
+    #PAGE HEADER
+\*------------------------------------*/
+/**
+* 1) Container that consists of of a page header title and description
+*/
+/**
+* Page header title
+*/
+.c-page-header__title {
+margin-bottom: 0.2rem; }
+
+/**
+* Page description
+*/
+.c-page-header__desc {
+margin-bottom: 2rem;
+font-size: 1.2rem;
+color: #808080;
+max-width: 36rem; }
+
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+/**
+* Primary navigation most likely existing in the header
+*/
+.c-primary-nav {
+/**
+    * Primary navigation list within a vertical header
+    */ }
+.c-header--vertical .c-primary-nav {
+    margin-left: -1rem;
+    margin-right: -1rem; }
+
+/**
+* Primary navigation list
+*/
+.c-primary-nav__list {
+display: flex;
+flex-direction: column;
+/**
+    * Primary navigation list within a vertical header
+    */ }
+.c-header--vertical .c-primary-nav__list {
+    display: block; }
+@media all and (min-width: 62em) {
+    .c-primary-nav__list {
+    flex-direction: row; } }
+
+/**
+* Primary navigation item
+*/
+.c-primary-nav__item {
+position: relative;
+/**
+    * Primary navigation item within vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-primary-nav__item {
+    margin-right: 1rem;
+    /**
+        * Remove margin right from last primary navigation item on large screens
+        */ }
+    .c-primary-nav__item:last-child {
+        margin-right: 0; } }
+.c-header--vertical .c-primary-nav__item {
+    margin-right: 0; }
+
+/**
+* Primary navigation link
+*/
+.c-primary-nav__link {
+display: block;
+padding: 0.5rem 0;
+cursor: pointer;
+/**
+    * Primary navigation link within vertical header
+    */ }
+.c-primary-nav__link:focus {
+    outline: 1px dotted #666; }
+.c-header--vertical .c-primary-nav__link {
+    padding: 0.5rem 1rem; }
+
+/**
+* Active primary navigation link
+*/
+.c-primary-nav__link.is-active {
+font-weight: bold; }
+
+/**
+* Current primary navigation link
+*/
+.c-primary-nav__link.is-current {
+font-weight: bold; }
+
+/**
+* Primary navigation link with subnavigation
+*/
+.c-primary-nav__link--has-children {
+display: flex;
+align-items: center;
+/**
+    * Primary navigation link withing active item
+    */
+/**
+    * Primary navigation link within active item in vertical header
+    */ }
+@media all and (min-width: 62em) {
+    .c-primary-nav__item.is-active .c-primary-nav__link--has-children {
+    background: #444;
+    color: #fff; } }
+.c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__link--has-children {
+    background: none;
+    color: inherit; }
+
+/**
+* Primary navigation list subnavigation
+* Targets descendant of the
+*/
+.c-primary-nav__subitem {
+/**
+    * Primary navigation sublist within subitem
+    */
+/**
+    * Primary navigation sublist within active subitem
+    */ }
+.c-primary-nav__subitem .c-primary-nav__subitem {
+    display: none; }
+.c-primary-nav__subitem.is-active .c-primary-nav__subitem {
+    display: block; }
+
+/**
+* Primary navigation sublist
+*/
+.c-primary-nav__sublist {
+border-left: 1px solid #bbb; }
+
+/**
+* Primary navigation list subnavigation first of type
+* 1) First of type is chosen to only choose direct descendant of primary
+*    navigation item
+*/
+.c-primary-nav__sublist:first-of-type {
+display: none;
+margin-left: 1rem;
+/**
+    * Primary navigation sublist within vertical header
+    */
+/**
+    * Primary navigation sublist within vertical header active primary nav item
+    */
+/**
+    * Primary navigation sublist within active primary navigation item
+    */
+/**
+    * Primary navigation sublist within active item in vertical header
+    */ }
+.c-header--vertical .c-primary-nav__sublist:first-of-type {
+    margin-left: 1rem; }
+.c-header--vertical.is-active > .c-primary-nav__sublist:first-of-type {
+    display: block; }
+.c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
+    display: block; }
+    @media all and (min-width: 62em) {
+    .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
+        background: #444;
+        padding: .5rem 1rem 1rem;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 6;
+        min-width: 8rem; } }
+.c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
+    background: none; }
+    @media all and (min-width: 62em) {
+    .c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
+        margin: 0;
+        margin-left: 1rem;
+        padding: 0;
+        position: static; } }
+@media all and (min-width: 62em) {
+    .c-primary-nav__sublist:first-of-type {
+    margin-left: 0; } }
+
+/**
+* Primary navigation sublink
+*/
+.c-primary-nav__sublink {
+display: flex;
+align-items: center;
+padding: 0.5rem 1rem;
+/**
+    * Primary navigation sublink within vertical header
+    */ }
+.c-primary-nav__sublink:focus {
+    outline: 1px dotted #666; }
+@media all and (min-width: 62em) {
+    .c-header--vertical .c-primary-nav__sublink {
+    color: inherit; } }
+
+/**
+* Active primary navigation link
+*/
+.c-primary-nav__sublink.is-active {
+font-weight: bold; }
+
+/**
+* Current primary navigation link
+*/
+.c-primary-nav__sublink.is-current {
+font-weight: bold; }
+
+/**
+* Primary navigation sublink with subnavigation
+*/
+.c-primary-nav__sublink--has-children {
+display: flex;
+align-items: center; }
+
+/**
+* Primary navigation icon
+*/
+.c-primary-nav__icon {
+fill: #444;
+transition: fill 0.2s ease;
+margin-left: auto;
+/**
+    * Primary navigation icon within vertical header
+    */
+/**
+    * Primary navigation icon within active link
+    */
+/**
+    * Primary navigation icon within active link within vertical header
+    */
+/**
+    * Primary navigation icon within hovered/focused primary navigation link
+    */ }
+.c-header--vertical .c-primary-nav__icon {
+    margin-left: auto; }
+.c-primary-nav__item.is-active .c-primary-nav__icon {
+    fill: #fff;
+    transform: rotate(180deg); }
+.c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__icon {
+    fill: #444;
+    transform: rotate(90deg); }
+.c-primary-nav__link:hover .c-primary-nav__icon, .c-primary-nav__link:focus .c-primary-nav__icon {
+    fill: #808080; }
+
+/**
+* Primary navigation subicon
+*/
+.c-primary-nav__subicon {
+fill: #444;
+transition: fill 0.2s ease;
+margin-left: auto;
+/**
+    * Primary navigation icon within vertical header
+    */
+/**
+    * Primary navigation subicon within active link
+    */
+/**
+    * Primary navigation subicon within active subitem within vertical header
+    */
+/**
+    * Primary navigation icon within hovered/focused primary navigation link
+    */ }
+.c-header--vertical .c-primary-nav__subicon {
+    margin-left: auto; }
+.c-primary-nav__subitem.is-active .c-primary-nav__subicon {
+    fill: #fff;
+    transform: rotate(180deg); }
+.c-header--vertical .c-primary-nav__subitem.is-active .c-primary-nav__subicon {
+    fill: #444;
+    transform: rotate(90deg); }
+.c-primary-nav__sublink:hover .c-primary-nav__subicon, .c-primary-nav__sublink:focus .c-primary-nav__subicon {
+    fill: #808080; }
+
+.c-header__inner,
+.l-page-layout__secondary,
+.nav-btn {
+transition: all 0.4s ease-out;
+overflow: visible; }
+
+@media all and (min-width: 62em) {
+.c-header__inner {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eee; }
+    .c-header__inner .toggle-collapsed {
+    display: none; } }
+
+.no-js .nav-btn {
+display: none; }
+
+.nav-btn {
+display: none; }
+@media all and (min-width: 62em) {
+    .nav-btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: inline-block;
+    background: #444;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem 0.35rem;
+    border: 0;
+    box-shadow: none;
+    text-align: center;
+    transition: all 0.4s ease-out; }
+    .nav-btn:hover, .nav-btn:focus {
+        background: #000; }
+    .nav-btn .c-primary-nav__icon {
+        fill: #fff;
+        transition: fill 0.2s ease;
+        margin-left: auto; } }
+
+.c-primary-nav__list {
+opacity: 1;
+transition: all 0.4s ease-out;
+visibility: visible; }
+
+.c-header__inner-collapsed .toggle-collapsed {
+display: inline-block; }
+.c-header__inner-collapsed .c-primary-nav {
+display: none; }
+.c-header__inner-collapsed .toggle-open,
+.c-header__inner-collapsed .c-logo {
+display: none; }
+@media all and (min-width: 62em) {
+.c-header__inner-collapsed {
+    transform: translateX(-82%);
+    overflow: hidden; } }
+
+.c-header__inner-collapsed .nav-btn {
+transform: translateX(100%);
+right: 46px;
+bottom: 5px; }
+
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+/**
+* Section block that helps chunk related items together
+*/
+.c-section {
+margin-bottom: 2rem; }
+
+/*------------------------------------*\
+    #SECTION HEADER
+\*------------------------------------*/
+/**
+* 1) Block containing section title and description to distinguish section
+*/
+.c-section-header {
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 1px solid #eee; }
+
+/**
+* Section header title
+*/
+.c-section-header__title {
+font-size: 1.4375rem; }
+
+/**
+* Section description
+*/
+.c-section-header__desc {
+font-size: 1rem;
+margin-bottom: 0; }
+
+/*------------------------------------*\
+    #TABLE
+\*------------------------------------*/
+/**
+* 1) Data Table
+*/
+.c-table {
+margin-bottom: 1rem;
+min-width: 600px;
+/* 2 */ }
+
+/**
+* Table Header
+*/
+.c-table__header {
+background: #eee; }
+
+/**
+* Table Header Cell
+*/
+.c-table__header-cell {
+padding: 0.8rem; }
+
+/**
+* Table Row
+*/
+.c-table__row {
+border-bottom: 1px solid #eee; }
+
+/**
+* Table Cell
+*/
+.c-table__cell {
+padding: 1.6rem 0.8rem; }
+
+/**
+* Table Footer
+*/
+/**
+* Table Footer Cell
+*/
+.c-table__footer-cell {
+padding: 0.8rem; }
+
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+/**
+* 1) Unordered list of links where the each link targets different information
+*/
+/**
+* Vertical tabs
+* 1) Displays tabs on the right and the body on the left
+*/
+.c-tabs--vertical {
+display: flex;
+margin-bottom: 1rem; }
+
+/**
+* Tabs list
+*/
+.c-tabs__list {
+display: flex;
+border-bottom: 1px solid #bbb;
+/**
+    * Tabs list within vertical tabs
+    */ }
+.c-tabs--vertical .c-tabs__list {
+    border: 1px solid #bbb;
+    display: block;
+    order: 1; }
+
+/**
+* Tabs list
+* 1) Overlap the tabs bottom border
+*/
+.c-tabs__link {
+display: block;
+padding: 0.5rem 1rem;
+margin-bottom: -1px;
+min-width: 5rem;
+text-align: center;
+/**
+    * Active tabs link
+    */
+/**
+    * Tabs link within vertical tabs
+    */ }
+.c-tabs__link.is-active {
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #fff; }
+.c-tabs--vertical .c-tabs__link {
+    border: 0;
+    border-bottom: 1px solid #bbb;
+    /**
+    * Last tabs item link within vertical tabs
+    */
+    /**
+    * Active tabs link within vertical tabs
+    */ }
+    .c-tabs__item:last-child .c-tabs--vertical .c-tabs__link {
+    border-bottom: 0; }
+    .c-tabs--vertical .c-tabs__link.is-active {
+    background: #ddd; }
+
+/**
+* Tab Body
+*/
+.c-tabs__body {
+padding: 1rem 0;
+border-top: 0;
+/**
+    * Tabs body within vertical tabs
+    * 1) Take up the remaining space that the actual tabs do not take up
+    */ }
+.c-tabs--vertical .c-tabs__body {
+    flex: 1;
+    /* 1 */
+    border: 1px solid #bbb;
+    border-right: 0; }
+
+/**
+* Tab Panel
+* 1) Display by default, and only hide if JS is available
+*/
+.c-tabs__panel {
+display: none;
+padding: 1rem;
+/**
+    * Active tabs panel
+    */ }
+.c-tabs__panel.is-active {
+    display: block; }
+
+/*------------------------------------*\
+    #TEXT PASSAGE
+\*------------------------------------*/
+/**
+* 1) A passage of text, including various components (i.e. article, blog post)
+*/
+.c-text-passage {
+/**
+    * Link within the text passage
+    */
+/**
+    * Blockquote within text passage
+    */
+/**
+    * First-level heading within text passage
+    */
+/**
+    * Second-level heading within text passage
+    */
+/**
+    * Third-level heading within text passage
+    */
+/**
+    * Fourth-level heading within text passage
+    */
+/**
+    * Fifth-level heading within text passage
+    */
+/**
+    * Sixth-level heading within text passage
+    */
+/**
+    * Unordered list within text passage
+    */
+/**
+    * Ordered list within text passage
+    */ }
+.c-text-passage p {
+    margin-bottom: 1rem; }
+.c-text-passage a:not(.c-btn) {
+    color: #808080;
+    text-decoration: underline; }
+    .c-text-passage a:not(.c-btn):hover, .c-text-passage a:not(.c-btn):focus {
+    color: #444; }
+.c-text-passage blockquote {
+    padding-left: 0.8rem;
+    border-left: 3px solid #444;
+    color: #808080;
+    font-size: 1rem; }
+.c-text-passage h1 {
+    margin-bottom: 1rem; }
+.c-text-passage h2 {
+    margin: 2rem 0 0.5rem;
+    color: #444;
+    font-weight: bold; }
+.c-text-passage h3 {
+    margin: 1rem 0 1rem; }
+.c-text-passage h4 {
+    margin: 1rem 0 1rem; }
+.c-text-passage h5 {
+    margin: 1rem 0 1rem; }
+.c-text-passage h6 {
+    margin: 1rem 0 1rem; }
+.c-text-passage ul {
+    list-style: disc;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .c-text-passage ul li:last-child {
+    margin-bottom: 0; }
+.c-text-passage ol {
+    list-style: decimal;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .c-text-passage ol li:last-child {
+    margin-bottom: 0; }
+.c-text-passage li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6; }
+
+/*------------------------------------*\
+    #TILE
+\*------------------------------------*/
+/**
+* 1) A block of stylized content containing a key and a value
+* 2) The root of a tile is typically <a> tag
+*/
+.c-tile {
+display: block;
+align-items: center;
+padding: 1.5rem;
+background: #444;
+color: #fff; }
+
+/**
+* Tile headline
+* 1) Headline of the tile
+*/
+.c-tile__headline {
+display: block;
+font-size: 1.4375rem; }
+
+/*------------------------------------*\
+    #TILE LIST
+\*------------------------------------*/
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+/*------------------------------------*\
+    #VISIBILITY CLASSES
+\*------------------------------------*/
+/**
+* Is Hidden
+* 1) Completely remove from the flow and screen readers.
+*/
+.u-is-hidden {
+display: none !important;
+visibility: hidden !important; }
+
+/**
+* Is Visibly Hidden
+* 1) Completely remove from the flow but leave available to screen readers.
+*/
+.u-is-vishidden {
+position: absolute !important;
+overflow: hidden;
+width: 1px;
+height: 1px;
+padding: 0;
+border: 0;
+clip: rect(1px, 1px, 1px, 1px); }
+
+/*------------------------------------*\
+    #DISPLAY CLASSES
+\*------------------------------------*/
+/**
+* Display block
+* 1) Add display block by overriding
+*/
+.u-display-block {
+display: block !important; }
+
+/**
+* Margin Bottom Double
+* 1) Adds double the base unit of margin
+*    to the bottom of an element
+*/
+.u-margin-bottom-double {
+margin-bottom: 2rem !important; }
+
+
+
+
+
+/**
+* Max Width
+*/
+/**
+* Breakpoints
+*/
+/**
+* 1) This is an overide to have more text breathing room on home
+*/
+@media all and (min-width: 62em) {
+.c-section--home {
+    padding: 0 3rem; } }
+/*------------------------------------*\
+    #IFFFRAME
+\*------------------------------------*/
+/**
+* 1) Iffframe creates a resizable component
+*/
+.iffframe {
+padding: 1rem 0.7rem 1rem 0;
+width: 100%;
+position: relative;
+border: 1px solid #f5f5f5;
+border-left: none;
+overflow: hidden;
+height: auto;
+background-color: #ffffff;
+margin-bottom: 2rem; }
+
+.iffframe__iframe {
+width: 100%;
+overflow: auto;
+overflow-x: auto !important; }
+
+/**
+* Iffframe handle
+* 1) Hide resize handle for small screens
+*/
+.iffframe__handle {
+display: none;
+/* 1 */
+width: 0.7rem;
+height: 100%;
+position: absolute;
+right: 0;
+top: 0;
+cursor: col-resize;
+background-color: #f5f5f5;
+transition: background-color 0.3s ease; }
+.iffframe__handle:after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 2px;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5rem;
+    margin-left: -1px; }
+.iffframe__handle:hover {
+    background: #e5e5e5; }
+.iffframe__handle:active {
+    background: #cccccd; }
+@media all and (min-width: 40em) {
+    .iffframe__handle {
+    display: block; } }
+
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+/**
+* 1) Override some Prism defaults
+* 2) Fixed width button for showing and hiding code
+* 3) Change background color
+* 4) Update the code color to have Exxon colors
+*/
+code[class*="language-"], pre[class*="language-"] {
+tab-size: 2; }
+
+.pattern-code {
+position: relative;
+margin-top: 2rem; }
+
+/**
+* Applied to pre element
+*/
+.pattern-code-block {
+margin-top: 0;
+max-height: 25rem;
+overflow-y: hidden; }
+.is-expanded .pattern-code-block {
+    max-height: none; }
+
+.pattern-code-copy-btn {
+position: absolute;
+top: 0;
+right: 0;
+z-index: 2; }
+
+/* 3 */
+pre[class*="language-"] {
+background-color: #f5f5f5; }
+
+code[class*="language-"], pre[class*="language-"] {
+text-shadow: none; }
+
+/**
+* Push the button up to be closer to the code-block in the show-more block
+*/
+.show-more .c-btn {
+position: relative;
+bottom: 2rem;
+z-index: 1; }
+
+/**
+* Force last paragraph of page header description to be inline so markdown flows into "Jump To Usage Guidelines Link"
+*/
+.c-page-header__desc p:last-of-type {
+display: inline; }
+
+/**
+* Page header icon
+* 1) Add height and width for the page header icon for the "Jump to Usage Guidelines Link"
+* 2) Added within the header__desc to cancel out text-passage styles;
+*/
+.c-page-header__desc .c-page-header__icon {
+height: 1rem;
+/* 1 */
+width: 1rem;
+/* 1 */ }
+
+/**
+* Tabs list in reference site
+* 1) Wrap tabs
+* 2) Remove overflow
+* 3) Remove shadows for overflow
+*/
+@media all and (min-width: 47em) {
+.c-tabs__list {
+    flex-wrap: wrap;
+    /* 1 */
+    overflow-x: inherit;
+    /* 2 */
+    overflow-y: inherit;
+    /* 2 */ } }
+
+/*------------------------------------*\
+#BADGES
+\*------------------------------------*/
+.c-badge {
+border-radius: 4px;
+color: #ffffff;
+font-size: .65rem;
+margin-left: 4px;
+padding: 4px;
+vertical-align: middle; }
+
+.c-badge--negative {
+background-color: #d82424; }
+
+.c-badge--positive {
+background-color: #00af53; }
+
+.c-badge--caution {
+background-color: #225896; }
+
+/*------------------------------------*\
+#BADGES
+\*------------------------------------*/
+.c-table-container {
+width: 100%;
+overflow-x: auto;
+overflow-y: hidden;
+background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) right, linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, transparent 70%), linear-gradient(to left, rgba(0, 0, 0, 0.2) 0%, transparent 70%) right;
+background-repeat: no-repeat;
+background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+background-attachment: local, local, scroll, scroll; }
+
+.c-table__cell:first-child {
+white-space: nowrap; }
+
+/*------------------------------------*\
+    #LAYOUT TWEAKS
+\*------------------------------------*/
+.push-right {
+padding-left: 0.5rem; }
+@media all and (min-width: 40em) {
+    .push-right {
+    padding-left: 8rem; } }
+
+.c-tabs-list__item {
+display: none; }
+.c-tabs-list__item.is-active {
+    display: block; }
+  
