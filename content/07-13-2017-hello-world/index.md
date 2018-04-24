@@ -1,7 +1,7 @@
 ---
 path: "/hello-world.html"
 date: "2017-07-14T03:49:16.408Z"
-title: "Hello World"
+title: "This is my blog post"
 tags: ["first"]
 ---
 

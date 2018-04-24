@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Logo from './logo';
 import PrimaryNav from './primary-nav';
 
