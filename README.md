@@ -5,7 +5,7 @@ Style Guide Guide is a boilerplate for creating a custom style guide for your or
 [See the demo here](http://bradfrost.github.io/style-guide-guide/)
 
 ## How it works
-Style Guide Guide is built using [Gatsby]https://www.gatsbyjs.org/), a site generator built with [React](https://reactjs.org/).
+Style Guide Guide is built using [Gatsby](https://www.gatsbyjs.org/), a site generator built with [React](https://reactjs.org/).
 
 The tool can consume and display components from anywhere, but in my own workflow we import patterns from [Pattern Lab](http://patternlab.io/) into Style Guide Guide for display. For more info, check out this blog post (coming soon for now).
 
