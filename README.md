@@ -1,23 +1,21 @@
-# gatsby-blog-starter-kit
+# Gatsby Style Guide Guide
 
-[![Build Status](https://travis-ci.org/DSchau/gatsby-blog-starter-kit.svg?branch=master)](https://travis-ci.org/DSchau/gatsby-blog-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/DSchau/gatsby-blog-starter-kit.svg)](https://greenkeeper.io/)
+Style Guide Guide is a boilerplate for creating a custom style guide for your organization's design system. It provides just enough IA and hooks to get you going. As a bonus, I've provided links to helpful resources and inspiration to help you as you create your own custom style guide.
 
-Use this starter kit to jump start (or use as a reference) a great blog with [gatsby][gatsby]
+[See the demo here](http://bradfrost.github.io/style-guide-guide/)
 
-![Blog example](./assets/gatsby-blog-starter-kit.png)
+## How it works
+Style Guide Guide is built using [Gatsby]https://www.gatsbyjs.org/), a site generator built with [React](https://reactjs.org/).
 
-## Features
+The tool can consume and display components from anywhere, but in my own workflow we import patterns from [Pattern Lab](http://patternlab.io/) into Style Guide Guide for display. For more info, check out this blog post (coming soon for now).
 
-1. Blog post listing with previews for each blog post
-1. Navigation between posts with a previous/next post button
-1. Tags and tag navigation
-1. Responsive images via [gatsby-remark-images][gatsby-remark-images]
+## Getting Started
+1. Download or clone the files from the [repository on Github](https://github.com/bradfrost/gatsby-style-guide-guide).
+2. In the command line, navigate to the root of the project and run the `yarn` command. This will download the project dependencies
+3. Run `yarn start` to run the project.
+3. Visit `http://localhost:8000/` in your browser to see the style guide.
 
-## Set up
+From here, you can customize the style guide for your needs and populate it with your own content and components.
 
-1. Clone this repo
-1. `yarn`
-1. `yarn start`
-
-[gatsby]: https://www.gatsbyjs.org/
-[gatsby-remark-images]: https://www.gatsbyjs.org/packages/gatsby-remark-images/
+## Feedback and Questions
+If you have questions or issues with Style Guide Guide, please feel free to [open an issue](https://github.com/bradfrost/gatsby-style-guide-guide/issues). If your organization is creating a design system and style guide and would like some help taking it to the next level, feel free to [get in touch!](http://bradfrost.com/contact/)
