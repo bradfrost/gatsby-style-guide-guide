@@ -3,6 +3,7 @@ import GatsbyLink from "gatsby-link";
 import Helmet from "react-helmet";
 
 import Link from "../components/Link";
+import Card from "../components/card";
 
 export default function Index({ data }) {
     const { edges: posts } = data.allMarkdownRemark;
@@ -12,14 +13,7 @@ export default function Index({ data }) {
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }) => {
                     return (
-                        <div className="blog-post-preview" key={post.id}>
-                            <h2 className="title">
-                                <GatsbyLink to={post.frontmatter.path}>
-                                    {post.frontmatter.title}
-                                </GatsbyLink>
-                            </h2>
-                            <p>{post.frontmatter.description}</p>
-                        </div>
+                        <Card href={post.frontmatter.path} kicker="kicker" title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
                     );
                 })}
         </div>
