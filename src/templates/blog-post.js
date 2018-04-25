@@ -6,6 +6,7 @@ import ForwardIcon from "react-icons/lib/fa/chevron-right";
 import Link from "../components/Link";
 import Tags from "../components/Tags";
 import PageHeader from "../components/page-header";
+import Breadcrumbs from "../components/breadcrumbs";
 
 export default function Template({ data, pathContext }) {
     const { markdownRemark: post } = data;
@@ -13,6 +14,8 @@ export default function Template({ data, pathContext }) {
     return (
         <div className="blog-post-container">
             <Helmet title={`${post.frontmatter.title}`} />
+
+			<Breadcrumbs group={ post.frontmatter.group } />
 
             <PageHeader
                 title={post.frontmatter.title}
@@ -53,6 +56,7 @@ export const pageQuery = graphql`
 				title
 				description
 				status
+				group
             }
         }
     }

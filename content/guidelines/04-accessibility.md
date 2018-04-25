@@ -4,6 +4,7 @@ type: detail
 title: Accessibility
 group: guidelines
 path: /guidelines/accessibility
+status: ready
 description: Describe the design system's approach to accessibility
 
 ---
