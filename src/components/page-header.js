@@ -1,8 +1,9 @@
 import React from "react";
+import Badge from './badge';
 
-const PageHeader = ({ title, description }) => (
+const PageHeader = ({ title, description, status }) => (
     <div className="c-page-header">
-        <h1 className="c-page-header__title">{ title }</h1>
+        <h1 className="c-page-header__title">{ title } <Badge status={ status } /></h1>
         <div className="c-page-header__desc">{ description }</div>
 	</div>
 );

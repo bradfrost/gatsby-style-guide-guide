@@ -3,6 +3,7 @@ layout: page
 title: Design Principles
 group: guidelines
 path: /guidelines/principles
+status: ready
 description: The design system's guiding values
 
 

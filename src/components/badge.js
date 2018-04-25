@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Badge = ({ siteTitle }) => (
-  <div className="c-badge">
-  </div>
+if (status) {
+  const styleModifier = "negative";
+}
+
+const Badge = ({ status }) => (
+  <span className={"c-badge c-badge--positive"}> { status.toUpperCase() }</span>
 );
 
 export default Badge;

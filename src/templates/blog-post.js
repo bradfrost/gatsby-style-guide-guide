@@ -16,7 +16,8 @@ export default function Template({ data, pathContext }) {
 
             <PageHeader
                 title={post.frontmatter.title}
-                description={post.frontmatter.description}
+				description={post.frontmatter.description}
+				status={post.frontmatter.status}
             />
 
             <h2 className="date">{post.frontmatter.date}</h2>
@@ -51,6 +52,7 @@ export const pageQuery = graphql`
                 tags
 				title
 				description
+				status
             }
         }
     }
