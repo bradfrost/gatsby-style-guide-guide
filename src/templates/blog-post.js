@@ -8,9 +8,11 @@ import Tags from "../components/Tags";
 import PageHeader from "../components/page-header";
 import Breadcrumbs from "../components/breadcrumbs";
 
+
 export default function Template({ data, pathContext }) {
     const { markdownRemark: post } = data;
     const { next, prev } = pathContext;
+
     return (
         <div className="blog-post-container">
             <Helmet title={`${post.frontmatter.title}`} />
@@ -18,9 +20,9 @@ export default function Template({ data, pathContext }) {
 			<Breadcrumbs group={ post.frontmatter.group } />
 
             <PageHeader
-                title={post.frontmatter.title}
-				description={post.frontmatter.description}
-				status={post.frontmatter.status}
+                title={ post.frontmatter.title }
+				description={ post.frontmatter.description }
+				status={ post.frontmatter.status }
             />
 
             <h2 className="date">{post.frontmatter.date}</h2>

@@ -1,7 +1,7 @@
 ---
+path: /support
 layout: page
 title: Support
-path: /support
 description: The support page provides information about getting help with using the design system
 ---
 
