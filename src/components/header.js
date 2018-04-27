@@ -7,8 +7,7 @@ export class Header extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {isToggleOn: true};
-
-	
+		
 		this.toggleMenu = this.toggleMenu.bind(this);
 	}
 
