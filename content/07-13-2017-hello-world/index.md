@@ -1,5 +1,5 @@
 ---
-path: "/hello-world.html"
+path: /hello-world
 date: "2017-07-14T03:49:16.408Z"
 title: "This is my blog post"
 tags: ["first"]

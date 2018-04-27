@@ -2,7 +2,7 @@
 layout: landing
 type: landing
 group: guidelines
-path: /guidelines/
+path: /guidelines
 status: complete
 
 title: Guidelines
