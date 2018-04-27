@@ -9,13 +9,17 @@ export default function Index({ data }) {
     const { edges: posts } = data.allMarkdownRemark;
     return (
         <div className="blog-posts">
+            <ul class="c-card-list l-grid l-grid--3up">
             {posts
                 .filter(post => post.node.frontmatter.title.length > 0)
                 .map(({ node: post }) => {
                     return (
-                        <Card href={post.frontmatter.path} kicker="kicker" title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
+                        <li class="l-grid__item">
+                            <Card href={post.frontmatter.path} kicker="kicker" title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
+                        </li>
                     );
                 })}
+            </ul>
         </div>
     );
 }
