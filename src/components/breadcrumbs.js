@@ -5,11 +5,11 @@ const Breadcrumbs = ({ group, subgroup }) => {
 	return (
 		<ol className="c-breadcrumbs">
 
-			<li class="c-breadcrumbs__item">
+			<li className="c-breadcrumbs__item">
 				<Link className="c-breadcrumbs__link" to={ group }>{ group }</Link>
 			</li>
 
-			{subgroup ? <li class="c-breadcrumbs__item">
+			{subgroup ? <li className="c-breadcrumbs__item">
 				<Link className="c-breadcrumbs__link" to={ subgroup }>{ subgroup }</Link>
 			</li> : null}
 

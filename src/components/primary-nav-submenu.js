@@ -7,7 +7,7 @@ const style = {
 
 const PrimaryNavSubmenu = () => (
     <ul className="c-primary-nav__sublist" style={ style }>
-        <li class="c-primary-nav__subitem">
+        <li className="c-primary-nav__subitem">
         <Link className="c-primary-nav__sublink">
             TEST
         </Link>

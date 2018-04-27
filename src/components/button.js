@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Button = ({ text, styleModifier }) => (
-	<button className={"c-btn " + styleModifier }>
+
+const Button = ({ text, onClickHandler, styleModifier, props }) => (
+	<button className={"c-btn " + styleModifier } onClick={ onClickHandler } {...props}>
 
 		{ text }
 
