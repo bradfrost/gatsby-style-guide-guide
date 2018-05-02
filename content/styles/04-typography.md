@@ -1,9 +1,9 @@
 ---
+path: /styles/typography
 layout: page
 type: detail
 title: Typography
 group: styles
-path: /styles/typography.html
 description: Typography style description
 
 ---

@@ -1,8 +1,8 @@
 ---
+path: /components/blocks-and-cards/tile
 layout: component-detail
 group: components
 subgroup: blocks-and-cards
-path: /components/blocks-and-cards/tile.html
 
 title: Tile
 status: Deprecated

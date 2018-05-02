@@ -1,8 +1,8 @@
 ---
+path: /components/blocks-and-cards/hero
 layout: component-detail
 group: components
 subgroup: blocks-and-cards
-path: /components/blocks-and-cards/hero.html
 
 title: Hero
 status: In Progress

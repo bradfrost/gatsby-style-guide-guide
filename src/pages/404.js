@@ -1,7 +1,7 @@
 import React from 'react';
+import PageHeader from "../components/page-header";
 
 export default () =>
   <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn't exist... the sadness.</p>
+    <PageHeader title="Page Not Found" description="The page you tried couldn't be found." />
   </div>;

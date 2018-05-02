@@ -1,4 +1,5 @@
 ---
+path: /contributing
 layout: page
 title: Contributing to the design system
 description: This page explains the process (or processes) by which the design system gets updated
@@ -13,4 +14,4 @@ Describe specifically the process or processes by which the system gets [updated
 Since a design system is made up of component code, guidelines, documentation, design tools, and resources, keep in mind you'll likely need to define several processes to contribute each of these ingredients.
 
 ## Support
-Cross-linking to the <a href="{{ "/support.html" | prepend: site.baseurl }}">support page</a> is a good idea here.
+Cross-linking to the [support page](/support) is a good idea here.

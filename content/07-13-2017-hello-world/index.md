@@ -2,6 +2,7 @@
 path: /hello-world
 date: "2017-07-14T03:49:16.408Z"
 title: "This is my blog post"
+description: This is my post description
 tags: ["first"]
 ---
 

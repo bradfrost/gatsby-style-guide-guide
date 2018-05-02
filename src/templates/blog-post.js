@@ -25,20 +25,21 @@ export default function Template({ data, pathContext }) {
 				status={ post.frontmatter.status }
             />
 
-            <h2 className="date">{post.frontmatter.date}</h2>
             <div
                 className="c-text-passage"
                 dangerouslySetInnerHTML={{ __html: post.html }}
             />
+            
             <Tags list={post.frontmatter.tags || []} />
-            <div className="navigation">
+            
+            <div className="c-pagination">
                 {prev && (
-                    <Link className="link prev" to={prev.frontmatter.path}>
+                    <Link className="c-pagination__link" to={prev.frontmatter.path}>
                         <BackIcon /> {prev.frontmatter.title}
                     </Link>
                 )}
                 {next && (
-                    <Link className="link next" to={next.frontmatter.path}>
+                    <Link className="c-pagination__link" to={next.frontmatter.path}>
                         {next.frontmatter.title} <ForwardIcon />
                     </Link>
                 )}

@@ -1,9 +1,8 @@
 ---
+path: /styles
 layout: landing
 type: landing
 group: styles
-path: /styles/
-
 title: Styles
 description: The attributes of the brand
 ---

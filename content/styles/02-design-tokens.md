@@ -1,9 +1,9 @@
 ---
+path: /styles/design-tokens
 layout: page
 type: detail
 title: Design tokens
 group: styles
-path: /styles/design-tokens.html
 description: Design token information
 
 ---

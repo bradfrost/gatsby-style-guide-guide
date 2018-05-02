@@ -2057,3 +2057,16 @@ display: none; }
 .c-tabs-list__item.is-active {
     display: block; }
   
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+.c-pagination {
+    display: flex;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.c-pagination__link:last-child {
+    margin-left: auto;
+}

@@ -1,8 +1,8 @@
 ---
+path: /components/blocks-and-cards/card
 layout: component-detail
 group: components
 subgroup: blocks-and-cards
-path: /components/blocks-and-cards/card.html
 
 title: Card
 description: This is a card.

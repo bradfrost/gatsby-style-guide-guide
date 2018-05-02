@@ -1,9 +1,9 @@
 ---
+path: /styles/voice-and-tone
 layout: page
 type: detail
 title: Voice and tone
 group: styles
-path: /styles/voice-tone.html
 description: Capturing the personality and authority of the brand in words
 
 ---

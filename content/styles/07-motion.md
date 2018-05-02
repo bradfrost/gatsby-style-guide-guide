@@ -1,9 +1,9 @@
 ---
+path: /styles/motion
 layout: page
 type: detail
 title: Motion
 group: styles
-path: /styles/motion.html
 description: How the style guide uses motion to enhance the user experience.
 
 ---

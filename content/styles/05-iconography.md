@@ -1,9 +1,9 @@
 ---
+path: /styles/iconography
 layout: page
 type: detail
 title: Iconography
 group: styles
-path: /styles/iconography.html
 description: How to style or construct icons for the design system
 
 ---
