@@ -10,7 +10,7 @@ export default function ComponentDetail({ data }) {
     const { edges: posts } = data.allMarkdownRemark;
     return (
         <div className="l-container">
-            <PageHeader title="Components" description="This is the description" />
+            <PageHeader title="Components" description="This is a list of all the components" />
 
             <ul class="c-card-list l-grid l-grid--3up">
             {posts
@@ -19,7 +19,7 @@ export default function ComponentDetail({ data }) {
                 .map(({ node: post }) => {
                     return (
                         <li class="l-grid__item">
-                            <Card href={"/components/"+post.frontmatter.subgroup} kicker="kicker" title={post.frontmatter.subgroup} key={post.id} />
+                            <Card href={"/components/"+post.frontmatter.subgroup} kicker={post.frontmatter.subgroup} title={post.frontmatter.title} key={post.id} />
                         </li>
                     );
                 })}
