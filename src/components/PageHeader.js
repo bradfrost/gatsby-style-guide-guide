@@ -1,5 +1,5 @@
 import React from "react";
-import Badge from './badge';
+import Badge from './Badge';
 
 const PageHeader = ({ title, description, status }) => (
     <div className="c-page-header">

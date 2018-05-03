@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Logo from "./logo";
-import Button from "./button";
-import PrimaryNav from "./primary-nav";
+import Logo from "./Logo";
+import Button from "./Button";
+import PrimaryNav from "./PrimaryNav";
 
 export class Header extends Component {
     constructor(props) {

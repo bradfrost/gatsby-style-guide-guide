@@ -3,7 +3,7 @@ import GatsbyLink from "gatsby-link";
 import Helmet from "react-helmet";
 
 import Link from "../components/Link";
-import Card from "../components/card";
+import Card from "../components/Card";
 
 export default function Index({ data }) {
     const { edges: posts } = data.allMarkdownRemark;

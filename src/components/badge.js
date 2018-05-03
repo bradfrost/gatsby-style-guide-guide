@@ -5,6 +5,7 @@ if (status) {
 }
 
 const Badge = ({ status }) => {
+  
     if (status) {
       return (
         <span className={"c-badge c-badge--positive"}>{ status }</span>

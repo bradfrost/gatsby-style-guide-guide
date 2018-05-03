@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "gatsby-link";
-import PrimaryNavSubmenu from "./primary-nav-submenu";
+import PrimaryNavSubmenu from "./PrimaryNavSubmenu";
 
 const PrimaryNavItem = ({ label, href, hasSubnav }) => {
 

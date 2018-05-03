@@ -3,8 +3,8 @@ import GatsbyLink from "gatsby-link";
 import Helmet from "react-helmet";
 
 import Link from "../components/Link";
-import PageHeader from "../components/page-header";
-import Card from "../components/card";
+import PageHeader from "../components/PageHeader";
+import Card from "../components/Card";
 
 export default function ComponentDetail({ data }) {
     const { edges: posts } = data.allMarkdownRemark;

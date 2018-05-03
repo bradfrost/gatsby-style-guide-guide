@@ -1,5 +1,5 @@
 import React from "react";
-import PrimaryNavItem from "./primary-nav-item";
+import PrimaryNavItem from "./PrimaryNavItem";
 
 const PrimaryNav = ({ data }) => (
     <nav className="c-primary-nav" role="navigation">
