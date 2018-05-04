@@ -12,13 +12,13 @@ export default function ComponentDetail({ data }) {
         <div className="l-container">
             <PageHeader title="Components" description="This is a list of all the components" />
 
-            <ul class="c-card-list l-grid l-grid--3up">
+            <ul className="c-card-list l-grid l-grid--3up">
             {posts
                 .filter(post => post.node.frontmatter.group == 'components')
                 .filter(post => post.node.frontmatter.subgroup)
                 .map(({ node: post }) => {
                     return (
-                        <li class="l-grid__item">
+                        <li className="l-grid__item">
                             <Card href={"/components/"+post.frontmatter.subgroup} kicker={post.frontmatter.subgroup} title={post.frontmatter.title} key={post.id} />
                         </li>
                     );
@@ -30,7 +30,7 @@ export default function ComponentDetail({ data }) {
 
 export const pageQuery = graphql`
     query ComponentQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }) {
             edges {
                 node {
                     excerpt(pruneLength: 250)

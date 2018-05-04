@@ -9,12 +9,12 @@ export default function Index({ data }) {
     const { edges: posts } = data.allMarkdownRemark;
     return (
         <div className="blog-posts">
-            <ul class="c-card-list l-grid l-grid--3up">
+            <ul className="c-card-list l-grid l-grid--3up">
                 {posts
                     .filter(post => post.node.frontmatter.title.length > 0)
                     .map(({ node: post }) => {
                         return (
-                            <li class="l-grid__item">
+                            <li className="l-grid__item">
                                 <Card
                                     href={post.frontmatter.path}
                                     kicker="kicker"
@@ -32,10 +32,10 @@ export default function Index({ data }) {
 
 export const pageQuery = graphql`
     query IndexQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }) {
             edges {
                 node {
-                    excerpt(pruneLength: 250)
+                    excerpt
                     id
                     frontmatter {
                         title

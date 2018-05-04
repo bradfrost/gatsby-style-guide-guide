@@ -2,6 +2,7 @@
 layout: component-detail
 group: components
 subgroup: messaging
+status: complete
 path: /components/messaging/tooltip.html
 
 title: Tooltip
