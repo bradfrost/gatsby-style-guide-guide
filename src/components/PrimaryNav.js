@@ -6,7 +6,7 @@ const PrimaryNav = ({ data }) => (
         <ul className="c-primary-nav__list" role="tablist" aria-multiselectable="true">
             <PrimaryNavItem href="/getting-started" label="Getting Started" />
 			<PrimaryNavItem href="/guidelines" label="Guidelines" />
-			<PrimaryNavItem href="/components" label="Components" />
+			<PrimaryNavItem href="/components" label="Components" hasSubnav={true} />
 			<PrimaryNavItem href="/utilities" label="Utilities" />
 			<PrimaryNavItem href="/page-templates" label="Page Templates" />
 			<PrimaryNavItem href="/downloads" label="Downloads" />

@@ -9,14 +9,14 @@ const Table = ({ table, children }) => {
                     <th>Column title</th>
                     <th>Column title</th>
                 </tr>
-                
+
             </thead>
             <tbody className="c-table__body">
-                <tr class="c-table__row">
-                    <td class="c-table__cell">
+                <tr className="c-table__row">
+                    <td className="c-table__cell">
                         TD
                     </td>
-                    <td class="c-table__cell">
+                    <td className="c-table__cell">
                         TD
                     </td>
                 </tr>

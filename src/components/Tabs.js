@@ -3,9 +3,9 @@ import React from "react";
 const Tabs = ({ tabList, children }) => (
     <div className="c-tabs">
         <ul className="c-tabs__list">
-            {tabList.map(function(tabListItem) {
+            {tabList.map(function(tabListItem, index) {
                 return (
-                    <li className="c-tabs__item">
+                    <li className="c-tabs__item" key={index}>
                         <a className="c-tabs__link" href={tabListItem.href}>
                             {tabListItem.label}
                         </a>
