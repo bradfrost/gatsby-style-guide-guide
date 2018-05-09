@@ -1,18 +1,14 @@
 import React from "react";
 import Link from "gatsby-link";
 
-const style = {
-    display: 'block'
-};
-
-const PrimaryNavSubmenu = () => (
+const PrimaryNavSubSubmenu = () => (
     <ul className="c-primary-nav__sublist">
         <li className="c-primary-nav__subitem">
         <Link className="c-primary-nav__sublink">
-            TEST
+            <span className="c-primary-nav__text">TEST 1</span>
         </Link>
         </li>
 	</ul>
 );
 
-export default PrimaryNavSubmenu;
+export default PrimaryNavSubSubmenu;
