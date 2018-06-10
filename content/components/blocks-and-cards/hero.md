@@ -1,38 +1,31 @@
 ---
-path: /components/blocks-and-cards/hero
 layout: component-detail
 group: components
 subgroup: blocks-and-cards
+path: /components/blocks-and-cards/hero
 
 title: Hero
-status: In Progress
-description: Large-format unit to promote content with a high-impact image
+description: This is a hero.
+status: Not Started
+
 
 variations:
 - title: Default hero
-  description: Default hero that has no gradient overlay
+  description: Hero description
   styleModifier: c-hero
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: hero
-- title: Blue tint hero
-  description: Hero with a blue gradient overlay
-  styleModifier: c-hero c-hero--blue-tint
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: hero-blue-tint
-- title: Red tinted hero
-  description: Hero with a red gradient overlay
-  styleModifier: c-hero c-hero--red-tint
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: hero-red-tint
+  component: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
 
 classes:
 - className: c-hero
@@ -46,7 +39,7 @@ classes:
   description: Add to the `c-hero` element to replace the default gradient overlay with a solid, uniform tint.
 - className: c-hero__body
   required: yes
-  description: Apply to the container for the card body, which typically includes a title and description (see below) but can include any arbitrary markup including buttons for a call to action. The class manages the card's background gradient.
+  description: Apply to the container for the card body, Which typically includes a title and description (see below) but can include any arbitrary markup including buttons for a call to action. The class manages the card's background gradient.
 - className: c-hero__title
   recommended: yes
   description: Apply to the card's heading inside the card body. The recommended element for this class is `<h1>`.

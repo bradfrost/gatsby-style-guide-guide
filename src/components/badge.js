@@ -1,14 +1,18 @@
 import React from 'react';
-
-if (status) {
-  const styleModifier = "negative";
-}
+import classnames from 'classnames';
 
 const Badge = ({ status }) => {
+    
+    let badgeClass = classnames({
+        "c-badge": true,
+        "c-badge--positive": status === "Complete",
+        "c-badge--negative": status === "Deprecated" || "Not Started",
+        "c-badge--caution": status === "In Progress"
+    })
   
     if (status) {
       return (
-        <span className={"c-badge c-badge--positive"}>{ status }</span>
+        <span className={badgeClass}>{ status }</span>
       )
     }
 };

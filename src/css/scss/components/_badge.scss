@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #BADGE
+\*------------------------------------*/
+
+/**
+ * A badge is a small 
+ */
+ .c-badge {
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: .65rem;
+    margin-left: 4px;
+    padding: 4px;
+    vertical-align: middle; 
+}
+    
+.c-badge--negative {
+    background-color: #d82424;
+}
+    
+.c-badge--positive {
+    background-color: #00af53;
+}
+    
+.c-badge--caution {
+    background-color: #225896;
+}

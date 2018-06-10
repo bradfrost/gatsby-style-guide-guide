@@ -6,12 +6,10 @@ const Breadcrumbs = ({ group, subgroup }) => {
 		<ol className="c-breadcrumbs">
 
 			<li className="c-breadcrumbs__item">
-				<Link className="c-breadcrumbs__link" to={ group }>{ group }</Link>
+				<Link className="c-breadcrumbs__link" to={"/" + group }>{ group }</Link>
 			</li>
 
-			{subgroup ? <li className="c-breadcrumbs__item">
-				<Link className="c-breadcrumbs__link" to={ subgroup }>{ subgroup }</Link>
-			</li> : null}
+
 
 			
 		</ol>

@@ -1,24 +1,55 @@
 import React from "react";
 
-const Tabs = ({ tabList, children }) => (
-    <div className="c-tabs">
-        <ul className="c-tabs__list">
-            {tabList.map(function(tabListItem, index) {
-                return (
-                    <li className="c-tabs__item" key={index}>
-                        <a className="c-tabs__link" href={tabListItem.href}>
-                            {tabListItem.label}
-                        </a>
-                    </li>
-                );
-            })}
-        </ul>
-        <div className="c-tabs__body">
-            <div className="c-tabs__panel is-active" id="#panel-1">
-                {children}
+class Tabs extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentTab: 0
+        };
+        this.setCurrentTab.bind(this);
+    }
+
+    setCurrentTab(currentTab) {
+        this.setState({
+            currentTab: currentTab
+        });
+    }
+
+    render() {
+        return (
+            <div className={"c-tabs " + this.props.styleModifier }>
+                <ul className="c-tabs__list" role="tablist">
+                    {React.Children.map(this.props.children, (item, index) => {
+                        return (
+                            <li className={ 'c-tabs__list-item ' + (this.state.currentTab == index ? 'is-active' : '') } key={"tab-" + index }>
+                                <a
+                                    className="c-tabs__link"
+                                    onClick={e => {
+                                        this.setCurrentTab(index);
+                                        if (typeof window !== 'undefined') {
+                                            if(document.readyState !== "loading") {
+                                        	    setTimeout(Prism.highlightAll, 0);
+                                        	}
+                                        	else {
+                                        	    document.addEventListener('DOMContentLoaded', Prism.highlightAll);
+                                        	}
+                                        }
+                                    }}
+                                    href={"#tabs-" + index}>
+                                    {item.props.label}
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <div className="c-tabs__body">
+                    {this.props.children[this.state.currentTab]}
+                </div>
             </div>
-        </div>
-    </div>
-);
+        )
+    }
+
+};
 
 export default Tabs;

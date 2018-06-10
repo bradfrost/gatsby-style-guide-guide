@@ -17,7 +17,7 @@ export default function Template({ data, pathContext }) {
         <div className="blog-post-container">
             <Helmet title={`${post.frontmatter.title}`} />
 
-			<Breadcrumbs group={ post.frontmatter.group } />
+			<Breadcrumbs group={ post.frontmatter.group } subgroup={ post.frontmatter.subgroup } />
 
             <PageHeader
                 title={ post.frontmatter.title }
@@ -31,7 +31,7 @@ export default function Template({ data, pathContext }) {
             />
 
             <Tags list={post.frontmatter.tags || []} />
-            
+
             <div className="c-pagination">
                 {prev && (
                     <Link className="c-pagination__link" to={prev.frontmatter.path}>
@@ -53,13 +53,13 @@ export const pageQuery = graphql`
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html
             frontmatter {
-                date(formatString: "MMMM DD, YYYY")
                 path
                 tags
 				title
 				description
 				status
-				group
+                group
+                subgroup
             }
         }
     }

@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #INLINE FORM
+\*------------------------------------*/
+
+/**
+ * 1) An inline form displays an input and a button side-by-side.
+ * 2) Can be used for search, email newsletter signup, and other one-field forms
+ */
+.c-inline-form {
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.c-inline-form__input {
+    flex: 1;
+    padding: 0.5rem;
+}

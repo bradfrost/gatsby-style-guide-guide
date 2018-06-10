@@ -2,24 +2,29 @@
 layout: component-detail
 group: components
 subgroup: lists-and-collections
-path: /components/lists-and-collections/card-list.html
+path: /components/lists-and-collections/card-list
 
 title: Card list
 description: Card description
+status: Not Started
 
 variations:
 - title: Default card list
   description: Card list description
   styleModifier: c-card-list
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card
+  component: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
 
 classes:
 - className: c-hero

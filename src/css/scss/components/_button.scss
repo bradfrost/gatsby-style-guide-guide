@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+/**
+ * 1) Button or link that has functionality to it
+ */
+ .c-btn {
+ 	display: inline-block;
+ 	background: $color-gray-73;
+ 	border-radius: $border-radius;
+ 	cursor: pointer;
+ 	color: $color-white;
+ 	line-height: 1;
+ 	font-weight: bold;
+ 	padding: 1rem 2rem;
+ 	border: 0;
+ 	box-shadow: none; /* 2 */
+ 	text-align: center;
+ 	transition: all $anim-fade-quick $anim-ease;
+
+ 	&:hover, &:focus {
+ 		background: $color-black;
+ 		color: $color-white;
+ 	}
+}
+
+/**
+ * Small button
+ */
+.c-btn--small {
+	padding: .375rem .75rem;
+}
+
+.c-btn__text {
+    display: block;
+}
+
+.c-btn__icon {
+    position: relative;
+    bottom: 2px;
+    display: block;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5rem;
+}

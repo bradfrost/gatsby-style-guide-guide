@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #WRAPPER
+\*------------------------------------*/
+
+/**
+ * 1) The main wrapper <div> for the website 
+ */
+
+.c-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

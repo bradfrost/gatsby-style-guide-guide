@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="602px" height="535px" viewBox="0 0 602 535" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="288" height="276" rx="4"></rect>
+        <filter x="-15.3%" y="-10.1%" width="130.6%" height="131.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="16" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="288" height="1"></rect>
+        <filter x="-0.1%" y="-25.0%" width="100.2%" height="150.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0.5" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.6   0 0 0 0 0.6   0 0 0 0 0.6  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="border-color" transform="translate(146.000000, 42.000000)">
+            <g id="Card/UI/Container">
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#D9D9D9" stroke-width="0.5" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.25" y="0.25" width="287.5" height="275.5" rx="4"></rect>
+                </g>
+                <g id="thumbs-up" stroke-width="1" fill-rule="evenodd" transform="translate(270.900000, -50.025000)"></g>
+            </g>
+            <g id="Text-Default" transform="translate(0.000000, 308.000000)">
+                <g id="Form/UI/Field" transform="translate(0.000000, 28.000000)" fill="#FFFFFF" stroke="#B5B5B5" stroke-width="0.5">
+                    <rect id="Rectangle-10" x="0.25" y="0.25" width="259.5" height="39.5" rx="4"></rect>
+                </g>
+                <path d="M2.093,16 L1.014,16 L1.014,7.329 L2.093,7.329 L2.093,16 Z M9.295,16 L8.333,16 L8.333,11.892 C8.333,10.774 7.761,10.436 6.916,10.436 C6.149,10.436 5.434,10.904 5.057,11.411 L5.057,16 L4.082,16 L4.082,9.721 L5.057,9.721 L5.057,10.631 C5.499,10.098 6.357,9.565 7.306,9.565 C8.606,9.565 9.295,10.228 9.295,11.593 L9.295,16 Z M14.352,16.156 C13.494,16.156 12.753,15.74 12.233,15.051 L12.233,18.392 L11.258,18.392 L11.258,9.721 L12.233,9.721 L12.233,10.657 C12.688,10.02 13.468,9.565 14.352,9.565 C16.003,9.565 17.147,10.813 17.147,12.854 C17.147,14.882 16.003,16.156 14.352,16.156 Z M14.105,15.285 C15.366,15.285 16.12,14.245 16.12,12.854 C16.12,11.463 15.366,10.436 14.105,10.436 C13.338,10.436 12.571,10.891 12.233,11.437 L12.233,14.271 C12.571,14.817 13.338,15.285 14.105,15.285 Z M23.907,16 L22.932,16 L22.932,15.116 C22.451,15.662 21.632,16.156 20.696,16.156 C19.383,16.156 18.694,15.506 18.694,14.154 L18.694,9.721 L19.669,9.721 L19.669,13.855 C19.669,14.96 20.228,15.285 21.086,15.285 C21.84,15.285 22.568,14.843 22.932,14.336 L22.932,9.721 L23.907,9.721 L23.907,16 Z M27.456,16.156 C26.52,16.156 26.052,15.623 26.052,14.687 L26.052,10.579 L25.012,10.579 L25.012,9.721 L26.052,9.721 L26.052,8.005 L27.04,8.005 L27.04,9.721 L28.314,9.721 L28.314,10.579 L27.04,10.579 L27.04,14.479 C27.04,14.947 27.248,15.285 27.664,15.285 C27.95,15.285 28.197,15.155 28.327,15.012 L28.613,15.753 C28.366,15.987 28.015,16.156 27.456,16.156 Z M34.164,16 L33.085,16 L33.085,7.329 L38.766,7.329 L38.766,8.291 L34.164,8.291 L34.164,11.086 L38.675,11.086 L38.675,12.048 L34.164,12.048 L34.164,16 Z M40.703,8.824 C40.339,8.824 40.04,8.538 40.04,8.174 C40.04,7.81 40.339,7.511 40.703,7.511 C41.067,7.511 41.353,7.81 41.353,8.174 C41.353,8.538 41.067,8.824 40.703,8.824 Z M41.184,16 L40.209,16 L40.209,9.721 L41.184,9.721 L41.184,16 Z M45.981,16.156 C44.109,16.156 42.77,14.817 42.77,12.854 C42.77,11.034 44.07,9.565 45.864,9.565 C47.762,9.565 48.88,11.047 48.88,12.932 L48.88,13.179 L43.81,13.179 C43.888,14.362 44.707,15.35 46.059,15.35 C46.787,15.35 47.502,15.064 48.009,14.544 L48.477,15.181 C47.84,15.805 46.995,16.156 45.981,16.156 Z M47.918,12.451 C47.905,11.528 47.281,10.371 45.851,10.371 C44.512,10.371 43.849,11.502 43.797,12.451 L47.918,12.451 Z M51.428,16 L50.453,16 L50.453,7.329 L51.428,7.329 L51.428,16 Z M58.903,16 L57.928,16 L57.928,15.064 C57.46,15.701 56.693,16.156 55.809,16.156 C54.171,16.156 53.014,14.908 53.014,12.867 C53.014,10.852 54.171,9.565 55.809,9.565 C56.654,9.565 57.421,9.981 57.928,10.67 L57.928,7.329 L58.903,7.329 L58.903,16 Z M56.056,15.285 C56.823,15.285 57.59,14.83 57.928,14.284 L57.928,11.45 C57.59,10.904 56.823,10.436 56.056,10.436 C54.782,10.436 54.028,11.476 54.028,12.867 C54.028,14.258 54.782,15.285 56.056,15.285 Z" id="Label" fill="#444444"></path>
+            </g>
+            <rect id="Rectangle-5" fill="#F2F2F2" x="24" y="24" width="155" height="16" rx="4"></rect>
+            <rect id="Rectangle-5" fill="#F2F2F2" x="24" y="48" width="93" height="16" rx="4"></rect>
+            <rect id="Rectangle-5" fill="#F2F2F2" x="24" y="118" width="230" height="16" rx="4"></rect>
+            <rect id="Rectangle-5" fill="#D9D9D9" x="24" y="150" width="211" height="16" rx="4"></rect>
+            <rect id="Rectangle-5" fill="#F2F2F2" x="24" y="182" width="185" height="16" rx="4"></rect>
+            <rect id="Rectangle-5" fill="#D9D9D9" x="24" y="214" width="132" height="16" rx="4"></rect>
+            <g id="Line-Separator/Dark" transform="translate(0.000000, 416.000000)" fill="black" fill-opacity="1">
+                <g id="Divider">
+                    <use filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

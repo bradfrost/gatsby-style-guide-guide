@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+
+/**
+ * 1) Block containing headline, description text, that serves as a primary content area
+ * 2) Background image set inline
+ */
+.c-hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 2rem;
+	min-height: 50vh;
+	background-color: #fff;
+	background-image: none; /* 2 */
+	background-size: contain;
+}
+
+.c-hero__body {
+    padding: 2rem;
+    text-align: center;
+}
+
+/**
+ * Hero Title
+ */
+.c-hero__title {
+	max-width: 45rem;
+	margin: 0 auto 2rem;
+    font-size: 3.5rem;
+	line-height: 1em;
+}
+
+/**
+ * Hero Description
+ */
+.c-hero__desc {
+	color: $color-gray-50;
+	font-size: $font-size-med;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+	max-width: 35rem;
+}
+
+/**
+ * Hero Meta Information
+ * 1) A lighter small treatment
+ */
+.c-hero__meta {
+    color: $color-gray-27;
+}

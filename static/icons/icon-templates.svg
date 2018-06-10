@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Templates</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="70" height="53" rx="2"></rect>
+        <filter x="-22.9%" y="-15.1%" width="145.7%" height="160.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="100%" y1="101.947343%" x2="0%" y2="0%" id="linearGradient-3">
+            <stop stop-color="#0076AE" offset="0%"></stop>
+            <stop stop-color="#3B1B65" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon/Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(5.000000, 14.000000)">
+            <g id="Rectangle-8">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <rect stroke="#D9D9D9" stroke-width="0.5" stroke-linejoin="square" fill="#F8F9FB" fill-rule="evenodd" x="0.25" y="0.25" width="69.5" height="52.5" rx="2"></rect>
+            </g>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="5" y="34" width="14" height="14" rx="2"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="5" y="14" width="35" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="5" y="18" width="22" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="5" y="22" width="33" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="5" y="29" width="9" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="56" y="14" width="9" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="27" y="29" width="9" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="49" y="29" width="9" height="2" rx="1"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="27" y="34" width="14" height="14" rx="2"></rect>
+            <rect id="Rectangle-8" fill="#D9D9D9" x="49" y="34" width="14" height="14" rx="2"></rect>
+            <path d="M2,0 L68,0 C69.1045695,-2.02906125e-16 70,0.8954305 70,2 L70,10 L0,10 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="Rectangle-8" fill="url(#linearGradient-3)"></path>
+        </g>
+    </g>
+</svg>

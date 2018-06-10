@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="16px" viewBox="0 0 25 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>chevron-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chevron-right" transform="translate(12.000000, 8.000000) rotate(90.000000) translate(-12.000000, -8.000000) translate(4.000000, -5.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="chevron-down" transform="translate(8.000000, 12.642858) rotate(-90.000000) translate(-8.000000, -12.642858) translate(-4.500000, 4.642858)">
+                <polygon id="Shape" points="21.572853 0.614826948 24.6109673 2.86161876 12.8241658 15.8064214 0.230014971 2.90811952 3.18042901 0.568326193 12.7196014 10.3378714"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/TK</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="62.1066667"></rect>
+        <filter x="-37.5%" y="-12.9%" width="175.0%" height="177.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.529411765   0 0 0 0 0.925490196   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Icon/TK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Adobe_Typekit_CC_icon" transform="translate(8.000000, 9.000000)" fill-rule="nonzero">
+            <g id="Rectangle-path">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#87EC00" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <rect id="Rectangle-path" fill="#152600" x="3.2" y="3.2" width="57.4133333" height="55.52"></rect>
+            <path d="M20.6933333,20.32 L13.7333333,20.32 C13.5466667,20.32 13.36,20.1333333 13.36,19.9466667 L13.7333333,16.56 C13.7333333,16.3733333 13.92,16.1866667 14.1066667,16.1866667 L31.04,16.1866667 C31.2266667,16.1866667 31.2266667,16.1866667 31.4133333,16.3733333 C31.4133333,16.3733333 31.4133333,16.3733333 31.4133333,16.56 L31.7866667,19.9466667 C31.7866667,20.1333333 31.7866667,20.1333333 31.6,20.32 L25.04,20.32 L25.04,43.84 C25.04,44.0266667 24.8533333,44.2133333 24.6666667,44.2133333 L20.9066667,44.2133333 C20.72,44.2133333 20.5333333,44.0266667 20.5333333,43.84 L20.6933333,20.32 Z M38.96,32.9333333 L45.1733333,24.4533333 C45.1733333,24.2666667 45.36,24.2666667 45.5466667,24.2666667 L49.68,24.2666667 C50.0533333,24.2666667 50.0533333,24.4533333 49.8666667,24.64 C48.9333333,25.9466667 44.4,31.4133333 42.9066667,33.12 L42.9066667,33.4933333 L50.8,43.84 C50.9866667,44.0266667 50.8,44.2133333 50.6133333,44.2133333 L45.92,44.2133333 C45.7333333,44.2133333 45.5466667,44.0266667 45.5466667,43.84 C44.24,42.1333333 40.8533333,37.2533333 39.1466667,34.9866667 L39.1466667,43.84 C39.1466667,44.0266667 39.1466667,44.0266667 38.96,44.2133333 L35.0133333,44.2133333 C34.8266667,44.2133333 34.8266667,44.2133333 34.64,44.0266667 C34.64,44.0266667 34.64,44.0266667 34.64,43.84 L34.64,16.56 C34.64,16.3733333 34.64,16.3733333 34.8266667,16.1866667 L38.7733333,16.1866667 C38.96,16.1866667 39.1466667,16.3733333 39.1466667,16.56 L38.96,32.9333333 Z" id="Shape" fill="#87EC00"></path>
+        </g>
+    </g>
+</svg>

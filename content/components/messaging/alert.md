@@ -2,24 +2,29 @@
 layout: component-detail
 group: components
 subgroup: messaging
-path: /components/messaging/alert.html
+path: /components/messaging/alert
 
 title: Alert
 description: Alert description
+status: Complete
 
 variations:
-- title: Alert
+- title: Default alert
   description: Alert description
   styleModifier: c-alert
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card
+  component: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
 
 classes:
 - className: c-hero

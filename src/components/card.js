@@ -1,25 +1,42 @@
 import React from 'react';
 import Link from "gatsby-link";
+import Button from "./Button"
+import ButtonGroup from "./ButtonGroup"
+import markdownIt from 'markdown-it';
 
-const Card = ({ href, kicker, title, description }) => (
-	<Link to={ href } className="c-card">
+const Card = ({ href, header, title, description, cardImg, cardImgAlt, footer}) => {
+	const md = markdownIt({
+	  html: true,
+	  linkify: true
+  });
+	return (
+		<a href={href} className="c-card">
+			{ header &&
+			<header className="c-card__header">
+					{header}
+			</header>
+			}
 
-		<div className="c-card__body">
-
-			<div className="c-card__kicker">
-				{ kicker }
-			</div>
-
+			<div className="c-card__body">
 			<h2 className="c-card__title">
-				<span className="c-card__title-text">{ title }</span>
+			  <span className="c-card__title-text">{title}</span>
 			</h2>
 
-			<p className="c-card__desc">{ description }</p>
+				{ description &&
+					<div className="c-card__desc" dangerouslySetInnerHTML={{ __html: md.render(description) }} />
+				}
 
-		</div>
+			</div>
 
-	</Link>
+			{ footer &&
+				<div className="c-card__footer">
+					{footer}
+				</div>
+			}
 
-);
+		</a>
+)
+
+};
 
 export default Card;

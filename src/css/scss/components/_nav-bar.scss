@@ -1,0 +1,185 @@
+/*------------------------------------*\
+    #NAVBAR
+\*------------------------------------*/
+
+/**
+ * Container for primary navigation
+ */
+.c-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3.5rem;
+    background: linear-gradient(to right, #250056, #0076ae);
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 0 6rem;
+    white-space: nowrap;
+  }
+
+  .c-navbar__navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 84px
+  }
+
+  .c-navbar__navbar-brand-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .c-navbar__brand-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+  }
+
+  .c-navbar__navbar-menu {
+    /*something here*/
+  }
+
+  .c-navbar__navbar-menu-items {
+    display: flex;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0;
+  }
+
+  .c-navbar__navbar-menu-item {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    line-height: 1.5;
+  }
+
+  .c-icon-navitem-dropdown {
+    padding: 4px 8px 0 8px;
+    opacity: .9;
+  }
+
+  .c-navbar__navbar-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 100%;
+  }
+
+  .c-navbar__navbar-menu-item--dropdown:hover .c-dropdown {
+    display: block;
+  }
+
+  .c-navbar__navbar-menu-item--dropdown:hover > .c-icon-navitem-dropdown {
+    transform: rotate3d(1, 0, 0, 180deg);
+    transition-duration: .5s;
+  }
+
+  .c-navbar__navbar-menu-item--dropdown:not(:hover) > .c-icon-navitem-dropdown {
+    transform: rotate3d(0, 0, 0, 180deg);
+    transition-duration: .5s;
+  }
+
+  .c-dropdown-item__flyout:hover .c-dropdown-flyout {
+    display: block;
+  }
+  .c-navbar__navbar-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .c-navbar__navbar-actions-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .c-navbar--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Dropdowns */
+  .c-dropdown {
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    background-color: white;
+    color: black;
+    list-style-type: none;
+    margin-left: -1rem;
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 0px 0px 5px 5px;
+    border: 0.5px solid #d9d9d9;
+    padding: 8px 0;
+  }
+
+  .c-dropdown-item {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .c-dropdown-item__disabled {
+    color: #d9d9d9;
+  }
+
+  .c-dropdown-item:hover {
+    background-color: rgba(41, 125, 253, 0.08);
+    cursor: pointer;
+  }
+
+  .c-dropdown-item__disabled:hover {
+    background-color: #ffffff;
+  }
+
+  .c-dropdown-flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -1px;
+    padding: 8px 0;
+    background-color: white;
+    color: black;
+    list-style-type: none;
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    border: 0.5px solid #d9d9d9;
+  }
+
+  .c-dropdown--open {
+    display: block;
+    padding: 0;
+  }
+
+  /* Only for use in CodePen */
+
+  .c-dropdown-item .material-icons {
+    padding-right: 1rem;
+  }
+
+  .c-dropdown-item .materials-icons--position-right {
+    position: absolute;
+    right: 0;
+  }
+  .polyfill {
+    fill: #fff;
+  }
+
+  .polyfill-opaque {
+    fill: #fff;
+    opacity: 0.5;
+  }
+  .test-body {
+    margin-top: 80px;
+    padding: 3rem 6rem;
+  }
+  

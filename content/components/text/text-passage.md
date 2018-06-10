@@ -2,25 +2,28 @@
 layout: component-detail
 group: components
 subgroup: text
-path: /components/text/text-passage.html
+path: /components/text/text-passage
 
 title: Text passage
-description: A passage of text, including various components (i.e. article, blog post)
+description: Text passage description
+status: Not Started
 
 variations:
 - title: Text passage
   description: Text passage description
-  styleModifier: c-text-passage
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card  
+  component: card
 
 usage:
-- title: When to use
-  description: Usage description.
-- title: When to consider an alternative
-  description: Alternative usage.
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
 
+use:
+- title: When to use
+  description: Usage description
+
+altUse:
+- title: When to consider an alternative
+  description: Alternative usage
 classes:
 - className: c-hero
   required : yes

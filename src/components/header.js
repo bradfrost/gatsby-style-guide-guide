@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import classnames from 'classnames';
 import Logo from "./Logo";
 import Button from "./Button";
 import PrimaryNav from "./PrimaryNav";
@@ -19,8 +20,14 @@ export class Header extends Component {
     }
 
     render() {
+        let headerClass = classnames({
+            "c-header": true,
+            "ads-u-margin-bottom-none": this.props.styleModifier === "ads-u-margin-bottom-none",
+            "c-header--vertical": this.props.styleModifier === "c-header--vertical"
+        })
+
         return (
-            <header className="c-header c-header--vertical" role="banner">
+            <header className={headerClass} status="Complete" role="banner">
                 <div className="c-header__inner">
                     <Logo siteTitle={this.props.siteTitle} />
                     <Button
@@ -35,7 +42,7 @@ export class Header extends Component {
                                 : "c-header__nav-container is-active"
                         }
                     >
-                        <PrimaryNav />
+                        <PrimaryNav data={this.props.navData} />
                     </div>
                 </div>
             </header>

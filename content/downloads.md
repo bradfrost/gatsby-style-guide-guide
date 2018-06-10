@@ -1,6 +1,7 @@
 ---
 path: /downloads
 title: Downloads
+layout: page
 description: The downloads page features links to downloads
 tags: ["downloads"]
 ---

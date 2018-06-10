@@ -2,24 +2,29 @@
 layout: component-detail
 group: components
 subgroup: charts-and-graphs
-path: /components/charts-and-graphs/bar-graph.html
+path: /components/charts-and-graphs/bar-graph
 
 title: Bar graph
 description: Bar graph description
+status: Complete
 
 variations:
-- title: Bar graph
-  description: Bar graph description
+- title: Default bar graph
+  description: Bar graph descriptions
+  component: card
   styleModifier: c-bar-graph
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
 
 classes:
 - className: c-hero
@@ -45,4 +50,5 @@ fine-print:
 - version: 0.3
   update: April 27, 2017
   owner: Jane Doe
+
 ---

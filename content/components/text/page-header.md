@@ -2,24 +2,29 @@
 layout: component-detail
 group: components
 subgroup: text
-path: /components/text/page-header.html
+path: /components/text/page-header
 
 title: Page header
-description: Block that consists of of a page header title and description. Used to headline a page.
+description: Page header description
+status: Not Started
 
 variations:
 - title: Page header
   description: Page header description
   styleModifier: c-page-header
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card
+  component: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
 
 classes:
 - className: c-hero

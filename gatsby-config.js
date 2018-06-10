@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
   siteMetadata: {
-    author: 'Brad Frost',
+    author: 'Ian Frost',
     title: `Style Guide Guide`,
   },
   plugins: [

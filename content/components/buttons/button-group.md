@@ -2,24 +2,30 @@
 layout: component-detail
 group: components
 subgroup: buttons
-path: /components/buttons/button-group.html
+path: /components/buttons/button-group
 
 title: Button group
 description: Button group description
+status: Not Started
 
 variations:
 - title: Button group
   description: Button group description
   styleModifier: c-btn-group
-  includeClassification: molecules
-  includeCategory: 02-blocks
-  includeName: card
+  component: card
 
 usage:
+- description: |
+     This is a text passage to describe some of the usage for this pattern.
+
+use:
 - title: When to use
-  description: Usage description.
+  description: Usage description
+
+altUse:
 - title: When to consider an alternative
-  description: Alternative usage.
+  description: Alternative usage
+
 
 classes:
 - className: c-hero

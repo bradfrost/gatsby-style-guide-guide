@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+/**
+ * Global block at the top of each page containing the navigation, logo, and other potential utility nav
+ */
+.c-header {
+    position: relative;
+    background-color: $color-gray-07;
+    color: $color-white;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.c-header--vertical {
+    margin-bottom: 0;
+    background-color: $color-gray-07;
+
+    @media all and (min-width: $bp-large) {
+        height: auto;
+    }
+}
+
+/**
+ * Header inner wrapper
+ * 1) Align header items in horizontal configuration
+ * 2) Vertically-align logo, primary nav items, and other stuff.
+ */
+.c-header__inner {
+    display: flex; /* 1 */
+    align-items: center; /* 2 */
+    padding: 1rem 0;
+
+    .c-header--vertical & {
+        @media all and (min-width: $bp-large) {
+            display: block;
+            min-height: 100vh;
+        }
+    }
+}
+
+.c-header__nav-btn.c-header__nav-btn {
+    margin-left: auto;
+
+    @media all and (min-width: $bp-large) {
+        display: none;
+    }
+}
+
+/**
+ * Header navigation conntainer
+ * 1) Contains the primary navigation and other possible patterns
+ */
+.c-header__nav-container {
+	display: none;
+	width: 100%;
+
+	@media all and (min-width: $bp-large) {
+		display: block;
+		margin-left: auto;
+	}
+
+	/**
+	 * Header navigation conntainer within vertical header
+	 */
+	.c-header--vertical & {
+		@media all and (min-width: $bp-large) {
+			margin-left: 0;
+		}
+	}
+}
+
+/**
+ * Active header nav container
+ */
+.c-header__nav-container.is-active {
+	display: block;
+	position: absolute;
+	background: $color-gray-07;
+	top: 100%;
+	left: 0;
+    padding: 0 1rem;
+	width: 100%;
+	z-index: 5;
+
+	@media all and (min-width: $bp-large) {
+		display: block;
+		position: static;
+		padding: 0;
+		margin-left: auto;
+		width: inherit;
+	}
+
+	/**
+	 * Active header nav container within vertical header
+	 */
+	.c-header--vertical &{
+		@media all and (min-width: $bp-large) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+}

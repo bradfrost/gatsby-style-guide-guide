@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/GitLab</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M63.4307982,25.0685585 L59.8748413,36.0123862 L52.8274436,57.7023641 C52.4649489,58.8182351 50.8861103,58.8182351 50.5234436,57.7023641 L43.4758739,36.0123862 L20.073724,36.0123862 L13.0259822,57.7023641 C12.6634876,58.8182351 11.0846489,58.8182351 10.7219822,57.7023641 L3.67458456,36.0123862 L0.1187997,25.0685585 C-0.20567341,24.070365 0.149767441,22.9768597 0.998799679,22.3599134 L31.7747129,0 L62.5507982,22.3599134 C63.3998304,22.9768597 63.7550992,24.070365 63.4307982,25.0685585" id="path-1"></path>
+        <filter x="-37.8%" y="-41.0%" width="175.5%" height="182.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.988235294   0 0 0 0 0.42745098   0 0 0 0 0.149019608  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Icon/GitLab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#FFFFFF" cx="61" cy="20" r="2"></circle>
+        <g id="g44" transform="translate(39.963547, 95.628029) scale(1, -1) translate(-39.963547, -95.628029) translate(10.144999, 68.107868)"></g>
+        <g id="g72" transform="translate(21.381676, 78.755369) scale(1, -1) translate(-21.381676, -78.755369) translate(13.639741, 68.170691)"></g>
+        <g id="g84" transform="translate(58.585530, 78.755369) scale(1, -1) translate(-58.585530, -78.755369) translate(50.843595, 68.170691)"></g>
+        <g id="Group" transform="translate(8.000000, 11.000000)" fill-rule="nonzero">
+            <g id="path46" transform="translate(31.774763, 29.269634) scale(1, -1) translate(-31.774763, -29.269634) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FC6D26" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <polygon id="path50" fill="#E24329" transform="translate(31.967828, 40.406193) scale(1, -1) translate(-31.967828, -40.406193) " points="31.9678277 22.4 31.9678277 22.4 43.6689886 58.4123862 20.2666667 58.4123862"></polygon>
+            <polygon id="path58" fill="#FC6D26" transform="translate(18.316731, 40.406107) scale(1, -1) translate(-18.316731, -40.406107) " points="32.366795 22.4 20.6656339 58.4122142 4.26666667 58.4122142"></polygon>
+            <path d="M3.67468173,58.4122142 L0.118724829,47.4683864 C-0.205576238,46.470193 0.149692571,45.3766876 0.998896851,44.7599134 L31.77481,22.4 L3.67468173,58.4122142 Z" id="path66" fill="#FCA326" transform="translate(15.887405, 40.406107) scale(1, -1) translate(-15.887405, -40.406107) "></path>
+            <path d="M3.73333333,0 L20.1323007,0 L13.0847309,21.6899779 C12.7220643,22.8060209 11.1432256,22.8060209 10.780731,21.6899779 L3.73333333,0 Z" id="path74" fill="#E24329" transform="translate(11.932817, 11.263505) scale(1, -1) translate(-11.932817, -11.263505) "></path>
+            <path d="M43.7333333,0 L60.1323007,0 L53.0847309,21.6899779 C52.7220643,22.8060209 51.1432256,22.8060209 50.780731,21.6899779 L43.7333333,0 Z" id="path74" fill="#E24329" transform="translate(51.932817, 11.263505) scale(1, -1) translate(-51.932817, -11.263505) "></path>
+            <polygon id="path78" fill="#FC6D26" transform="translate(46.050064, 40.406107) scale(1, -1) translate(-46.050064, -40.406107) " points="32 22.4 43.701161 58.4122142 60.1001284 58.4122142"></polygon>
+            <path d="M60.1001283,58.4122142 L63.6560852,47.4683864 C63.9803862,46.470193 63.6251175,45.3766876 62.7759132,44.7599134 L32,22.4 L60.1001283,58.4122142 Z" id="path82" fill="#FCA326" transform="translate(47.887405, 40.406107) scale(1, -1) translate(-47.887405, -40.406107) "></path>
+        </g>
+    </g>
+</svg>

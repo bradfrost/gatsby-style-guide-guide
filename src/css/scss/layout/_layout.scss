@@ -1,0 +1,199 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Layout Container
+ * 1) Caps the width of the content to the maximum width
+ *    and centers the container
+ */
+.l-container {
+	max-width: $l-max-width;
+	margin: 0 auto;
+}
+
+/**
+ *
+ * 1) This narrow layout container is for lists, forms,
+ *    and other singular objects that aren't dashboard-y
+ *    kinds of displays
+ */
+.l-linelength-container {
+	margin: 0 auto;
+    max-width: $l-linelength-width;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+/**
+ * Grid Container
+ */
+.l-grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	@supports (display: grid) {
+		display: grid;
+		grid-gap: 3rem 2rem;
+		margin: 0;
+	}
+}
+
+/**
+ * 2up Grid and 2up-expand-first grid
+ */
+.l-grid--2up {
+	margin: 0 -0.5rem;
+
+	@supports (display: grid) {
+		grid-template-columns: 1fr;
+		margin: 0;
+
+		@media all and (min-width: $bp-med) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+.l-grid--2up-wide {
+	grid-gap: 10rem;
+}
+
+/**
+ * 2up Grid and 2up-expand-first grid
+ */
+.l-grid--3up {
+	margin: 0 -0.5rem;
+
+	@supports (display: grid) {
+		grid-template-columns: repeat(auto-fill, minmax(285px, 1fr) );
+		margin: 0;
+	}
+}
+
+/**
+ * 4up Grid and 2up-expand-first grid
+ */
+.l-grid--4up {
+	margin: 0 -0.5rem;
+
+	@supports (display: grid) {
+		grid-template-columns: repeat(auto-fill, minmax(285px, 1fr) );
+		margin: 0;
+
+		@media all and (min-width: $bp-med) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media all and (min-width: $bp-large) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		@media all and (min-width: $bp-xl) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+}
+
+/**
+ * Grid Item
+ */
+.l-grid__item {
+	.l-grid--2up & {
+		@media all and (min-width: $bp-med) {
+			width: 50%;
+		}
+
+		@supports (display: grid) {
+			width: 100%;
+		}
+	}
+
+	.l-grid--3up & {
+		@media all and (min-width: $bp-med) {
+			width: 50%;
+		}
+
+		@media all and (min-width: $bp-large) {
+			width: 33.33%;
+		}
+
+		@supports (display: grid) {
+			width: 100%;
+		}
+	}
+
+	/**
+	 * 4up Grid and 2up-expand-first grid
+	 */
+	.l-grid--4up {
+
+		@media all and (min-width: $bp-med) {
+			width: 50%;
+		}
+
+		@media all and (min-width: $bp-large) {
+			width: 33.33%;
+		}
+
+		@media all and (min-width: $bp-xl) {
+			width: 25%;
+		}
+
+
+		@supports (display: grid) {
+			width: 100%;
+		}
+	}
+}
+
+/**
+ * Main section
+ * 1) The main section is the primary content container
+ */
+.l-page-layout__main {
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	/**
+	 * Main section of 2 column fixed layout
+	 * 1) Margin left equals width of the fixed positioned sidebar
+	 */
+	.l-page-layout--two-column-fixed > & {
+		height: 100vh;
+
+		@media all and (min-width: $bp-large) {
+			margin-left: 18rem; /* 1 */
+		}
+	}
+}
+
+/**
+ * Secondary section
+ * 1) The secondary section is an auxiliary container
+ *    Otherwise known as "sidebar", but we try to
+ *    avoid that term to be mindful of the fact in
+ *    responsive environments "sidebar"
+ */
+.l-page-layout__secondary {
+	/**
+	 * Secondary section in a two-column fixed layout
+	 * 1) This is a fixed element
+	 */
+	.l-page-layout--two-column-fixed > & {
+		@media all and (min-width: $bp-large) {
+			position: fixed;
+			z-index: 2;
+			overflow: auto;
+			width: 18rem;
+			height: 100vh;
+		}
+	}
+}

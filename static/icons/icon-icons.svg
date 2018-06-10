@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Icons</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-4.91595655%" y1="-19.4841055%" x2="111.988769%" y2="109.84412%" id="linearGradient-1">
+            <stop stop-color="#F60663" offset="0%"></stop>
+            <stop stop-color="#5F0C71" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="30" cy="30" r="30"></circle>
+        <filter x="-40.0%" y="-13.3%" width="180.0%" height="180.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.549019608   0 0 0 0 0.0392156863   0 0 0 0 0.42745098  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Icon/Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar" transform="translate(10.000000, 10.000000)">
+            <g id="base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <rect id="Path" fill="#000000" x="9.375" y="22.5" width="3.75" height="9.375" rx="1.875"></rect>
+            <rect id="Path" fill="#000000" x="46.875" y="22.5" width="3.75" height="9.375" rx="1.875"></rect>
+            <ellipse id="Path" stroke="#000000" fill="#FFFFFF" cx="30" cy="40.3125" rx="16.375" ry="9.8125"></ellipse>
+            <ellipse id="Path" stroke="#000000" fill="#FFFFFF" cx="30" cy="27.1875" rx="18.25" ry="17.3125"></ellipse>
+            <path d="M30,40.75 C38.031592,40.75 44.5,35.7100321 44.5,29.5625 C44.5,23.9953463 39.0419682,21.125 30,21.125 C20.9580318,21.125 15.5,23.9953463 15.5,29.5625 C15.5,35.7100321 21.968408,40.75 30,40.75 Z" id="Path" stroke="#444444" fill="#000000"></path>
+            <rect id="Path" fill="#4A4A4A" x="28.125" y="9.375" width="3.75" height="7.5" rx="1.875"></rect>
+            <rect id="Path" fill="#4A4A4A" x="33.75" y="11.25" width="1.875" height="5.625" rx="0.9375"></rect>
+            <rect id="Path" fill="#4A4A4A" x="24.375" y="11.25" width="1.875" height="5.625" rx="0.9375"></rect>
+            <path d="M35.625,26.25 C36.25,26.5625 36.875,26.71875 37.5,26.71875 C38.125,26.71875 38.75,26.5625 39.375,26.25 C39.0625,26.875 38.90625,27.5 38.90625,28.125 C38.90625,28.75 39.0625,29.375 39.375,30 C38.75,29.6875 38.125,29.53125 37.5,29.53125 C36.875,29.53125 36.25,29.6875 35.625,30 C35.9375,29.375 36.09375,28.75 36.09375,28.125 C36.09375,27.5 35.9375,26.875 35.625,26.25 Z" id="Path" fill="#FFFFFF" transform="translate(37.500000, 28.125000) rotate(45.000000) translate(-37.500000, -28.125000) "></path>
+        </g>
+    </g>
+</svg>

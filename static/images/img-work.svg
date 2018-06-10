@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="702px" height="447px" viewBox="0 0 702 447" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="702" height="447"></rect>
+            <g id="img-work" transform="translate(11.000000, 72.000000)">
+                <g id="Group" transform="translate(370.000000, 0.000000)">
+                    <circle id="Oval-2" stroke="#D9D9D9" stroke-width="20" cx="160" cy="160" r="150"></circle>
+                    <path d="M160,320 C154.477153,320 150,315.522847 150,310 C150,304.477153 154.477153,300 160,300 C237.319865,300 300,237.319865 300,160 C300,82.680135 237.319865,20 160,20 C82.680135,20 20,82.680135 20,160 C20,165.522847 15.5228475,170 10,170 C4.4771525,170 0,165.522847 0,160 C0,71.63444 71.63444,0 160,0 C248.36556,0 320,71.63444 320,160 C320,248.36556 248.36556,320 160,320 Z" id="Oval-2" fill="#DF216D" fill-rule="nonzero" transform="translate(160.000000, 160.000000) scale(-1, 1) rotate(-180.000000) translate(-160.000000, -160.000000) "></path>
+                </g>
+                <g id="20" transform="translate(501.000000, 102.000000)" fill="#333333" font-family="ProximaNova-Regular, Proxima Nova" font-size="48" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="48">20</tspan>
+                    </text>
+                </g>
+                <g id="Group">
+                    <g id="Group-2">
+                        <circle id="Oval-2" stroke="#D9D9D9" stroke-width="20" cx="150" cy="160" r="150"></circle>
+                        <path d="M150,320 C144.477153,320 140,315.522847 140,310 C140,304.477153 144.477153,300 150,300 C227.319865,300 290,237.319865 290,160 C290,82.680135 227.319865,20 150,20 C105.940745,20 65.2900759,40.4754974 38.9389252,74.7500895 C35.5727029,79.1284901 29.2944456,79.9490228 24.916045,76.5828006 C20.5376443,73.2165783 19.7171117,66.938321 23.0833339,62.5599203 C53.1808157,23.4125251 99.6624609,0 150,0 C238.36556,0 310,71.63444 310,160 C310,248.36556 238.36556,320 150,320 Z" id="Oval-2" fill="#299FFD" fill-rule="nonzero" transform="translate(165.505315, 160.000000) scale(-1, 1) rotate(-180.000000) translate(-165.505315, -160.000000) "></path>
+                    </g>
+                    <text id="16" fill="#333333" font-family="ProximaNova-Regular, Proxima Nova" font-size="48" font-weight="normal">
+                        <tspan x="129" y="150">16</tspan>
+                    </text>
+                    <text id="Campaigns-In-Progress" fill="#299FFD" font-family="ProximaNova-Regular, Proxima Nova" font-size="20" font-weight="normal">
+                        <tspan x="48" y="186">Campaigns In Progress</tspan>
+                    </text>
+                </g>
+                <g id="Campaigns-Approved" transform="translate(434.000000, 166.000000)" fill="#DF216D" font-family="ProximaNova-Regular, Proxima Nova" font-size="20" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="20">Campaigns Approved</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

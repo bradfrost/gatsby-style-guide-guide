@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BUTTON GROUP
+\*------------------------------------*/
+
+/**
+ * 1) A grouping of buttons, often displayed side-by-side
+ */
+.c-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    .c-card &, .c-hero & {
+        justify-content: center;
+    }
+}

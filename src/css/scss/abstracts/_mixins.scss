@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+/**
+ * Kicker styles are understated all=caps
+ * treatments for short word clusters like
+ * kickers and breadcrumbs
+ */
+@mixin kickerStyles() {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: $font-size-sm;
+}

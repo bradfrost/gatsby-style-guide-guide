@@ -1,5 +1,5 @@
 ---
-path: /components/blocks-and-cards/
+path: /components/blocks-and-cards
 layout: component-category
 group: components
 subgroup: blocks-and-cards
