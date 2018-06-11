@@ -223,7 +223,7 @@
 	 */
 	.c-header--vertical & {
 		@media all and (min-width: $bp-xl) {
-			color: inherit;
+			color: $color-gray-73;
 		}
 	}
 }

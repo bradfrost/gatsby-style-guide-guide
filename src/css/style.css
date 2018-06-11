@@ -1225,7 +1225,7 @@ tr {
     outline: 1px dotted #666; }
   @media all and (min-width: 70em) {
     .c-header--vertical .c-primary-nav__sublink {
-      color: inherit; } }
+      color: #444; } }
 
 /**
  * Active primary navigation link
