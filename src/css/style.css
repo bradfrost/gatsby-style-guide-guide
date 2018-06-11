@@ -364,6 +364,9 @@ button {
   display: block;
   flex: 1 0 auto;
   padding: 1rem; }
+  @media all and (min-width: 60em) {
+    [role=main] {
+      padding: 2rem; } }
 
 /*------------------------------------*\
     #MEDIA
@@ -422,7 +425,7 @@ hr {
  */
 code {
   display: inline-block;
-  background: #fff;
+  background: #f8f9fb;
   border: 1px solid #ddd;
   padding: .2rem .5rem;
   line-height: 1.2;
