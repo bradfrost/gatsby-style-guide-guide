@@ -10,10 +10,19 @@ export class PrimarySubNavItem extends Component {
     }
 
     toggleSubNav(e) {
-        e.preventDefault();
-        this.setState(prevState => ({
-            isSubNavOn: !prevState.isSubNavOn
-        }));
+        if (this.props.subSubNavItems) {
+            e.preventDefault();
+            this.setState(prevState => ({
+                isSubNavOn: !prevState.isSubNavOn
+            }));
+        }
+        else if (document.querySelector(".c-header__nav-container.is-active")) {
+            this.props.toggleStatus(e)
+            console.log(document.querySelector(".c-header__nav-container.is-active"))
+        }
+        else {
+            null
+        }
     }
 
     render() {
@@ -23,7 +32,7 @@ export class PrimarySubNavItem extends Component {
                     ? "c-primary-nav__subitem "
                     : "c-primary-nav__subitem is-active"
             } key={this.props.url}>
-                <Link className= "c-primary-nav__sublink" to={ this.props.url } onClick= {this.props.subSubNavItems ? this.toggleSubNav : null}>
+                <Link className= "c-primary-nav__sublink" to={ this.props.url } onClick= {this.toggleSubNav}>
                     <span className="c-primary-nav__text">{this.props.title}</span>
                     {this.props.subSubNavItems &&
                         <svg className="c-icon c-primary-nav__subicon" width="16" height="16" viewBox="0 0 7 16" id="chevron-right"><title>chevron-right</title><path d="M2 3L0 5l3 3-3 3 2 2 5-5-5-5z"></path></svg>

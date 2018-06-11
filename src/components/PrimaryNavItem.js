@@ -10,10 +10,18 @@ export class PrimaryNavItem extends Component {
     }
 
     toggleNav(e) {
-        e.preventDefault();
-        this.setState(prevState => ({
-            isNavOn: !prevState.isNavOn
-        }));
+        if (this.props.subNavItem) {
+            e.preventDefault();
+            this.setState(prevState => ({
+                isNavOn: !prevState.isNavOn
+            }));
+        }
+        else if (document.querySelector(".c-header__nav-container.is-active")) {
+            this.props.toggleStatus(e)
+        }
+        else {
+            null
+        }
     }
 
     render() {
@@ -23,8 +31,7 @@ export class PrimaryNavItem extends Component {
                     ? "c-primary-nav__item "
                     : "c-primary-nav__item is-active"
             } key={this.props.index}>
-
-                <Link className={this.props.subNavItem ? "c-primary-nav__link  c-primary-nav__link--has-children" : "c-primary-nav__link"}  to={ this.props.href } onClick={this.props.subNavItem ? this.toggleNav : null }>
+                <Link className={this.props.subNavItem ? "c-primary-nav__link  c-primary-nav__link--has-children" : "c-primary-nav__link"}  to={ this.props.href } onClick={this.toggleNav}>
                     <span className="c-primary-nav__text">{this.props.label}</span>
                     {this.props.subNavItem &&
                         <svg className="c-icon c-primary-nav__icon" width="16" height="16" viewBox="0 0 7 16" id="chevron-right"><title>chevron-right</title><path d="M2 3L0 5l3 3-3 3 2 2 5-5-5-5z"></path></svg>
