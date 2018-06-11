@@ -695,7 +695,8 @@ tr {
       min-height: 100vh; } }
 
 .c-header__nav-btn.c-header__nav-btn {
-  margin-left: auto; }
+  margin-left: auto;
+  margin-right: 1rem; }
   @media all and (min-width: 60em) {
     .c-header__nav-btn.c-header__nav-btn {
       display: none; } }
