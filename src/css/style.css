@@ -516,7 +516,7 @@ tr {
   @supports (display: grid) {
     .l-grid {
       display: grid;
-      grid-gap: 3rem 2rem;
+      grid-gap: 1rem;
       margin: 0; } }
 
 /**
