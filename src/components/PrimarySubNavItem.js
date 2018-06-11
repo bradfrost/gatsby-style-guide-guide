@@ -18,7 +18,6 @@ export class PrimarySubNavItem extends Component {
         }
         else if (document.querySelector(".c-header__nav-container.is-active")) {
             this.props.toggleStatus(e)
-            console.log(document.querySelector(".c-header__nav-container.is-active"))
         }
         else {
             null
