@@ -13,7 +13,6 @@ export class Header extends Component {
     }
 
     toggleMenu(e) {
-        e.preventDefault();
         this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn
         }));
@@ -42,7 +41,7 @@ export class Header extends Component {
                                 : "c-header__nav-container is-active"
                         }
                     >
-                        <PrimaryNav data={this.props.navData} />
+                        <PrimaryNav data={this.props.navData} toggleStatus={this.toggleMenu} />
                     </div>
                 </div>
             </header>
