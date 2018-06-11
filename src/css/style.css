@@ -1053,14 +1053,6 @@ tr {
 /**
  * Primary navigation most likely existing in the header
  */
-.c-primary-nav {
-  /**
-   * Primary navigation list within a vertical header
-   */ }
-  .c-header--vertical .c-primary-nav {
-    margin-left: -1rem;
-    margin-right: -1rem; }
-
 /**
  * Primary navigation list
  */
@@ -1072,7 +1064,7 @@ tr {
    */ }
   .c-header--vertical .c-primary-nav__list {
     display: block; }
-  @media all and (min-width: 70em) {
+  @media all and (min-width: 60em) {
     .c-primary-nav__list {
       flex-direction: row; } }
 
@@ -1084,7 +1076,7 @@ tr {
   /**
    * Primary navigation item within vertical header
    */ }
-  @media all and (min-width: 70em) {
+  @media all and (min-width: 60em) {
     .c-primary-nav__item {
       margin-right: 1rem;
       /**
@@ -1134,7 +1126,7 @@ tr {
   /**
    * Primary navigation link within active item in vertical header
    */ }
-  @media all and (min-width: 70em) {
+  @media all and (min-width: 60em) {
     .c-primary-nav__item.is-active .c-primary-nav__link--has-children {
       background: #444;
       color: #fff; } }
@@ -1190,7 +1182,7 @@ tr {
     display: block; }
   .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
     display: block; }
-    @media all and (min-width: 70em) {
+    @media all and (min-width: 60em) {
       .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
         background: #444;
         padding: .5rem 1rem 1rem;
@@ -1201,13 +1193,13 @@ tr {
         min-width: 8rem; } }
   .c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
     background: none; }
-    @media all and (min-width: 70em) {
+    @media all and (min-width: 60em) {
       .c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__sublist:first-of-type {
         margin: 0;
         margin-left: 1rem;
         padding: 0;
         position: static; } }
-  @media all and (min-width: 70em) {
+  @media all and (min-width: 60em) {
     .c-primary-nav__sublist:first-of-type {
       margin-left: 0; } }
 
@@ -1223,7 +1215,7 @@ tr {
    */ }
   .c-primary-nav__sublink:focus {
     outline: 1px dotted #666; }
-  @media all and (min-width: 70em) {
+  @media all and (min-width: 60em) {
     .c-header--vertical .c-primary-nav__sublink {
       color: #444; } }
 

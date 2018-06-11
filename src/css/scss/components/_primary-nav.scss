@@ -6,13 +6,6 @@
  * Primary navigation most likely existing in the header
  */
 .c-primary-nav {
-	/**
-	 * Primary navigation list within a vertical header
-	 */
-	.c-header--vertical & {
-		margin-left: -1rem;
-		margin-right: -1rem;
-	}
 }
 
 /**
@@ -29,7 +22,7 @@
 		display: block;
 	}
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-large) {
 		flex-direction: row;
 	}
 }
@@ -40,7 +33,7 @@
 .c-primary-nav__item {
 	position: relative;
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-large) {
 		margin-right: 1rem;
 
 		/**
@@ -104,7 +97,7 @@
 	 * Primary navigation link withing active item
 	 */
 	.c-primary-nav__item.is-active & {
-		@media all and (min-width: $bp-xl) {
+		@media all and (min-width: $bp-large) {
 			background: $color-gray-73;
 			color: $color-white;
 		}
@@ -175,7 +168,7 @@
 	.c-primary-nav__item.is-active & {
 		display: block;
 
-		@media all and (min-width: $bp-xl) {
+		@media all and (min-width: $bp-large) {
 			background: $color-gray-73;
 			padding: .5rem 1rem 1rem;
 			margin: 0;
@@ -192,7 +185,7 @@
 	.c-header--vertical .c-primary-nav__item.is-active & {
 		background: none;
 
-		@media all and (min-width: $bp-xl) {
+		@media all and (min-width: $bp-large) {
 			margin: 0;
 			margin-left: 1rem;
 			padding: 0;
@@ -201,7 +194,7 @@
 		}
 	}
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-large) {
 		margin-left: 0;
 	}
 }
@@ -222,7 +215,7 @@
 	 * Primary navigation sublink within vertical header
 	 */
 	.c-header--vertical & {
-		@media all and (min-width: $bp-xl) {
+		@media all and (min-width: $bp-large) {
 			color: $color-gray-73;
 		}
 	}
