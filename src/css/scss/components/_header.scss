@@ -42,6 +42,7 @@
 
 .c-header__nav-btn.c-header__nav-btn {
     margin-left: auto;
+    margin-right: 1rem;
 
     @media all and (min-width: $bp-large) {
         display: none;

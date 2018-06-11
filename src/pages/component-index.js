@@ -20,7 +20,7 @@ export default function ComponentDetail({ data }) {
                         if (post.frontmatter.layout === "component-category") {
                             return (
                                 <li className="l-grid__item">
-                                    <Card href={"/components/"+post.frontmatter.subgroup} kicker={post.frontmatter.subgroup} title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
+                                    <Card href={"/components/"+post.frontmatter.subgroup} header={post.frontmatter.subgroup} title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
                                 </li>
                             );
                         }
