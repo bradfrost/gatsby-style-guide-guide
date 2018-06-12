@@ -214,7 +214,7 @@ export class ComponentDetail extends Component {
                             </ul>
                         </div>
                     )}
-                    <ButtonLink href="#" text="Discus this component" />
+                    <ButtonLink href="#" text="Discuss this component" />
                 </Section>
                 }
             </div>
