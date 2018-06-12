@@ -1,35 +1,81 @@
 /*------------------------------------*\
-    #TABS
+    #TABS
 \*------------------------------------*/
-.c-tabs {
-    margin-bottom: 1rem;
-}
 
+/**
+ * 1) Unordered list of links where the each link targets different information
+ */
+
+/**
+ * Tabs list
+ */
 .c-tabs__list {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: visible;
+	display: flex;
+	border-bottom: 1px solid $color-gray-27;
 
-    @media all and (min-width: $bp-med) {
-        flex-wrap: wrap;
-    }
+	/**
+	 * Tabs list within vertical tabs
+	 */
+	.c-tabs--vertical & {
+		border: 1px solid $color-gray-27;
+		display: block;
+		order: 1;
+	}
+
 }
 
-.c-tabs__list-item {
-    flex-shrink: 0;
-    margin-top: 1rem;
-    margin-right: 3rem;
-}
-
+ /**
+ * Tabs list
+ * 1) Overlap the tabs bottom border
+ */
 .c-tabs__link {
-    display: block;
-    padding: 0 0 0.7rem;
+	display: block;
+	padding: 0.5rem 1rem;
+	margin-bottom: -1px;
+    min-width: 5rem;
+    text-align: center;
 
-    .c-tabs__list-item.is-active & {
-        box-shadow: inset 0 -3px 0 0 $color-gray-73;
-    }
+	/**
+	 * Active tabs link
+	 */
+	.c-tabs__list-item.is-active & {
+		border: 1px solid $color-gray-27;
+		border-bottom: 1px solid $color-white;
+	}
 }
 
-.c-tabs__link--is-active {
-    box-shadow: inset 0px -4px 0px 0px limegreen;
+
+/**
+ * Tab Body
+ */
+.c-tabs__body {
+	padding: 1rem 0;
+	border-top: 0;
+
+	/**
+	 * Tabs body within vertical tabs
+	 * 1) Take up the remaining space that the actual tabs do not take up
+	 */
+	.c-tabs--vertical & {
+		flex: 1; /* 1 */
+		border: 1px solid $color-gray-27;
+		border-right: 0;
+	}
+
+}
+
+/**
+ * Tab Panel
+ * 1) Display by default, and only hide if JS is available
+ */
+.c-tabs__panel {
+	display: none;
+	padding: 1rem;
+
+	/**
+	 * Active tabs panel
+	 */
+	&.is-active {
+		display: block;
+	}
 }
