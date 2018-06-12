@@ -9,13 +9,13 @@ import ForwardIcon from "react-icons/lib/fa/chevron-right";
 import Link from "../components/Link";
 import Tags from "../components/Tags";
 import PageHeader from "../components/PageHeader";
+import Breadcrumbs from "../components/Breadcrumbs";
 import Tab from "../components/Tab";
 import Tabs from "../components/Tabs";
 import Section from "../components/Section";
 import Well from "../components/Well";
 import Table from "../components/Table";
 import ContentBlock from "../components/ContentBlock";
-import Figure from "../components/Figure";
 
 import ComponentExample from "../components/ComponentExample";
 import markdownIt from 'markdown-it'
@@ -37,8 +37,9 @@ export class ComponentDetail extends Component {
             <div className="l-container">
                 <Helmet title={`${post.frontmatter.title}`} />
 
+                <Breadcrumbs group={post.frontmatter.group} subgroup={post.frontmatter.subgroup} />
+
                 <PageHeader
-                    kicker="Components"
                     title={post.frontmatter.title}
                     description={post.frontmatter.description}
                     status={post.frontmatter.status}

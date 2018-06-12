@@ -14,7 +14,6 @@
  * Page header kicker
  */
 .c-page-header__kicker {
-    @include kickerStyles();
     color: $color-gray-40;
     margin-bottom: 1rem;
 }

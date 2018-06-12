@@ -127,11 +127,6 @@
 /*------------------------------------*\
     #MIXINS
 \*------------------------------------*/
-/**
- * Kicker styles are understated all=caps
- * treatments for short word clusters like
- * kickers and breadcrumbs
- */
 /*------------------------------------*\
     #BASE
 \*------------------------------------*/
@@ -849,9 +844,6 @@ tr {
  * Page header kicker
  */
 .c-page-header__kicker {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
   color: #999999;
   margin-bottom: 1rem; }
 
@@ -1705,9 +1697,7 @@ tr {
  */
 .c-well {
   background: #fff;
-  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.08);
   border: 1px solid #d9d9d9;
-  border-radius: 4px;
   padding: 1.5rem;
   margin-bottom: 2rem; }
 
