@@ -40,3 +40,10 @@
 	font-size: $font-size-med;
 	margin-bottom: 0;
 }
+
+.c-section__title {
+	.c-well & {
+		font-size: $font-size-sm-2;
+		margin-bottom: 0;
+	}
+}
