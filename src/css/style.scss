@@ -68,10 +68,8 @@
 /**
  * Navigation
  */
-@import "scss/components/nav-bar";
 @import "scss/components/footer-nav";
 @import "scss/components/primary-nav";
-@import "scss/components/pagination";
 @import "scss/components/breadcrumbs";
 
 /**
@@ -83,10 +81,7 @@
 /**
  * Forms
  */
-@import "scss/components/text-input";
-@import "scss/components/form-field";
-@import "scss/components/inline-form";
-@import "scss/components/option-list";
+
 
 /**
  * Blocks
@@ -94,7 +89,6 @@
 @import "scss/components/card";
 @import "scss/components/content-block";
 @import "scss/components/hero";
-@import "scss/components/media-block";
 @import "scss/components/well";
 
 /**
@@ -121,7 +115,6 @@
 /**
  * Interactive
  */
-@import "scss/components/accordion";
 @import "scss/components/tabs";
 
 

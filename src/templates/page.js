@@ -8,12 +8,7 @@ import Section from "../components/Section";
 import ButtonGroup from "../components/ButtonGroup";
 import Breadcrumbs from "../components/Breadcrumbs";
 import ContentBlock from "../components/ContentBlock";
-import MediaBlock from "../components/MediaBlock";
 import Table from "../components/Table";
-import TextField from "../components/TextField";
-import SelectField from "../components/SelectField"
-import TextareaField from "../components/TextareaField"
-import Form from "../components/Form";
 import Well from "../components/Well";
 
 export default function Template({ data, pathContext }) {
