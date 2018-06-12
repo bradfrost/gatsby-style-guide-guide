@@ -16,6 +16,7 @@ import Section from "../components/Section";
 import Well from "../components/Well";
 import Table from "../components/Table";
 import ContentBlock from "../components/ContentBlock";
+import ButtonLink from "../components/ButtonLink";
 
 import ComponentExample from "../components/ComponentExample";
 import markdownIt from 'markdown-it'
@@ -188,6 +189,7 @@ export class ComponentDetail extends Component {
                             </ul>
                         </div>
                     )}
+                    <ButtonLink href="#" text="Discus this component" />
                 </Section>
                 }
             </div>
