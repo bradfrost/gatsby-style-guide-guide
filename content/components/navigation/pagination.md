@@ -26,4 +26,9 @@ altUse:
 - title: When to consider an alternative
   description: Alternative usage
 
+finePrint:
+- version: 0.3
+  update: April 27, 2017
+  owner: Jane Doe
+
 ---

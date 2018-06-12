@@ -30,8 +30,9 @@ examples:
 - title: Dashboard
   image: ../../images/img-mission.png
 
-fine-print:
-- version: 0.1
-  update: June 6, 2018
+finePrint:
+- version: 0.3
+  update: April 27, 2017
+  owner: Jane Doe
 
 ---
