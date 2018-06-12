@@ -6,6 +6,7 @@ require('prismjs');
 require('prismjs/themes/prism.css');
 
 import "../css/style.css";
+import "../css/style-guide.css";
 
 export default ({children, data}) => {
 	if (typeof window !== 'undefined') {

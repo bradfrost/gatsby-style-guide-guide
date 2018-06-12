@@ -454,6 +454,15 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                 toggleStatus={toggleStatus}
                 subNavItem= {
                     <ul className="c-primary-nav__sublist">
+                    {data
+                        .filter(post => post.node.frontmatter.group == 'utilities')
+                        .filter(post => post.node.frontmatter.layout =='utilities-index')
+                        .map(({ node: post }) => {
+                                return (
+                                    <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                );
+                        })
+                    }
                    {data
                        .filter(post => post.node.frontmatter.group == 'utilities')
                        .filter(post => post.node.frontmatter.layout =='component-detail')

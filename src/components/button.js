@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 
-const Button = ({ text, onClickHandler, styleModifier, props, image }) => (
-	<button className={"c-btn " + styleModifier } onClick={ onClickHandler } {...props}>
+const Button = ({ text, onClickHandler, styleModifier, props, image, dataClipboardTarget }) => (
+	<button className={"c-btn " + styleModifier }
+	onClick={ onClickHandler }
+	{...props}
+	data-clipboard-target={dataClipboardTarget}
+	>
 		{image &&
 			<svg className="c-btn__icon" viewBox="0 0 80 80" version="1.1">
 			    <title>download</title>

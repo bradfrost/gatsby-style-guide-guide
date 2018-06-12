@@ -20,7 +20,7 @@
 /**
  * 1) Block containing section title and description to distinguish section
  */
-.c-section-header {
+.c-section__header {
 	margin-bottom: 1rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid $color-gray-07;
@@ -29,14 +29,15 @@
 /**
  * Section header title
  */
-.c-section-header__title {
+.c-section__title {
 	font-size: $font-size-large;
+	margin-bottom: 0;
 }
 
 /**
  * Section description
  */
-.c-section-header__desc {
+.c-section__desc {
 	font-size: $font-size-med;
 	margin-bottom: 0;
 }

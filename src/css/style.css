@@ -429,7 +429,7 @@ code {
   	 * 1) Force code inside tables to remain on one line
   	 * 2) //TODO: cleanup
    	 */ }
-  td code {
+  .c-table code {
     white-space: nowrap; }
 
 /**
@@ -818,7 +818,7 @@ tr {
 /**
  * 1) Block containing section title and description to distinguish section
  */
-.c-section-header {
+.c-section__header {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #eee; }
@@ -826,13 +826,14 @@ tr {
 /**
  * Section header title
  */
-.c-section-header__title {
-  font-size: 1.4375rem; }
+.c-section__title {
+  font-size: 1.4375rem;
+  margin-bottom: 0; }
 
 /**
  * Section description
  */
-.c-section-header__desc {
+.c-section__desc {
   font-size: 1rem;
   margin-bottom: 0; }
 
@@ -874,164 +875,6 @@ tr {
 /**
  * Navigation
  */
-/*------------------------------------*\
-    #NAVBAR
-\*------------------------------------*/
-/**
- * Container for primary navigation
- */
-.c-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 3.5rem;
-  background: linear-gradient(to right, #250056, #0076ae);
-  color: white;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-sizing: border-box;
-  padding: 0 6rem;
-  white-space: nowrap; }
-
-.c-navbar__navbar-brand {
-  display: flex;
-  align-items: center;
-  margin-right: 84px; }
-
-.c-navbar__navbar-brand-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem; }
-
-.c-navbar__brand-logo {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.75rem; }
-
-.c-navbar__navbar-menu {
-  /*something here*/ }
-
-.c-navbar__navbar-menu-items {
-  display: flex;
-  list-style-type: none;
-  margin-left: 0px;
-  padding-left: 0; }
-
-.c-navbar__navbar-menu-item {
-  padding: 1rem 1rem;
-  display: flex;
-  justify-content: flex-start;
-  line-height: 1.5; }
-
-.c-icon-navitem-dropdown {
-  padding: 4px 8px 0 8px;
-  opacity: .9; }
-
-.c-navbar__navbar-menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  height: 100%; }
-
-.c-navbar__navbar-menu-item--dropdown:hover .c-dropdown {
-  display: block; }
-
-.c-navbar__navbar-menu-item--dropdown:hover > .c-icon-navitem-dropdown {
-  transform: rotate3d(1, 0, 0, 180deg);
-  transition-duration: .5s; }
-
-.c-navbar__navbar-menu-item--dropdown:not(:hover) > .c-icon-navitem-dropdown {
-  transform: rotate3d(0, 0, 0, 180deg);
-  transition-duration: .5s; }
-
-.c-dropdown-item__flyout:hover .c-dropdown-flyout {
-  display: block; }
-
-.c-navbar__navbar-actions {
-  display: flex;
-  align-items: center;
-  margin-left: auto; }
-
-.c-navbar__navbar-actions-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 3rem; }
-
-.c-navbar--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-/* Dropdowns */
-.c-dropdown {
-  display: none;
-  position: absolute;
-  top: 3.5rem;
-  background-color: white;
-  color: black;
-  list-style-type: none;
-  margin-left: -1rem;
-  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 0px 0px 5px 5px;
-  border: 0.5px solid #d9d9d9;
-  padding: 8px 0; }
-
-.c-dropdown-item {
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  position: relative;
-  display: flex;
-  align-items: center; }
-
-.c-dropdown-item__disabled {
-  color: #d9d9d9; }
-
-.c-dropdown-item:hover {
-  background-color: rgba(41, 125, 253, 0.08);
-  cursor: pointer; }
-
-.c-dropdown-item__disabled:hover {
-  background-color: #ffffff; }
-
-.c-dropdown-flyout {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: -1px;
-  padding: 8px 0;
-  background-color: white;
-  color: black;
-  list-style-type: none;
-  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 4px;
-  border: 0.5px solid #d9d9d9; }
-
-.c-dropdown--open {
-  display: block;
-  padding: 0; }
-
-/* Only for use in CodePen */
-.c-dropdown-item .material-icons {
-  padding-right: 1rem; }
-
-.c-dropdown-item .materials-icons--position-right {
-  position: absolute;
-  right: 0; }
-
-.polyfill {
-  fill: #fff; }
-
-.polyfill-opaque {
-  fill: #fff;
-  opacity: 0.5; }
-
-.test-body {
-  margin-top: 80px;
-  padding: 3rem 6rem; }
-
 /*------------------------------------*\
     #FOOTER NAVIGATION
 \*------------------------------------*/
@@ -1135,7 +978,7 @@ tr {
   @media all and (min-width: 60em) {
     .c-primary-nav__item.is-active .c-primary-nav__link--has-children {
       background: #444;
-      color: #fff; } }
+      color: #444; } }
   .c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__link--has-children {
     background: none;
     color: #444; }
@@ -1266,7 +1109,7 @@ tr {
   .c-header--vertical .c-primary-nav__icon {
     margin-left: auto; }
   .c-primary-nav__item.is-active .c-primary-nav__icon {
-    fill: #fff;
+    fill: #444;
     transform: rotate(180deg); }
   .c-header--vertical .c-primary-nav__item.is-active .c-primary-nav__icon {
     fill: #444;
@@ -1296,48 +1139,13 @@ tr {
   .c-header--vertical .c-primary-nav__subicon {
     margin-left: auto; }
   .c-primary-nav__subitem.is-active .c-primary-nav__subicon {
-    fill: #fff;
+    fill: #444;
     transform: rotate(180deg); }
   .c-header--vertical .c-primary-nav__subitem.is-active .c-primary-nav__subicon {
     fill: #444;
     transform: rotate(90deg); }
   .c-primary-nav__sublink:hover .c-primary-nav__subicon, .c-primary-nav__sublink:focus .c-primary-nav__subicon {
     fill: #808080; }
-
-/*------------------------------------*\
-    #PAGINATION
-\*------------------------------------*/
-.c-pagination {
-  font-family: sans-serif;
-  font-size: 16px;
-  background: #fff;
-  margin: 10px;
-  background: none; }
-
-.c-pagination-control {
-  font-size: 13px;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  border-radius: 4px;
-  padding-top: 8px;
-  color: #444444;
-  margin: 0 4px; }
-
-.c-pagination-control-hover:hover {
-  background-color: rgba(41, 125, 253, 0.1);
-  cursor: pointer; }
-
-.c-pagination-control-selected {
-  font-weight: 900;
-  color: #000; }
-
-.c-pagination-control-inactive {
-  color: #999; }
-
-.c-pagination-control-arrow {
-  margin: 0 16px; }
 
 /*------------------------------------*\
     #BREADCRUMBS
@@ -1451,61 +1259,6 @@ tr {
 
 /**
  * Forms
- */
-/*------------------------------------*\
-    #TEXT INPUT
-\*------------------------------------*/
-/*------------------------------------*\
-    #FIELDS
-\*------------------------------------*/
-/**
- * 1) Consists of a label, form control, and an optional note about the field.
- */
-.c-form-field {
-  margin-bottom: 2rem; }
-
-/**
- * Field label
- */
-.c-form-field__label {
-  margin-bottom: 0.5rem;
-  font-size: 1rem; }
-
-/**
- * Field body
- */
-.c-form-field__body {
-  position: relative; }
-
-/**
- * Field note
- */
-.c-form-field__note {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: #808080; }
-
-/*------------------------------------*\
-    #INLINE FORM
-\*------------------------------------*/
-/**
- * 1) An inline form displays an input and a button side-by-side.
- * 2) Can be used for search, email newsletter signup, and other one-field forms
- */
-.c-inline-form {
-  display: flex;
-  padding: 0.5rem 0; }
-
-.c-inline-form__input {
-  flex: 1;
-  padding: 0.5rem; }
-
-/*------------------------------------*\
-    #OPTION LIST
-\*------------------------------------*/
-/**
- * 1) An option list is a group of list items
- *    that contains either checkboxes or radio buttons
  */
 /**
  * Blocks
@@ -1635,71 +1388,6 @@ tr {
   color: #bbbbbb; }
 
 /*------------------------------------*\
-    #MEDIA BLOCK
-\*------------------------------------*/
-/**
- * 1) A media block features a block of media(i.e. image) and text
- */
-.c-media-block__inner {
-  display: block; }
-  @media all and (min-width: 47em) {
-    .c-media-block__inner {
-      display: flex;
-      position: relative;
-      align-items: center; }
-      .c-media-block--top-aligned .c-media-block__inner {
-        align-items: flex-start; } }
-
-.c-media-block--white {
-  background: #fff; }
-
-/**
- * Media block body
- */
-.c-media-block__body {
-  margin-bottom: 1rem; }
-  @media all and (min-width: 47em) {
-    .c-media-block__body {
-      max-width: 50%;
-      margin-bottom: 0; } }
-  @media all and (min-width: 47em) {
-    .c-media-block--reversed .c-media-block__body {
-      order: 2; } }
-
-/**
- * Media block title
- */
-.c-media-block__title {
-  font-size: 1.4375rem;
-  margin-bottom: 0.5rem; }
-
-/**
- * Media block description
- */
-/**
- * Media container
- */
-@media all and (min-width: 47em) {
-  .c-media-block__media {
-    max-width: 50%;
-    margin-left: 2.5rem; } }
-@media all and (min-width: 47em) {
-  .c-media-block--reversed .c-media-block__media {
-    order: 1;
-    margin-left: 0;
-    margin-right: 2.5rem; } }
-
-/**
- * Media block image
- * 1) Max height added to work in IE 10 and Edge
- */
-.c-media-block-list {
-  margin-bottom: 2rem; }
-
-.c-media-block__footer {
-  margin-top: 1rem; }
-
-/*------------------------------------*\
     #WELL
 \*------------------------------------*/
 /**
@@ -1723,38 +1411,25 @@ tr {
 .c-table {
   margin-bottom: 1rem;
   min-width: 600px;
-  /* 2 */
-  font-size: 0.85rem; }
-
-.c-table--highlight {
-  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.08);
-  border: 1px solid #d9d9d9;
-  border-collapse: separate;
-  border-radius: 4px; }
+  /* 2 */ }
 
 /**
  * Table Header
  */
 .c-table__header {
-  background: #f8f9fb; }
+  background: #eee; }
 
 /**
  * Table Header Cell
  */
 .c-table__header-cell {
   padding: 0.8rem; }
-  .c-table--highlight .c-table__header-cell:first-child {
-    border-top-left-radius: 4px; }
-  .c-table--highlight .c-table__header-cell:last-child {
-    border-top-right-radius: 4px; }
 
 /**
  * Table Row
  */
 .c-table__row {
   border-bottom: 1px solid #eee; }
-  .c-table--no-bottom-border .c-table__row:last-child {
-    border-bottom: none; }
 
 /**
  * Table Cell
@@ -1902,97 +1577,6 @@ tr {
  * Interactive
  */
 /*------------------------------------*\
-    #ACCORDION
-\*------------------------------------*/
-.c-accordion-container {
-  width: 100%;
-  max-width: 832px;
-  padding: 24px;
-  background-color: #fff; }
-
-.c-accordion-menu-container {
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08);
-  padding: 0;
-  background-color: #fff;
-  max-width: 220px;
-  border: 1px solid #d9d9d9; }
-
-.c-accordion__item,
-.c-accordion-menu__item {
-  background-color: #fff;
-  color: #444;
-  cursor: pointer;
-  width: 100%;
-  border: 0px solid #d9d9d9;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  font-weight: normal;
-  transition: 0.4s;
-  padding: 14px 10px; }
-
-.c-accordion-menu__item {
-  border-top: 1px solid #d9d9d9; }
-
-.c-accordion__item i,
-.c-accordion-menu__item i {
-  margin-right: 6px; }
-
-.c-accordion:first-child {
-  border-top: 1px; }
-
-.c-accordion:hover {
-  background-color: rgba(41, 125, 253, 0.08); }
-
-.c-accordion:before {
-  color: #777;
-  font-weight: bold;
-  font-size: 19px;
-  float: left;
-  margin: 0px;
-  padding: 0 10px 0 15px; }
-
-.c-accordion-active .icon-ios-next {
-  display: inline-flex;
-  transform: rotate(90deg); }
-
-.c-accordion-active + .c-accordion__content {
-  max-height: 2000px;
-  -webkit-transition: max-height 2s;
-  /* Safari 4.0 - 8.0 */
-  transition: max-height 2s; }
-
-.c-accordion__content {
-  padding: 0 16px 0 32px;
-  max-height: 0;
-  border-bottom: 1px solid #d9d9d9;
-  overflow: hidden;
-  background-color: #fff;
-  font-size: 13px; }
-
-.c-accordion__content-ul,
-.c-accordion-menu__content-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  padding-left: 30px; }
-
-.c-accordion-menu__content-ul {
-  border-top: 1px solid #d9d9d9; }
-
-.c-accordion-menu-container section:first-child .c-accordion-menu__item {
-  border: none; }
-
-.c-accordion__li,
-.c-accordion-menu__li {
-  padding: 10px 0;
-  color: #666;
-  font-size: 14px; }
-
-/*------------------------------------*\
     #TABS
 \*------------------------------------*/
 /**
@@ -2003,14 +1587,9 @@ tr {
  */
 .c-tabs__list {
   display: flex;
-  border-bottom: 1px solid #bbbbbb;
-  /**
-   * Tabs list within vertical tabs
-   */ }
-  .c-tabs--vertical .c-tabs__list {
-    border: 1px solid #bbbbbb;
-    display: block;
-    order: 1; }
+  overflow-x: auto;
+  overflow-y: visible;
+  border-bottom: 1px solid #bbbbbb; }
 
 /**
 * Tabs list
@@ -2027,23 +1606,14 @@ tr {
    */ }
   .c-tabs__list-item.is-active .c-tabs__link {
     border: 1px solid #bbbbbb;
-    border-bottom: 1px solid #fff; }
+    border-bottom-color: #fff; }
 
 /**
  * Tab Body
  */
 .c-tabs__body {
   padding: 1rem 0;
-  border-top: 0;
-  /**
-   * Tabs body within vertical tabs
-   * 1) Take up the remaining space that the actual tabs do not take up
-   */ }
-  .c-tabs--vertical .c-tabs__body {
-    flex: 1;
-    /* 1 */
-    border: 1px solid #bbbbbb;
-    border-right: 0; }
+  border-top: 0; }
 
 /**
  * Tab Panel

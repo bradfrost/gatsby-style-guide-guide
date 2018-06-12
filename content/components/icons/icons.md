@@ -2,7 +2,7 @@
 layout: component-detail
 group: components
 subgroup: icons
-path: /components/icons/icons.html
+path: /components/icons/icons
 
 title: Icons
 description: Icons description

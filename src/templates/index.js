@@ -3,9 +3,7 @@ import GatsbyLink from "gatsby-link";
 import Helmet from "react-helmet";
 
 import Link from "../components/Link";
-import MediaBlock from "../components/MediaBlock";
 import Card from "../components/Card";
-import Hero from "../components/Hero";
 import PageHeader from "../components/PageHeader";
 import Section from "../components/Section";
 import ButtonGroup from "../components/ButtonGroup";

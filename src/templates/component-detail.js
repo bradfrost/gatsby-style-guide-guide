@@ -16,6 +16,8 @@ import Section from "../components/Section";
 import Well from "../components/Well";
 import Table from "../components/Table";
 import ContentBlock from "../components/ContentBlock";
+import ButtonLink from "../components/ButtonLink";
+import Button from "../components/Button";
 
 import ComponentExample from "../components/ComponentExample";
 import markdownIt from 'markdown-it'
@@ -23,6 +25,16 @@ import markdownIt from 'markdown-it'
 
 
 export class ComponentDetail extends Component {
+
+    componentDidMount () {
+        const script = document.createElement("script");
+        script.src = "../../vendor/clipboard.min.js";
+        document.body.appendChild(script);
+
+        const scriptCopy = document.createElement("script");
+        scriptCopy.src = "../../vendor/copy.js";
+        document.body.appendChild(scriptCopy);
+    }
 
     render() {
         const md = markdownIt({
@@ -59,14 +71,20 @@ export class ComponentDetail extends Component {
                             </Well>
                             <Tabs styleModifier="ads-u-margin-bottom-large">
                                 <Tab label="React">
-                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup">{`
-            ${reactElementToJSXString(<ComponentExample component={item.component} />)}
-                                    `}</code></pre>
+                                    <div className="pattern-code">
+                                        <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                        <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+                ${reactElementToJSXString(<ComponentExample component={item.component} />)}
+                                        `}</code></pre>
+                                    </div>
                                 </Tab>
                                 <Tab label="HTML">
-                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup">{`
-            ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
-                                    `}</code></pre>
+                                    <div className="pattern-code">
+                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                        <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+                ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
+                                        `}</code></pre>
+                                    </div>
                                 </Tab>
                             </Tabs>
                         </Tab>
@@ -83,14 +101,20 @@ export class ComponentDetail extends Component {
 
                         <Tabs styleModifier="ads-u-margin-bottom-large">
                             <Tab label="React">
-                                <pre className="highlight pattern-code-block language-markup"><code className="code language-markup">{`
-        ${reactElementToJSXString(<ComponentExample component={item.component} />)}
-                                `}</code></pre>
+                                <div className="pattern-code">
+                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+            ${reactElementToJSXString(<ComponentExample component={item.component} />)}
+                                    `}</code></pre>
+                                </div>
                             </Tab>
                             <Tab label="HTML">
-                            <pre className="highlight pattern-code-block language-markup"><code className="code language-markup">{`
-    ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
-                            `}</code></pre>
+                                <div className="pattern-code">
+                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+            ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
+                                    `}</code></pre>
+                                </div>
                             </Tab>
                         </Tabs>
                     </div>
@@ -188,6 +212,7 @@ export class ComponentDetail extends Component {
                             </ul>
                         </div>
                     )}
+                    <ButtonLink href="#" text="Discuss this component" />
                 </Section>
                 }
             </div>
