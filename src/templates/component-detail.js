@@ -29,12 +29,10 @@ export class ComponentDetail extends Component {
     componentDidMount () {
         const script = document.createElement("script");
         script.src = "../../vendor/clipboard.min.js";
-        script.async = true;
         document.body.appendChild(script);
 
         const scriptCopy = document.createElement("script");
         scriptCopy.src = "../../vendor/copy.js";
-        scriptCopy.async = true;
         document.body.appendChild(scriptCopy);
     }
 
