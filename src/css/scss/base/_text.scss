@@ -52,7 +52,16 @@ code {
 	border: 1px solid $color-gray-13;
 	padding: .2rem .5rem;
     line-height: 1.2;
-    font-size: .85rem;
+	font-size: .85rem;
+	
+	
+	/**
+	 * 1) Force code inside tables to remain on one line
+	 * 2) //TODO: cleanup
+ 	 */
+	td & {
+		white-space: nowrap;
+	}
 }
 
 /**
