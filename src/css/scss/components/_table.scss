@@ -8,21 +8,13 @@
 .c-table {
 	margin-bottom: 1rem;
 	min-width: 600px; /* 2 */
-	font-size: $font-size-sm-2;
-}
-
-.c-table--highlight {
-	box-shadow: $box-shadow;
-	border: 1px solid $color-gray-15;
-	border-collapse: separate;
-	border-radius: $border-radius;
 }
 
 /**
  * Table Header
  */
 .c-table__header {
-	background: $color-neutral-07;
+	background: $color-gray-07;
 }
 
 /**
@@ -30,16 +22,6 @@
  */
 .c-table__header-cell {
 	padding: 0.8rem;
-
-	.c-table--highlight & {
-		&:first-child {
-			border-top-left-radius: $border-radius;
-		}
-
-		&:last-child {
-			border-top-right-radius: $border-radius;
-		}
-	}
 }
 
 /**
@@ -47,12 +29,6 @@
  */
 .c-table__row {
 	border-bottom: 1px solid $color-gray-07;
-
-	.c-table--no-bottom-border & {
-		&:last-child {
-			border-bottom: none;
-		}
-	}
 }
 
 /**
@@ -74,5 +50,4 @@
  */
 .c-table__footer-cell {
 	padding: 0.8rem;
-
 }

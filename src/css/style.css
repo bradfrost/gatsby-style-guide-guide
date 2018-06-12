@@ -1714,38 +1714,25 @@ tr {
 .c-table {
   margin-bottom: 1rem;
   min-width: 600px;
-  /* 2 */
-  font-size: 0.85rem; }
-
-.c-table--highlight {
-  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.08);
-  border: 1px solid #d9d9d9;
-  border-collapse: separate;
-  border-radius: 4px; }
+  /* 2 */ }
 
 /**
  * Table Header
  */
 .c-table__header {
-  background: #f8f9fb; }
+  background: #eee; }
 
 /**
  * Table Header Cell
  */
 .c-table__header-cell {
   padding: 0.8rem; }
-  .c-table--highlight .c-table__header-cell:first-child {
-    border-top-left-radius: 4px; }
-  .c-table--highlight .c-table__header-cell:last-child {
-    border-top-right-radius: 4px; }
 
 /**
  * Table Row
  */
 .c-table__row {
   border-bottom: 1px solid #eee; }
-  .c-table--no-bottom-border .c-table__row:last-child {
-    border-bottom: none; }
 
 /**
  * Table Cell
