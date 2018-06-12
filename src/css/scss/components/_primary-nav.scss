@@ -99,7 +99,7 @@
 	.c-primary-nav__item.is-active & {
 		@media all and (min-width: $bp-large) {
 			background: $color-gray-73;
-			color: $color-white;
+			color: $color-gray-73;
 		}
 	}
 
@@ -264,7 +264,7 @@
 	 * Primary navigation icon within active link
 	 */
 	.c-primary-nav__item.is-active & {
-		fill: $color-white;
+		fill: $color-gray-73;
 		transform: rotate(180deg);
 	}
 
@@ -303,7 +303,7 @@
 	 * Primary navigation subicon within active link
 	 */
 	.c-primary-nav__subitem.is-active & {
-		fill: $color-white;
+		fill: $color-gray-73;
 		transform: rotate(180deg);
 	}
 

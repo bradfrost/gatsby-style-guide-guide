@@ -9,6 +9,7 @@
     display: flex;
     overflow-x: auto;
     overflow-y: visible;
+    border-bottom: 1px solid $color-gray-27;
 
     @media all and (min-width: $bp-med) {
         flex-wrap: wrap;
