@@ -46,7 +46,7 @@ classes:
   recommended: yes
   description: Apply to the card's description text inside the card body. The recommended element for this class is `<p>`.
 
-fine-print:
+finePrint:
 - version: 0.3
   update: April 27, 2017
   owner: Jane Doe

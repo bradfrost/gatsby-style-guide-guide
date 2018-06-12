@@ -175,6 +175,20 @@ export class ComponentDetail extends Component {
                         </Link>
                     )}
                 </div>
+
+                {post.frontmatter.finePrint &&
+                <Section title="Fine print">
+                    {post.frontmatter.finePrint.map((item) =>
+                        <div className="c-text-passage">
+                            <ul>
+                                <li>Version: {item.version}</li>
+                                <li>Last Updated: {item.update}</li>
+                                <li>Owner: {item.owner}</li>
+                            </ul>
+                        </div>
+                    )}
+                </Section>
+                }
             </div>
         );
     }
@@ -221,6 +235,11 @@ export const pageQuery = graphql`
           examples {
             title
             image
+          }
+          finePrint {
+            version
+            update
+            owner
           }
       }
     }
