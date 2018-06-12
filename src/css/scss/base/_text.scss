@@ -53,6 +53,10 @@ code {
 	padding: .2rem .5rem;
     line-height: 1.2;
     font-size: .85rem;
+
+	.c-table & {
+		white-space: nowrap;
+	}
 }
 
 /**
