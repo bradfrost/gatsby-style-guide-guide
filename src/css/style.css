@@ -1587,8 +1587,6 @@ tr {
  */
 .c-tabs__list {
   display: flex;
-  overflow-x: auto;
-  overflow-y: visible;
   border-bottom: 1px solid #bbbbbb; }
 
 /**
@@ -1598,15 +1596,17 @@ tr {
 .c-tabs__link {
   display: block;
   padding: 0.5rem 1rem;
-  margin-bottom: -1px;
   min-width: 5rem;
-  text-align: center;
-  /**
-   * Active tabs link
-   */ }
-  .c-tabs__list-item.is-active .c-tabs__link {
+  text-align: center; }
+
+.c-tabs__list-item {
+  margin-bottom: -1px;
+    /**
+	 * Active tabs link
+	 */ }
+  .c-tabs__list-item.is-active {
     border: 1px solid #bbbbbb;
-    border-bottom-color: #fff; }
+    border-bottom: 1px solid #fff; }
 
 /**
  * Tab Body
