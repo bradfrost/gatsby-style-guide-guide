@@ -1,0 +1,2 @@
+webpackJsonp([55711580191530],{"./node_modules/json-loader/index.js!./.cache/json/styles-color.json":function(l,e){l.exports={data:{markdownRemark:{html:'<p>For inspiration, check out <a href="https://material.io/guidelines/style/color.html">Material Design\'s color styles page</a>.</p>',frontmatter:{path:"/styles/color",tags:null,kicker:null,title:"Color Palette",description:null,status:"Complete",group:"styles",usage:null,use:null,altUse:null}}},pathContext:{slug:"/styles/color/"}}}});
+//# sourceMappingURL=path---styles-color-10ce34633bd390cbb3cd.js.map

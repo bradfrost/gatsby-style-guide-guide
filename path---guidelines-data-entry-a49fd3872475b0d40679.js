@@ -1,0 +1,2 @@
+webpackJsonp([0x5eb76e32d76a],{"./node_modules/json-loader/index.js!./.cache/json/guidelines-data-entry.json":function(e,n){e.exports={data:{markdownRemark:{html:"<p>Form guidelines go here</p>",frontmatter:{path:"/guidelines/data-entry",tags:null,kicker:null,title:"Data entry",description:"High-level form guidelines",status:"Complete",group:"guidelines",usage:null,use:null,altUse:null}}},pathContext:{slug:"/guidelines/data-entry/"}}}});
+//# sourceMappingURL=path---guidelines-data-entry-a49fd3872475b0d40679.js.map

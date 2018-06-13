@@ -1,0 +1,2 @@
+webpackJsonp([62819031002353],{"./node_modules/json-loader/index.js!./.cache/json/downloads.json":function(o,n){o.exports={data:{markdownRemark:{html:"<p>Provide links and information for downloading the design system's files:</p>",frontmatter:{path:"/downloads",tags:["downloads"],kicker:null,title:"Downloads",description:"The downloads page features links to downloads",status:null,group:null,usage:null,use:null,altUse:null}}},pathContext:{slug:"/downloads/"}}}});
+//# sourceMappingURL=path---downloads-f04a283e39578778df0b.js.map

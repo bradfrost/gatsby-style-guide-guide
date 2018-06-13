@@ -1,0 +1,2 @@
+webpackJsonp([0x9f3d16ae5c91],{"./node_modules/json-loader/index.js!./.cache/json/guidelines-notifications.json":function(e,n){e.exports={data:{markdownRemark:{html:"<p>Guidelines go here</p>",frontmatter:{path:"/guidelines/notifications",tags:null,kicker:null,title:"Notifications",description:"Guidelines around how and when to respectfully interrupt users",status:"Complete",group:"guidelines",usage:null,use:null,altUse:null}}},pathContext:{slug:"/guidelines/notifications/"}}}});
+//# sourceMappingURL=path---guidelines-notifications-ba02bfb4aeed3fd7aef3.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([0x8040aaf8f50e],{"./node_modules/json-loader/index.js!./.cache/json/guidelines-writing.json":function(e,i){e.exports={data:{markdownRemark:{html:"<p>Guidelines go here.</p>",frontmatter:{path:"/guidelines/writing",tags:null,kicker:null,title:"Writing Guidelines",description:"Guidelines for writing best practices",status:"Complete",group:"guidelines",usage:null,use:null,altUse:null}}},pathContext:{slug:"/guidelines/writing/"}}}});
+//# sourceMappingURL=path---guidelines-writing-a4c6d4785c74a02e3f8c.js.map

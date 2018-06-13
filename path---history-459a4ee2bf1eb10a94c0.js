@@ -1,0 +1,2 @@
+webpackJsonp([45788430371641],{"./node_modules/json-loader/index.js!./.cache/json/history.json":function(e,l){e.exports={data:{markdownRemark:{html:"<p>Release notes go here</p>",frontmatter:{path:"/history",tags:null,kicker:null,title:"Release history",description:null,status:null,group:null,usage:null,use:null,altUse:null}}},pathContext:{slug:"/history/"}}}});
+//# sourceMappingURL=path---history-459a4ee2bf1eb10a94c0.js.map

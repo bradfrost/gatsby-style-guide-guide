@@ -1,0 +1,2 @@
+webpackJsonp([0xff9e8029a78c],{"./node_modules/json-loader/index.js!./.cache/json/guidelines-data-validation.json":function(a,e){a.exports={data:{markdownRemark:{html:"<p>Guidelines go here</p>",frontmatter:{path:"/guidelines/data-validation",tags:null,kicker:null,title:"Data validation",description:"Guidelines around validating data",status:"Complete",group:"guidelines",usage:null,use:null,altUse:null}}},pathContext:{slug:"/guidelines/data-validation/"}}}});
+//# sourceMappingURL=path---guidelines-data-validation-59d238f69d69df2be2d8.js.map
