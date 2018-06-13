@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: process.env.CI ? `/${name}` : `/`,
+  pathPrefix: process.env.CI ? `/${name}` : `/gatsby-style-guide-guide`,
   siteMetadata: {
     author: 'Ian Frost',
     title: `Style Guide Guide`,
