@@ -22,7 +22,6 @@
     "react-prism": "^4.3.2"
   },
   "devDependencies": {
-    "aws-cloudfront-invalidate": "^0.1.3",
     "classnames": "^2.2.5",
     "gh-pages": "^1.1.0",
     "prettier": "1.10.2",

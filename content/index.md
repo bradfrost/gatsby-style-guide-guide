@@ -1,7 +1,7 @@
 ---
 path: /
 layout: index
-title: Style Guide Guide
+title: Style Guide Guides
 description: A boilerplate for creating superb style guides
 ---
 

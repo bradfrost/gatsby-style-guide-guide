@@ -14,7 +14,7 @@ export default function Index({ data }) {
     return (
         <div className="l-container">
             <PageHeader
-                title="Style Guide Guide"
+                title="Style Guide Guides"
                 description="A boilerplate for creating superb style guides"
             />
 
