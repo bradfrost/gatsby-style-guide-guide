@@ -5,23 +5,23 @@ export class PrimaryNavItem extends Component {
   constructor(props) {
     super(props)
     this.state = { isNavOn: true }
-    // this.toggleNav = this.toggleNav.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
-  // toggleNav(e) {
-  //     if (this.props.subNavItem) {
-  //         e.preventDefault();
-  //         this.setState(prevState => ({
-  //             isNavOn: !prevState.isNavOn
-  //         }));
-  //     }
-  //     else if (document.querySelector(".c-header__nav-container.is-active")) {
-  //         this.props.toggleStatus(e)
-  //     }
-  //     else {
-  //         null
-  //     }
-  // }
+  toggleNav(e) {
+      if (this.props.subNavItem) {
+          e.preventDefault();
+          this.setState(prevState => ({
+              isNavOn: !prevState.isNavOn
+          }));
+      }
+      else if (document.querySelector(".c-header__nav-container.is-active")) {
+          this.props.toggleStatus(e)
+      }
+      else {
+          null
+      }
+  }
 
   render() {
     return (
@@ -40,6 +40,7 @@ export class PrimaryNavItem extends Component {
               : 'c-primary-nav__link'
           }
           to={this.props.href}
+          onClick={this.toggleNav}
         >
           <span className="c-primary-nav__text">{this.props.label}</span>
           {this.props.subNavItem && (
