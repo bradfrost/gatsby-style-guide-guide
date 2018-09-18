@@ -1,7 +1,7 @@
 import React from 'react';
 import markdownIt from 'markdown-it';
 
-const Hero = ({title, description, meta, backgroundImageUrl, cta, footer}) => {
+const Hero = ({title, description, meta, backgroundImageUrl, footer}) => {
 
 	const md = markdownIt({
 		html: true,

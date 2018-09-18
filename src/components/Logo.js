@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'gatsby';
 
-const Logo = ({ siteTitle }) => (
+const Logo = () => (
     <h3 className="c-logo">
         <Link className="c-logo__link" to="/">
         <svg className="c-logo__img" width="644px" height="53px" viewBox="0 0 644 53" version="1.1">

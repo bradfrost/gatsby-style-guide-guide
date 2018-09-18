@@ -1,7 +1,7 @@
 import React from 'react';
 import markdownIt from 'markdown-it';
 
-const Card = ({ href, header, title, description, cardImg, cardImgAlt, footer}) => {
+const Card = ({ href, header, title, description, footer}) => {
 	const md = markdownIt({
 	  html: true,
 	  linkify: true

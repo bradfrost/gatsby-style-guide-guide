@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = ({ tableHeaderColumns, data, tbody, styleModifier }) => {
+const Table = ({ tableHeaderColumns, tbody, styleModifier }) => {
 
     return (
         <table className= {"c-table " + styleModifier }>

@@ -1,7 +1,7 @@
 import React from "react";
 import markdownIt from 'markdown-it';
 
-const Section = ({ headingLevel, title, description, children }) => {
+const Section = ({ title, description, children }) => {
 
     const md = markdownIt({
 	  html: true,
