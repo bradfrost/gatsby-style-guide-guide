@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 
+import Layout from "../components/layout";
 import PageHeader from "../components/PageHeader";
 import Breadcrumbs from "../components/Breadcrumbs";
 
@@ -9,23 +10,19 @@ export default function Template({ data }) {
     const { markdownRemark: post } = data;
 
     return (
+      <Layout>
         <div className="l-container">
-            <Helmet title={`${post.frontmatter.title}`} />
-
-            {post.frontmatter.group &&
-                <Breadcrumbs group={post.frontmatter.group} />
-            }
-
-            <PageHeader
-                kicker={post.frontmatter.kicker}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-                status={post.frontmatter.status}
-            />
-
-            <div className="c-text-passage" dangerouslySetInnerHTML={{ __html: post.html }} />
-
+          <Helmet title={`${post.frontmatter.title}`} />
+          { post.frontmatter.group && <Breadcrumbs group={post.frontmatter.group} /> }
+          <PageHeader
+              kicker={post.frontmatter.kicker}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              status={post.frontmatter.status}
+          />
+          <div className="c-text-passage" dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
+      </Layout>
     );
 }
 

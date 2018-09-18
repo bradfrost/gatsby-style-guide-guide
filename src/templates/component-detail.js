@@ -6,6 +6,7 @@ import ReactDOMServer from 'react-dom/server';
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+import Layout from "../components/layout";
 import Link from "../components/Link";
 import Tags from "../components/Tags";
 import PageHeader from "../components/PageHeader";
@@ -45,29 +46,60 @@ export class ComponentDetail extends Component {
         const { next, prev } = this.props.pageContext;
 
         return (
-            <div className="l-container">
-                <Helmet title={`${post.frontmatter.title}`} />
+            <Layout>
+                <div className="l-container">
+                    <Helmet title={`${post.frontmatter.title}`} />
 
-                <Breadcrumbs group={post.frontmatter.group} subgroup={post.frontmatter.subgroup} />
+                    <Breadcrumbs group={post.frontmatter.group} subgroup={post.frontmatter.subgroup} />
 
-                <PageHeader
-                    title={post.frontmatter.title}
-                    description={post.frontmatter.description}
-                    status={post.frontmatter.status}
-                />
+                    <PageHeader
+                        title={post.frontmatter.title}
+                        description={post.frontmatter.description}
+                        status={post.frontmatter.status}
+                    />
 
-                {(post.frontmatter.variations && post.frontmatter.variations.length > 1) &&
-                    <Tabs>
-                        {post.frontmatter.variations.map((item) =>
-                        <Tab label={item.title}>
+                    {(post.frontmatter.variations && post.frontmatter.variations.length > 1) &&
+                        <Tabs>
+                            {post.frontmatter.variations.map((item) =>
+                            <Tab label={item.title}>
 
+                                <Well>
+                                    <Section title={item.title + " <code>" + item.styleModifier + "</code>"} description={item.description}>
+
+                                            <ComponentExample component={item.component} />
+
+                                    </Section>
+                                </Well>
+                                <Tabs styleModifier="ads-u-margin-bottom-large">
+                                    <Tab label="React">
+                                        <div className="pattern-code">
+                                            <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                            <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+                    ${reactElementToJSXString(<ComponentExample component={item.component} />)}
+                                            `}</code></pre>
+                                        </div>
+                                    </Tab>
+                                    <Tab label="HTML">
+                                        <div className="pattern-code">
+                                        <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                            <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
+                    ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
+                                            `}</code></pre>
+                                        </div>
+                                    </Tab>
+                                </Tabs>
+                            </Tab>
+                        )}
+                        </Tabs>
+                    }
+
+                    {(post.frontmatter.variations && post.frontmatter.variations.length) === 1 &&
+                        post.frontmatter.variations.map((item) =>
+                        <div>
                             <Well>
-                                <Section title={item.title + " <code>" + item.styleModifier + "</code>"} description={item.description}>
-
-                                        <ComponentExample component={item.component} />
-
-                                </Section>
+                                <ComponentExample component={item.component} />
                             </Well>
+
                             <Tabs styleModifier="ads-u-margin-bottom-large">
                                 <Tab label="React">
                                     <div className="pattern-code">
@@ -79,142 +111,113 @@ export class ComponentDetail extends Component {
                                 </Tab>
                                 <Tab label="HTML">
                                     <div className="pattern-code">
-                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
+                                        <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
                                         <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
                 ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
                                         `}</code></pre>
                                     </div>
                                 </Tab>
                             </Tabs>
-                        </Tab>
-                    )}
-                    </Tabs>
-                }
-
-                {(post.frontmatter.variations && post.frontmatter.variations.length) === 1 &&
-                    post.frontmatter.variations.map((item) =>
-                    <div>
-                        <Well>
-                            <ComponentExample component={item.component} />
-                        </Well>
-
-                        <Tabs styleModifier="ads-u-margin-bottom-large">
-                            <Tab label="React">
-                                <div className="pattern-code">
-                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
-                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
-            ${reactElementToJSXString(<ComponentExample component={item.component} />)}
-                                    `}</code></pre>
-                                </div>
-                            </Tab>
-                            <Tab label="HTML">
-                                <div className="pattern-code">
-                                    <Button styleModifier="pattern-code-copy-btn" text="Copy" dataClipboardTarget={"#pattern-code-"+ item.component} />
-                                    <pre className="highlight pattern-code-block language-markup"><code className="code language-markup" id={"pattern-code-"+ item.component}>{`
-            ${ReactDOMServer.renderToStaticMarkup(<ComponentExample component={item.component} />)}
-                                    `}</code></pre>
-                                </div>
-                            </Tab>
-                        </Tabs>
-                    </div>
-                    )
-                }
-
-                { (post.frontmatter.usage ||
-                    post.frontmatter.use ||
-                    post.frontmatter.altUse) &&
-                <Section title="Usage">
-                    <div className="c-text-passage">
-                    { post.frontmatter.usage &&
-                        post.frontmatter.usage.map((item) =>
-                        <div>
-                        <h3>{item.title}</h3>
-                        <div dangerouslySetInnerHTML={{ __html: md.render(item.description) }} />
                         </div>
                         )
                     }
-                    </div>
-                    <ul className="l-grid">
-                        <li className="l-grid__item">
-                            {post.frontmatter.use &&
-                                post.frontmatter.use.map((item, index) =>
-                                    <ContentBlock key={ index } title={item.title} description={item.description} styleModifier="c-content-block--success" />
-                                )
-                            }
-                        </li>
-                        <li className="l-grid__item">
-                            {post.frontmatter.altUse &&
-                                post.frontmatter.altUse.map((item, index) =>
-                                    <ContentBlock key={ index } title={item.title} description={item.description} styleModifier="c-content-block--error" />
-                                )
-                            }
-                        </li>
-                    </ul>
-                    </Section>
-                }
 
-                { post.frontmatter.classes &&
-                <Table
-                tableHeaderColumns={["Class Name", "Description"]}
-                tbody = {
-                    post.frontmatter.classes.map((item) =>
-
-                        <tr className="c-table__row">
-                            <td className="c-table__cell">
-                                <code>{item.className}</code>
-                            </td>
-
-                            <td className="c-table__cell"
-                                dangerouslySetInnerHTML={{ __html: md.render(item.description) }}
-                            />
-                        </tr>
-
-                    )
-                }
-                />
-            }
-
-                <div
-                    className="c-text-passage"
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                />
-
-                <Tags list={post.frontmatter.tags || []} />
-
-                <div className="c-pagination">
-                    {prev && (
-                        <Link
-                            className="c-pagination__link"
-                            to={prev.frontmatter.path}
-                        >
-                            <FaChevronLeft /> {prev.frontmatter.title}
-                        </Link>
-                    )}
-                    {next && (
-                        <Link
-                            className="c-pagination__link"
-                            to={next.frontmatter.path}
-                        >
-                            {next.frontmatter.title} <FaChevronRight />
-                        </Link>
-                    )}
-                </div>
-
-                {post.frontmatter.finePrint &&
-                <Section title="Fine print">
-                    {post.frontmatter.finePrint.map((item) =>
+                    { (post.frontmatter.usage ||
+                        post.frontmatter.use ||
+                        post.frontmatter.altUse) &&
+                    <Section title="Usage">
                         <div className="c-text-passage">
-                            <ul>
-                                <li>Version: {item.version}</li>
-                                <li>Last Updated: {item.update}</li>
-                                <li>Owner: {item.owner}</li>
-                            </ul>
+                        { post.frontmatter.usage &&
+                            post.frontmatter.usage.map((item) =>
+                            <div>
+                            <h3>{item.title}</h3>
+                            <div dangerouslySetInnerHTML={{ __html: md.render(item.description) }} />
+                            </div>
+                            )
+                        }
                         </div>
-                    )}
-                    <ButtonLink href="#" text="Discuss this component" />
-                </Section>
+                        <ul className="l-grid">
+                            <li className="l-grid__item">
+                                {post.frontmatter.use &&
+                                    post.frontmatter.use.map((item, index) =>
+                                        <ContentBlock key={ index } title={item.title} description={item.description} styleModifier="c-content-block--success" />
+                                    )
+                                }
+                            </li>
+                            <li className="l-grid__item">
+                                {post.frontmatter.altUse &&
+                                    post.frontmatter.altUse.map((item, index) =>
+                                        <ContentBlock key={ index } title={item.title} description={item.description} styleModifier="c-content-block--error" />
+                                    )
+                                }
+                            </li>
+                        </ul>
+                        </Section>
+                    }
+
+                    { post.frontmatter.classes &&
+                    <Table
+                    tableHeaderColumns={["Class Name", "Description"]}
+                    tbody = {
+                        post.frontmatter.classes.map((item) =>
+
+                            <tr className="c-table__row">
+                                <td className="c-table__cell">
+                                    <code>{item.className}</code>
+                                </td>
+
+                                <td className="c-table__cell"
+                                    dangerouslySetInnerHTML={{ __html: md.render(item.description) }}
+                                />
+                            </tr>
+
+                        )
+                    }
+                    />
                 }
-            </div>
+
+                    <div
+                        className="c-text-passage"
+                        dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+
+                    <Tags list={post.frontmatter.tags || []} />
+
+                    <div className="c-pagination">
+                        {prev && (
+                            <Link
+                                className="c-pagination__link"
+                                to={prev.frontmatter.path}
+                            >
+                                <FaChevronLeft /> {prev.frontmatter.title}
+                            </Link>
+                        )}
+                        {next && (
+                            <Link
+                                className="c-pagination__link"
+                                to={next.frontmatter.path}
+                            >
+                                {next.frontmatter.title} <FaChevronRight />
+                            </Link>
+                        )}
+                    </div>
+
+                    {post.frontmatter.finePrint &&
+                    <Section title="Fine print">
+                        {post.frontmatter.finePrint.map((item) =>
+                            <div className="c-text-passage">
+                                <ul>
+                                    <li>Version: {item.version}</li>
+                                    <li>Last Updated: {item.update}</li>
+                                    <li>Owner: {item.owner}</li>
+                                </ul>
+                            </div>
+                        )}
+                        <ButtonLink href="#" text="Discuss this component" />
+                    </Section>
+                    }
+                </div>
+            </Layout>
         );
     }
 }
