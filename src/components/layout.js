@@ -41,7 +41,7 @@ export default ({ children }) => {
 						<meta name="description" content="A boilerplate for creating superb style guides" />
 						<meta name="keywords" content="style guide guide" />
 
-						<link rel="icon" href="./favicon.ico" />
+						<link rel="icon" href="favicon.ico" />
 
 						<link rel="stylesheet" href="https://use.typekit.net/agm6qos.css" />
 
