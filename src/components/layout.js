@@ -6,7 +6,7 @@ import Footer from "./Footer";
 require('prismjs');
 require('prismjs/themes/prism.css');
 
-import "../css/style.css";
+import "../css/style.scss";
 import "../css/style-guide.css";
 
 export default ({children, data}) => {
