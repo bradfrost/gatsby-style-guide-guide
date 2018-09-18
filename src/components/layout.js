@@ -1,13 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
+import Prism from 'prismjs'
 import Header from "./Header";
 import Footer from "./Footer";
-require('prismjs');
-require('prismjs/themes/prism.css');
 
 import "../css/style.scss";
 import "../css/style-guide.css";
+
+require('prismjs/themes/prism.css');
 
 export default ({ children }) => {
 	if (typeof window !== 'undefined') {
