@@ -4,8 +4,7 @@ import Helmet from "react-helmet";
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import ReactDOMServer from 'react-dom/server';
 
-import BackIcon from "react-icons/lib/fa/chevron-left";
-import ForwardIcon from "react-icons/lib/fa/chevron-right";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import Link from "../components/Link";
 import Tags from "../components/Tags";
@@ -189,7 +188,7 @@ export class ComponentDetail extends Component {
                             className="c-pagination__link"
                             to={prev.frontmatter.path}
                         >
-                            <BackIcon /> {prev.frontmatter.title}
+                            <FaChevronLeft /> {prev.frontmatter.title}
                         </Link>
                     )}
                     {next && (
@@ -197,7 +196,7 @@ export class ComponentDetail extends Component {
                             className="c-pagination__link"
                             to={next.frontmatter.path}
                         >
-                            {next.frontmatter.title} <ForwardIcon />
+                            {next.frontmatter.title} <FaChevronRight />
                         </Link>
                     )}
                 </div>
