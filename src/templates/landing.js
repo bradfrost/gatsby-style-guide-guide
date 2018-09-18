@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 
 import PageHeader from "../components/PageHeader";
 
-export default function Template({ data, pathContext }) {
+export default function Template({ data }) {
     const { markdownRemark: post } = data;
 
     return (
