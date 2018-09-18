@@ -42,7 +42,7 @@ export class ComponentDetail extends Component {
           linkify: true
         });
         const { markdownRemark: post } = this.props.data;
-        const { next, prev } = this.props.pathContext;
+        const { next, prev } = this.props.pageContext;
 
         return (
             <div className="l-container">

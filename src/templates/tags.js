@@ -4,8 +4,8 @@ import TagsIcon from 'react-icons/lib/fa/tags';
 
 import Link from '../components/Link';
 
-export default function Tags({ pathContext }) {
-  const { posts, post, tag } = pathContext;
+export default function Tags({ pageContext }) {
+  const { posts, post, tag } = pageContext;
   if (tag) {
     return (
       <div>
