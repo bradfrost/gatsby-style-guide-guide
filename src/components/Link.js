@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
 
 export default function Link({ children, className, to }) {
   return (
