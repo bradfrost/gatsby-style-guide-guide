@@ -12,7 +12,7 @@ const PageHeader = ({ kicker, title, description, status }) => {
         {kicker &&
         <p className="c-page-header__kicker">{ kicker }</p>
         }
-        <h1 className="c-page-header__title">{ title } {(status && status != "Complete") ? <Badge status={ status } /> : null}</h1>
+        <h1 className="c-page-header__title">{ title } {(status && status !== "Complete") ? <Badge status={ status } /> : null}</h1>
         {description &&
             <div className="c-page-header__desc" dangerouslySetInnerHTML={{ __html: md.render(description) }} />
         }

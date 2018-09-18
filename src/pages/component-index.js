@@ -12,7 +12,7 @@ export default function ComponentDetail({ data }) {
 
                 <ul className="c-card-list l-grid l-grid--3up">
                 {posts
-                    .filter(post => post.node.frontmatter.group == 'components')
+                    .filter(post => post.node.frontmatter.group === 'components')
                     .filter(post => post.node.frontmatter.subgroup)
                     .map(({ node: post }) => {
                         if (post.frontmatter.layout === "component-category") {
@@ -22,6 +22,7 @@ export default function ComponentDetail({ data }) {
                                 </li>
                             );
                         }
+                        return null
                     })}
                 </ul>
         </div>
