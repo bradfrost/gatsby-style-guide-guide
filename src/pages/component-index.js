@@ -1,8 +1,6 @@
 import React from "react";
-import GatsbyLink from "gatsby-link";
-import Helmet from "react-helmet";
+import { graphql } from "gatsby";
 
-import Link from "../components/Link";
 import PageHeader from "../components/PageHeader";
 import Card from "../components/Card";
 
