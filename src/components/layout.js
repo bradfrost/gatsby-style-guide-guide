@@ -12,16 +12,16 @@ import "../css/style-guide.css";
 export default ({ children }) => {
 	if (typeof window !== 'undefined') {
 		if(document.readyState !== "loading") {
-		    setTimeout(Prism.highlightAll, 0);
+		  setTimeout(Prism.highlightAll, 0);
 		}
 		else {
-		    document.addEventListener('DOMContentLoaded', Prism.highlightAll);
+		  document.addEventListener('DOMContentLoaded', Prism.highlightAll);
 		}
 	}
 	return (
 		<StaticQuery
 			query={graphql`
-				query HeadingQuery {
+				query LayoutQuery {
 					allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___title] }) {
 						edges {
 							node {
