@@ -1,22 +1,25 @@
 import React from "react";
 import { graphql } from "gatsby";
 
+import Layout from "../components/layout"
 import PageHeader from "../components/PageHeader";
 
 export default function Index({ data }) {
     const { markdownRemark: post } = data;
     return (
-        <div className="l-container">
-            <PageHeader
-                title="Style Guide Guide"
-                description="A boilerplate for creating superb style guides"
-            />
+        <Layout>
+            <div className="l-container">
+                <PageHeader
+                    title="Style Guide Guide"
+                    description="A boilerplate for creating superb style guides"
+                />
 
-            <div
-                className="c-text-passage"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-        </div>
+                <div
+                    className="c-text-passage"
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
+            </div>
+        </Layout>
     );
 }
 
