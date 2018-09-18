@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'gatsby';
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
     <footer className="c-footer" role="contentinfo">
         <ul className="c-footer-nav">
             <li className="c-footer-nav__item">

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 const Button = ({ text, onClickHandler, styleModifier, props, image, dataClipboardTarget }) => (

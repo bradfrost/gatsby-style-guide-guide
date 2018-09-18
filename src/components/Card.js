@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Button from "./Button"
-import ButtonGroup from "./ButtonGroup"
 import markdownIt from 'markdown-it';
 
 const Card = ({ href, header, title, description, cardImg, cardImgAlt, footer}) => {
