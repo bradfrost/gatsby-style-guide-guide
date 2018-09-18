@@ -52,7 +52,6 @@ export default ({ children }) => {
 							<Header siteTitle="Style Guide Guide" styleModifier="c-header--vertical" navData={posts} />
 						</div>
 						<div className="l-page-layout__main">
-						{posts}
 							<main role="main">
 								{children}
 							</main>
