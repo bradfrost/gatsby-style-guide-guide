@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
-import Prism from 'prismjs'
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -11,14 +10,6 @@ import "../css/style-guide.css";
 require('prismjs/themes/prism.css');
 
 export default ({ children }) => {
-	if (typeof window !== 'undefined') {
-		if(document.readyState !== "loading") {
-		  setTimeout(Prism.highlightAll, 0);
-		}
-		else {
-		  document.addEventListener('DOMContentLoaded', Prism.highlightAll);
-		}
-	}
 	return (
 		<StaticQuery
 			query={graphql`
@@ -42,7 +33,7 @@ export default ({ children }) => {
 					}
 				}
 			`}
-			render={({ edges: posts }) => (
+			render={({ allMarkdownRemark: { edges: posts } }) => (
 				<div className="c-wrapper">
 					<Helmet>
 						<title>Style Guide Guide</title>
@@ -61,8 +52,9 @@ export default ({ children }) => {
 							<Header siteTitle="Style Guide Guide" styleModifier="c-header--vertical" navData={posts} />
 						</div>
 						<div className="l-page-layout__main">
+						{posts}
 							<main role="main">
-								{children()}
+								{children}
 							</main>
 							<Footer />
 						</div>
