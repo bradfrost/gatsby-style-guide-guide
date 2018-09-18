@@ -18,6 +18,7 @@ export default function Template({ data }) {
                     .map(({ node: post }) => {
                         if (((typeof window !== 'undefined') && (window.location.pathname.replace("/components/","")) === post.frontmatter.subgroup) && (post.frontmatter.layout === "component-category")) {
                             return ( <PageHeader
+                                key={post.id}
                                 title={post.frontmatter.title}
                                 description={post.frontmatter.description}
                             />
@@ -33,8 +34,8 @@ export default function Template({ data }) {
                         .map(({ node: post }) => {
                             if ((typeof window !== 'undefined') && (window.location.pathname.replace("/components/","")) === post.frontmatter.subgroup && post.frontmatter.layout !== "component-category") {
                                 return (
-                                    <li className="l-grid__item">
-                                        <Card href={"/components/"+post.frontmatter.path.replace("/components/","")} header={(post.frontmatter.subgroup.charAt(0).toUpperCase() + post.frontmatter.subgroup.slice(1)).replace(/-/g, " ")} title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
+                                    <li className="l-grid__item" key={post.id}>
+                                        <Card href={"/components/"+post.frontmatter.path.replace("/components/","")} header={(post.frontmatter.subgroup.charAt(0).toUpperCase() + post.frontmatter.subgroup.slice(1)).replace(/-/g, " ")} title={post.frontmatter.title} description={post.frontmatter.description} />
                                     </li>
                                 );
                             }

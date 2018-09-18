@@ -60,8 +60,8 @@ export class ComponentDetail extends Component {
 
                     {(post.frontmatter.variations && post.frontmatter.variations.length > 1) &&
                         <Tabs>
-                            {post.frontmatter.variations.map((item) =>
-                            <Tab label={item.title}>
+                            {post.frontmatter.variations.map((item, index) =>
+                            <Tab label={item.title} key={index}>
 
                                 <Well>
                                     <Section title={item.title + " <code>" + item.styleModifier + "</code>"} description={item.description}>
@@ -94,8 +94,8 @@ export class ComponentDetail extends Component {
                     }
 
                     {(post.frontmatter.variations && post.frontmatter.variations.length) === 1 &&
-                        post.frontmatter.variations.map((item) =>
-                        <div>
+                        post.frontmatter.variations.map((item, index) =>
+                        <div key={index}>
                             <Well>
                                 <ComponentExample component={item.component} />
                             </Well>
@@ -128,10 +128,10 @@ export class ComponentDetail extends Component {
                     <Section title="Usage">
                         <div className="c-text-passage">
                         { post.frontmatter.usage &&
-                            post.frontmatter.usage.map((item) =>
-                            <div>
-                            <h3>{item.title}</h3>
-                            <div dangerouslySetInnerHTML={{ __html: md.render(item.description) }} />
+                            post.frontmatter.usage.map((item, index) =>
+                            <div key={index}>
+                                <h3>{item.title}</h3>
+                                <div dangerouslySetInnerHTML={{ __html: md.render(item.description) }} />
                             </div>
                             )
                         }
@@ -156,25 +156,24 @@ export class ComponentDetail extends Component {
                     }
 
                     { post.frontmatter.classes &&
-                    <Table
-                    tableHeaderColumns={["Class Name", "Description"]}
-                    tbody = {
-                        post.frontmatter.classes.map((item) =>
+                        <Table
+                        tableHeaderColumns={["Class Name", "Description"]}
+                        tbody = {
+                            post.frontmatter.classes.map((item, index) =>
+                                <tr className="c-table__row" key={index}>
+                                    <td className="c-table__cell">
+                                        <code>{item.className}</code>
+                                    </td>
 
-                            <tr className="c-table__row">
-                                <td className="c-table__cell">
-                                    <code>{item.className}</code>
-                                </td>
+                                    <td className="c-table__cell"
+                                        dangerouslySetInnerHTML={{ __html: md.render(item.description) }}
+                                    />
+                                </tr>
 
-                                <td className="c-table__cell"
-                                    dangerouslySetInnerHTML={{ __html: md.render(item.description) }}
-                                />
-                            </tr>
-
-                        )
+                            )
+                        }
+                        />
                     }
-                    />
-                }
 
                     <div
                         className="c-text-passage"
@@ -204,8 +203,8 @@ export class ComponentDetail extends Component {
 
                     {post.frontmatter.finePrint &&
                     <Section title="Fine print">
-                        {post.frontmatter.finePrint.map((item) =>
-                            <div className="c-text-passage">
+                        {post.frontmatter.finePrint.map((item, index) =>
+                            <div className="c-text-passage" key={index}>
                                 <ul>
                                     <li>Version: {item.version}</li>
                                     <li>Last Updated: {item.update}</li>

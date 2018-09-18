@@ -16,6 +16,7 @@ export default function Template({ data }) {
                     .map(({ node: post }) => {
                         if ((post.frontmatter.layout === "utilities-index")) {
                             return ( <PageHeader
+                                key={post.id}
                                 title={post.frontmatter.title}
                                 description={post.frontmatter.description}
                             />
