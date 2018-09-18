@@ -1,8 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const Icons = () => (
-    <div className="c-icon">
-	</div>
-);
+const Icons = () => <div className="c-icon" />
 
-export default Icons;
+export default Icons

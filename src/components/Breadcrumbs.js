@@ -1,23 +1,27 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
 const Breadcrumbs = ({ group, subgroup }) => {
-	return (
-		<ol className="c-breadcrumbs">
+  return (
+    <ol className="c-breadcrumbs">
+      <li className="c-breadcrumbs__item">
+        <Link className="c-breadcrumbs__link" to={'/' + group}>
+          {group}
+        </Link>
+      </li>
 
-			<li className="c-breadcrumbs__item">
-				<Link className="c-breadcrumbs__link" to={"/" + group }>{ group }</Link>
-			</li>
+      {subgroup && (
+        <li className="c-breadcrumbs__item">
+          <Link
+            className="c-breadcrumbs__link"
+            to={'/' + group + '/' + subgroup}
+          >
+            {subgroup}
+          </Link>
+        </li>
+      )}
+    </ol>
+  )
+}
 
-			{subgroup &&
-
-				<li className="c-breadcrumbs__item">
-					<Link className="c-breadcrumbs__link" to={"/" + group + "/" + subgroup }>{ subgroup }</Link>
-				</li>
-			}
-
-		</ol>
-	)
-};
-
-export default Breadcrumbs;
+export default Breadcrumbs

@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 export default class HTML extends React.Component {
-
   render() {
-    let css;
+    let css
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
@@ -11,7 +10,7 @@ export default class HTML extends React.Component {
             __html: require('!raw!../public/styles.css'),
           }}
         />
-      );
+      )
     }
 
     return (
@@ -34,6 +33,6 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }

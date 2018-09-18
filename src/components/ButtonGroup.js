@@ -1,10 +1,7 @@
-import React from 'react';
+import React from 'react'
 
+const ButtonGroup = ({ children }) => (
+  <div className="c-btn-group">{children}</div>
+)
 
-const ButtonGroup = ({children}) => (
-	<div className="c-btn-group">
-		{children}
-	</div>
-);
-
-export default ButtonGroup;
+export default ButtonGroup
