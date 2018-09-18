@@ -13,21 +13,21 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                 subNavItem = {
                     <ul className="c-primary-nav__sublist">
                     {data
-                        .filter(post => post.node.frontmatter.group == 'guidelines')
-                        .filter(post => post.node.frontmatter.layout =='landing')
+                        .filter(post => post.node.frontmatter.group === 'guidelines')
+                        .filter(post => post.node.frontmatter.layout ==='landing')
                         .map(({ node: post }) => {
                                 return (
-                                    <PrimarySubNavItem title= 'Overview' url= {post.frontmatter.path} toggleStatus={toggleStatus} />
+                                    <PrimarySubNavItem key={post.id} title= 'Overview' url= {post.frontmatter.path} toggleStatus={toggleStatus} />
                                 );
                         })
                     }
                     {data
-                        .filter(post => post.node.frontmatter.group == 'guidelines')
-                        .filter(post => post.node.frontmatter.layout =='page')
-                        .filter(post => post.node.frontmatter.status =='Complete')
+                        .filter(post => post.node.frontmatter.group === 'guidelines')
+                        .filter(post => post.node.frontmatter.layout ==='page')
+                        .filter(post => post.node.frontmatter.status ==='Complete')
                         .map(({ node: post }) => {
                                 return (
-                                    <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                    <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                 );
                         })
                     }
@@ -42,21 +42,21 @@ const PrimaryNav = ({ data, toggleStatus }) => (
 
                     <ul className="c-primary-nav__sublist">
                     {data
-                       .filter(post => post.node.frontmatter.group == 'styles')
-                       .filter(post => post.node.frontmatter.layout =='landing')
+                       .filter(post => post.node.frontmatter.group === 'styles')
+                       .filter(post => post.node.frontmatter.layout ==='landing')
                        .map(({ node: post }) => {
                                return (
-                                   <PrimarySubNavItem title= 'Overview' url= {post.frontmatter.path} toggleStatus={toggleStatus} />
+                                   <PrimarySubNavItem key={post.id} title= 'Overview' url= {post.frontmatter.path} toggleStatus={toggleStatus} />
                                );
                        })
                    }
                    {data
-                       .filter(post => post.node.frontmatter.group == 'styles')
-                       .filter(post => post.node.frontmatter.layout =='page')
-                       .filter(post => post.node.frontmatter.status =='Complete')
+                       .filter(post => post.node.frontmatter.group === 'styles')
+                       .filter(post => post.node.frontmatter.layout ==='page')
+                       .filter(post => post.node.frontmatter.status ==='Complete')
                        .map(({ node: post }) => {
                                return (
-                                   <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                   <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                );
                        })
                    }
@@ -76,22 +76,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='blocks-and-cards')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='blocks-and-cards')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='blocks-and-cards')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='blocks-and-cards')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -104,22 +104,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='buttons')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='buttons')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='buttons')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='buttons')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -133,22 +133,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='charts-and-graphs')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='charts-and-graphs')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='charts-and-graphs')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='charts-and-graphs')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -162,22 +162,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='form-controls')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='form-controls')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='form-controls')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='form-controls')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -191,22 +191,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='headers-and-footers')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='headers-and-footers')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='headers-and-footers')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='headers-and-footers')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -220,22 +220,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='icons')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='icons')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path } toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path } toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='icons')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='icons')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -249,22 +249,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='interactive')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='interactive')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='interactive')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='interactive')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -278,22 +278,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='lists-and-collections')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='lists-and-collections')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='lists-and-collections')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='lists-and-collections')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -307,22 +307,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='media')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='media')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='media')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='media')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -336,22 +336,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='messaging')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='messaging')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='messaging')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='messaging')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -365,22 +365,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                             subSubNavItems={
                                 <ul className="c-primary-nav__sublist">
                                 {data
-                                    .filter(post => post.node.frontmatter.group == 'components')
-                                    .filter(post => post.node.frontmatter.subgroup =='navigation')
-                                    .filter(post => post.node.frontmatter.layout =='component-category')
+                                    .filter(post => post.node.frontmatter.group === 'components')
+                                    .filter(post => post.node.frontmatter.subgroup ==='navigation')
+                                    .filter(post => post.node.frontmatter.layout ==='component-category')
                                     .map(({ node: post }) => {
                                             return (
-                                                <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                                <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                             );
                                     })
                                 }
                                 {data
-                                    .filter(post => post.node.frontmatter.group == 'components')
-                                    .filter(post => post.node.frontmatter.subgroup =='navigation')
-                                    .filter(post => post.node.frontmatter.layout =='component-detail')
+                                    .filter(post => post.node.frontmatter.group === 'components')
+                                    .filter(post => post.node.frontmatter.subgroup ==='navigation')
+                                    .filter(post => post.node.frontmatter.layout ==='component-detail')
                                     .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                     })
                                 }
@@ -394,22 +394,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='tables')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='tables')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='tables')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='tables')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -423,22 +423,22 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                         subSubNavItems={
                             <ul className="c-primary-nav__sublist">
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='text')
-                                .filter(post => post.node.frontmatter.layout =='component-category')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='text')
+                                .filter(post => post.node.frontmatter.layout ==='component-category')
                                 .map(({ node: post }) => {
                                         return (
-                                            <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                            <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                         );
                                 })
                             }
                             {data
-                                .filter(post => post.node.frontmatter.group == 'components')
-                                .filter(post => post.node.frontmatter.subgroup =='text')
-                                .filter(post => post.node.frontmatter.layout =='component-detail')
+                                .filter(post => post.node.frontmatter.group === 'components')
+                                .filter(post => post.node.frontmatter.subgroup ==='text')
+                                .filter(post => post.node.frontmatter.layout ==='component-detail')
                                 .map(({ node: post }) => {
                                     return (
-                                        <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                        <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                     );
                                 })
                             }
@@ -455,20 +455,20 @@ const PrimaryNav = ({ data, toggleStatus }) => (
                 subNavItem= {
                     <ul className="c-primary-nav__sublist">
                     {data
-                        .filter(post => post.node.frontmatter.group == 'utilities')
-                        .filter(post => post.node.frontmatter.layout =='utilities-index')
+                        .filter(post => post.node.frontmatter.group === 'utilities')
+                        .filter(post => post.node.frontmatter.layout ==='utilities-index')
                         .map(({ node: post }) => {
                                 return (
-                                    <PrimarySubNavItem title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                    <PrimarySubNavItem key={post.id} title="Overview" url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                 );
                         })
                     }
                    {data
-                       .filter(post => post.node.frontmatter.group == 'utilities')
-                       .filter(post => post.node.frontmatter.layout =='component-detail')
+                       .filter(post => post.node.frontmatter.group === 'utilities')
+                       .filter(post => post.node.frontmatter.layout ==='component-detail')
                        .map(({ node: post }) => {
                                return (
-                                   <PrimarySubNavItem title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
+                                   <PrimarySubNavItem key={post.id} title={post.frontmatter.title} url={post.frontmatter.path} toggleStatus={toggleStatus} />
                                );
                        })
                    }
