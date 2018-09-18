@@ -8,11 +8,10 @@ export class Header extends Component {
   constructor(props) {
     super(props)
     this.state = { isToggleOn: true }
-
     this.toggleMenu = this.toggleMenu.bind(this)
   }
 
-  toggleMenu(e) {
+  toggleMenu() {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn,
     }))
