@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import ReactDOMServer from 'react-dom/server';

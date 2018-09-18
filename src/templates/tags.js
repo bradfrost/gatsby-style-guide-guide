@@ -1,6 +1,5 @@
 import React from 'react';
 import GatsbyLink from 'gatsby-link';
-import HomeIcon from 'react-icons/lib/fa/home';
 import TagsIcon from 'react-icons/lib/fa/tags';
 
 import Link from '../components/Link';
@@ -40,7 +39,6 @@ export default function Tags({ pathContext }) {
       <h1>Tags</h1>
       <ul className="tags">
         {Object.keys(posts).map(tagName => {
-          const tags = posts[tagName];
           return (
             <li key={tagName}>
               <GatsbyLink to={`/tags/${tagName}`}>

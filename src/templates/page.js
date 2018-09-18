@@ -1,17 +1,11 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 import PageHeader from "../components/PageHeader";
-import Button from "../components/Button";
-import ButtonLink from "../components/ButtonLink";
-import Section from "../components/Section";
-import ButtonGroup from "../components/ButtonGroup";
 import Breadcrumbs from "../components/Breadcrumbs";
-import ContentBlock from "../components/ContentBlock";
-import Table from "../components/Table";
-import Well from "../components/Well";
 
-export default function Template({ data, pathContext }) {
+export default function Template({ data }) {
     const { markdownRemark: post } = data;
 
     return (
