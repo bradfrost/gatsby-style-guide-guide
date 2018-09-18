@@ -9,7 +9,7 @@ require('prismjs/themes/prism.css');
 import "../css/style.scss";
 import "../css/style-guide.css";
 
-export default ({children, data}) => {
+export default ({ children }) => {
 	if (typeof window !== 'undefined') {
 		if(document.readyState !== "loading") {
 		    setTimeout(Prism.highlightAll, 0);
