@@ -5,7 +5,6 @@ module.exports = {
     title: `Style Guide Guide`,
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
