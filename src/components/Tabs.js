@@ -1,4 +1,5 @@
 import React from "react";
+import Prism from 'prismjs';
 
 class Tabs extends React.Component {
 
@@ -22,7 +23,7 @@ class Tabs extends React.Component {
                 <ul className="c-tabs__list" role="tablist">
                     {React.Children.map(this.props.children, (item, index) => {
                         return (
-                            <li className={ 'c-tabs__list-item ' + (this.state.currentTab == index ? 'is-active' : '') } key={"tab-" + index }>
+                            <li className={ 'c-tabs__list-item ' + (this.state.currentTab === index ? 'is-active' : '') } key={"tab-" + index }>
                                 <a
                                     className="c-tabs__link"
                                     onClick={e => {
