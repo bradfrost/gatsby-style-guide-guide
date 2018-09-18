@@ -43,7 +43,6 @@ export class ComponentDetail extends Component {
         });
         const { markdownRemark: post } = this.props.data;
         const { next, prev } = this.props.pathContext;
-        const variations = post.frontmatter.variations;
 
         return (
             <div className="l-container">
