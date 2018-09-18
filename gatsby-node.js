@@ -1,5 +1,5 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
   }
-};
+}
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -124,4 +124,4 @@ exports.createPages = ({ graphql, actions }) => {
       resolve()
     })
   })
-};
+}
