@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from 'gatsby';
 
 const Logo = ({ siteTitle }) => (
     <h3 className="c-logo">

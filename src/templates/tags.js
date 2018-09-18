@@ -1,5 +1,5 @@
 import React from 'react';
-import GatsbyLink from 'gatsby-link';
+import { Link } from 'gatsby';
 import TagsIcon from 'react-icons/lib/fa/tags';
 
 import Link from '../components/Link';

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from "gatsby-link";
+import { Link } from 'gatsby';
 
 const Breadcrumbs = ({ group, subgroup }) => {
 	return (
@@ -9,13 +9,13 @@ const Breadcrumbs = ({ group, subgroup }) => {
 				<Link className="c-breadcrumbs__link" to={"/" + group }>{ group }</Link>
 			</li>
 
-			{subgroup && 
-				
+			{subgroup &&
+
 				<li className="c-breadcrumbs__item">
 					<Link className="c-breadcrumbs__link" to={"/" + group + "/" + subgroup }>{ subgroup }</Link>
 				</li>
 			}
-			
+
 		</ol>
 	)
 };
