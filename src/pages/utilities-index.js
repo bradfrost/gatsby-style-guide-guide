@@ -11,7 +11,7 @@ export default function Template({ data }) {
         <div className="l-container">
 
         {posts
-            .filter(post => post.node.frontmatter.group == 'utilities')
+            .filter(post => post.node.frontmatter.group === 'utilities')
             .map(({ node: post }) => {
                 if ((post.frontmatter.layout === "utilities-index")) {
                     return ( <PageHeader
@@ -20,19 +20,21 @@ export default function Template({ data }) {
                     />
                 )
                 }
+                return null
             })}
 
             <ul className="c-card-list l-grid l-grid--3up">
                 {posts
-                    .filter(post => post.node.frontmatter.group == 'utilities')
+                    .filter(post => post.node.frontmatter.group === 'utilities')
                     .map(({ node: post }) => {
-                        if (post.frontmatter.layout != "utilities-index") {
+                        if (post.frontmatter.layout !== "utilities-index") {
                             return (
                                 <li className="l-grid__item">
                                     <Card href={post.frontmatter.path} title={post.frontmatter.title} description={post.frontmatter.description} key={post.id} />
                                 </li>
                             );
                         }
+                        return null
                     })}
             </ul>
         </div>
