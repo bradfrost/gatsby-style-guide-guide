@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export class PrimarySubNavItem extends Component {
   constructor(props) {
     super(props)
-    this.state = { isSubNavOn: !window.location.pathname.includes(props.url) }
+    this.state = { isSubNavOn: typeof window !== 'undefined' ? !window.location.pathname.includes(props.href) : false }
     this.toggleSubNav = this.toggleSubNav.bind(this)
   }
 

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export class PrimaryNavItem extends Component {
   constructor(props) {
     super(props)
-    this.state = { isNavOn: !window.location.pathname.includes(props.href) }
+    this.state = { isNavOn: typeof window !== 'undefined' ? !window.location.pathname.includes(props.href) : false }
     this.toggleNav = this.toggleNav.bind(this)
   }
 
