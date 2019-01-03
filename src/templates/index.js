@@ -1,29 +1,26 @@
-import React from "react";
-import GatsbyLink from "gatsby-link";
-import Helmet from "react-helmet";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Link from "../components/Link";
-import Card from "../components/Card";
-import PageHeader from "../components/PageHeader";
-import Section from "../components/Section";
-import ButtonGroup from "../components/ButtonGroup";
-import ButtonLink from "../components/ButtonLink";
+import Layout from '../components/layout'
+import PageHeader from '../components/PageHeader'
 
 export default function Index({ data }) {
-    const { markdownRemark: post } = data;
-    return (
-        <div className="l-container">
-            <PageHeader
-                title="Style Guide Guide"
-                description="A boilerplate for creating superb style guides"
-            />
+  const { markdownRemark: post } = data
+  return (
+    <Layout>
+      <div className="l-container">
+        <PageHeader
+          title="Style Guide Guide"
+          description="A boilerplate for creating superb style guides"
+        />
 
-            <div
-                className="c-text-passage"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-        </div>
-    );
+        <div
+          className="c-text-passage"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
+    </Layout>
+  )
 }
 
 export const componentDetailQuery = graphql`
@@ -31,14 +28,14 @@ export const componentDetailQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-          path
-          tags
-          kicker
-          title
-          description
-          status
-          group
+        path
+        tags
+        kicker
+        title
+        description
+        status
+        group
       }
     }
   }
-`;
+`

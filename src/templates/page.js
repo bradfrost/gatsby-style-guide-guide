@@ -1,38 +1,34 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react'
+import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
-import PageHeader from "../components/PageHeader";
-import Button from "../components/Button";
-import ButtonLink from "../components/ButtonLink";
-import Section from "../components/Section";
-import ButtonGroup from "../components/ButtonGroup";
-import Breadcrumbs from "../components/Breadcrumbs";
-import ContentBlock from "../components/ContentBlock";
-import Table from "../components/Table";
-import Well from "../components/Well";
+import Layout from '../components/layout'
+import PageHeader from '../components/PageHeader'
+import Breadcrumbs from '../components/Breadcrumbs'
 
-export default function Template({ data, pathContext }) {
-    const { markdownRemark: post } = data;
+export default function Template({ data }) {
+  const { markdownRemark: post } = data
 
-    return (
-        <div className="l-container">
-            <Helmet title={`${post.frontmatter.title}`} />
-
-            {post.frontmatter.group &&
-                <Breadcrumbs group={post.frontmatter.group} />
-            }
-
-            <PageHeader
-                kicker={post.frontmatter.kicker}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-                status={post.frontmatter.status}
-            />
-
-            <div className="c-text-passage" dangerouslySetInnerHTML={{ __html: post.html }} />
-
-        </div>
-    );
+  return (
+    <Layout>
+      <div className="l-container">
+        <Helmet title={`${post.frontmatter.title}`} />
+        {post.frontmatter.group && (
+          <Breadcrumbs group={post.frontmatter.group} />
+        )}
+        <PageHeader
+          kicker={post.frontmatter.kicker}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          status={post.frontmatter.status}
+        />
+        <div
+          className="c-text-passage"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
+    </Layout>
+  )
 }
 
 export const componentDetailQuery = graphql`
@@ -40,25 +36,25 @@ export const componentDetailQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-          path
-          tags
-          kicker
+        path
+        tags
+        kicker
+        title
+        description
+        status
+        group
+        usage {
+          description
+        }
+        use {
           title
           description
-          status
-          group
-          usage {
-            description
-          }
-          use {
-            title
-            description
-          }
-          altUse {
-            title
-            description
-          }
+        }
+        altUse {
+          title
+          description
+        }
       }
     }
   }
-`;
+`

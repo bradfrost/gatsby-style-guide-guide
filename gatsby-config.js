@@ -5,7 +5,6 @@ module.exports = {
     title: `Style Guide Guide`,
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
@@ -23,11 +22,21 @@ module.exports = {
             options: {
               linkImagesToOriginal: false
             }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+            },
           }
         ]
       }
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp'
+    `gatsby-plugin-sass`,
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet'
   ],
 }
