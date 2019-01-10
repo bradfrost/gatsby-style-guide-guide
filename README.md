@@ -12,7 +12,7 @@ The tool can consume and display components from anywhere, but in my own workflo
 ## Getting Started
 1. Download or clone the files from the [repository on Github](https://github.com/bradfrost/gatsby-style-guide-guide).
 2. In the command line, navigate to the root of the project and run the `yarn` command. This will download the project dependencies
-3. Run `yarn start` to run the project.
+3. Run `gatsby develop` to run the project.
 
 From here, obviously the point is to customize the style guide for your needs and populate it with your content and components.
 
