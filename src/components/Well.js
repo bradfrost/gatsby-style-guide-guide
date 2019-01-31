@@ -1,12 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Well = ({ children }) => {
+  return <div className="c-well">{children}</div>
+}
 
-    return (
-        <div className="c-well">
-            {children}
-        </div>
-    )
-};
-
-export default Well;
+export default Well

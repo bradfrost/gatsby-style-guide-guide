@@ -1,20 +1,18 @@
 import React from 'react'
 
-const ButtonLink = ({
+const Button = ({
   text,
   onClickHandler,
   styleModifier,
-  target,
   props,
-  href,
   image,
+  dataClipboardTarget,
 }) => (
-  <a
-    href={href}
-    target={target}
+  <button
     className={'c-btn ' + styleModifier}
     onClick={onClickHandler}
     {...props}
+    data-clipboard-target={dataClipboardTarget}
   >
     {image && (
       <svg className="c-btn__icon" viewBox="0 0 80 80" version="1.1">
@@ -118,7 +116,7 @@ const ButtonLink = ({
       </svg>
     )}
     <span className="c-btn__text">{text}</span>
-  </a>
+  </button>
 )
 
-export default ButtonLink
+export default Button

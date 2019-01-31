@@ -10,10 +10,8 @@
  * Tabs list
  */
 .c-tabs__list {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: visible;
-    border-bottom: 1px solid $color-gray-27;
+	display: flex;
+	border-bottom: 1px solid $color-gray-27;
 }
 
  /**
@@ -23,16 +21,19 @@
 .c-tabs__link {
 	display: block;
 	padding: 0.5rem 1rem;
-	margin-bottom: -1px;
     min-width: 5rem;
     text-align: center;
+}
 
-	/**
+.c-tabs__list-item {
+    margin-bottom: -1px;
+    
+    /**
 	 * Active tabs link
 	 */
-	.c-tabs__list-item.is-active & {
+	&.is-active {
 		border: 1px solid $color-gray-27;
-		border-bottom-color: $color-white;
+		border-bottom: 1px solid $color-white;
 	}
 }
 
