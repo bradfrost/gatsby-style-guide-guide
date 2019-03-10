@@ -10,8 +10,8 @@ export default function Index({ data }) {
     <Layout>
       <div className="l-container">
         <PageHeader
-          title="Style Guide Guide"
-          description="A boilerplate for creating superb style guides"
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
         />
 
         <div
